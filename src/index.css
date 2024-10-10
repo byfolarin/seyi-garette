@@ -1,3 +1,11 @@
+@font-face {
+    font-family: 'DepartureMono';
+    src: url('./assets/DepartureMono-1.420/DepartureMono-1.420/DepartureMono-Regular.otf') format('truetype'); /* Adjust the path as necessary */
+    font-weight: normal;
+    font-style: normal;
+  }
+
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
