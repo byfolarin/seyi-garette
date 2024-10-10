@@ -11,7 +11,7 @@ export default function HeroSection() {
       </p>
 
    
-        <img src={GarretImg} alt="" className='absolute top-0 w-[1579.1] h-[1579.1]' />
+        <img src={GarretImg} alt="" className='absolute top-0 w-[70%]' />
      
     </div>
   )
