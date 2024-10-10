@@ -5,11 +5,22 @@ export default function SecondSection() {
     <div className="bg-[#CECECE] min-h-screen px-[48px] pt-[42px] relative overflow-hidden flex items-center justify-center">
       
       {/* Background text */}
-      <div className='absolute inset-0 flex items-center justify-center'>
-        <div className='flex items-center gap-24 font-DepartureMono text-[185.15px] text-white opacity-50'>
-          <h1>GARSE</h1>
-          <h1>TTI1</h1> 
-        </div>
+
+      <div className='flex flex-col'>
+
+            <div className='absolute inset-0 flex items-center justify-center'>
+                <div className='flex items-center gap-24 font-DepartureMono text-[185.15px] text-white opacity-50'>
+                <h1>GARSE</h1>
+                <h1>TTI1</h1> 
+                </div>
+            </div>
+
+
+            <div className='w-[40%]'>
+                We believe you have a voice worth remembering just like every notable human that walked the earth.
+                The mic for a notable voice.
+            </div>
+
       </div>
 
       {/* Foreground image */}
