@@ -12,10 +12,9 @@ export default function SecondSection() {
 
       <div className='flex-grow flex items-center justify-center relative'>
         <div className='absolute inset-0 flex items-center justify-center pointer-events-none'>
-          <div className='flex items-center tracking-tighter gap-24 font-DepartureMono text-[185.15px] text-white opacity-50'>
-            <h1>GARSE</h1>
-            <h1>TTI1</h1> 
-            {/* <p className='font-helvetica-neue-5'>&reg;</p> */}
+          <div className='flex justify-between  items-center tracking-tighter font-DepartureMono text-[180px] text-white opacity-50'>
+            <h1 className="-translate-y-40" >GARSE</h1>
+            <h1 className="-translate-y-40">TTI1</h1> 
           </div>
         </div>
 
@@ -28,28 +27,21 @@ export default function SecondSection() {
         </div>
       </div>
 
-      <div className='absolute flex justify-between bottom-[42px] left-[48px] font-helvetica-neue-5'>
+      <div className='absolute bottom-[42px] left-[48px] right-[48px] font-helvetica-neue-5 flex justify-between'>
+        <div className='w-[446px] text-2xl leading-tight'>
+          We believe you have a voice worth remembering just like every notable human that walked the earth.
+          The mic for a notable voice.
+        </div>
 
-            <div className='w-[446px] text-2xl leading-tight'>
-            We believe you have a voice worth remembering just like every notable human that walked the earth.
-            The mic for a notable voice.
-            </div>
-
-
-            <div className='w-[446px] flex flex-col gap-8'>
-                <p>Experience not just an engineering marvel but an artistic one as well. The GARSETTI One seeks to further revolutionise audio capturing. </p>
-
-                
-                <div className='flex gap-8 mb-10 font-helvetica-neue-5'>
-                    <button  className='py-[16px] px-[40px] bg-[#FF5931] rounded-full text-base '>Join the Waitlist</button>
-                    <button><a href="#" className='underline'>See what's in the box</a></button>
-                </div>
-
-            </div>
-
+        <div className='w-[446px] flex flex-col gap-8 '>
+          <p className='text-[#555963]'>Experience not just an engineering marvel but an artistic one as well. The GARSETTI One seeks to further revolutionise audio capturing. </p>
+          
+          <div className='flex gap-8 mb-10 font-helvetica-neue-5'>
+            <button className='py-[16px] px-[40px] bg-[#FF5931] rounded-full text-base'>Join the Waitlist</button>
+            <button><a href="#" className='underline'>See what's in the box</a></button>
+          </div>
+        </div>
       </div>
-
-
 
     </div>
   )
