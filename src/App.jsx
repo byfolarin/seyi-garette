@@ -1,5 +1,6 @@
 import HeroSection from "./Components/HeroSection"
 import SecondSection from "./Components/SecondSection"
+import ThirdSection from "./Components/ThirdSection"
 
 
 
@@ -8,6 +9,7 @@ function App() {
     <div>
       <HeroSection />
       <SecondSection />
+      <ThirdSection />
     </div>
   )
 }
