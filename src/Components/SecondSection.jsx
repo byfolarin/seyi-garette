@@ -28,12 +28,29 @@ export default function SecondSection() {
         </div>
       </div>
 
-      <div className='absolute bottom-[42px] left-[48px] font-helvetica-neue-5'>
-        <div className='w-[446px] text-2xl leading-tight'>
-          We believe you have a voice worth remembering just like every notable human that walked the earth.
-          The mic for a notable voice.
-        </div>
+      <div className='absolute flex justify-between bottom-[42px] left-[48px] font-helvetica-neue-5'>
+
+            <div className='w-[446px] text-2xl leading-tight'>
+            We believe you have a voice worth remembering just like every notable human that walked the earth.
+            The mic for a notable voice.
+            </div>
+
+
+            <div className='w-[446px] flex flex-col gap-8'>
+                <p>Experience not just an engineering marvel but an artistic one as well. The GARSETTI One seeks to further revolutionise audio capturing. </p>
+
+                
+                <div className='flex gap-8 mb-10 font-helvetica-neue-5'>
+                    <button  className='py-[16px] px-[40px] bg-[#FF5931] rounded-full text-base '>Join the Waitlist</button>
+                    <button><a href="#" className='underline'>See what's in the box</a></button>
+                </div>
+
+            </div>
+
       </div>
+
+
+
     </div>
   )
 }
