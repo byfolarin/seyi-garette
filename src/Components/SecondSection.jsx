@@ -11,13 +11,18 @@ export default function SecondSection() {
       </div>
 
       <div className='flex-grow flex items-center justify-center relative'>
-        <div className='absolute inset-0 flex items-center justify-center pointer-events-none'>
-          <div className='flex justify-between  items-center tracking-tighter font-DepartureMono text-[180px] text-white opacity-50'>
-            <h1 className="-translate-y-40" >GARSE</h1>
-            <h1 className="-translate-y-40">TTI1</h1> 
+        {/* Background text */}
+        <div className='absolute inset-0 flex justify-center items-center pointer-events-none'>
+          <div className='flex justify-center items-center tracking-tighter font-DepartureMono text-[180px] text-white opacity-50'>
+
+            <h1 className="-translate-y-40">GARSE</h1>
+                 <span className="w-42"></span>
+            <h1 className="-translate-y-40">TTI1 <span className='font-helvetica-neue-5 text-[24px] align-text-top'>&#174;</span></h1> 
+
           </div>
         </div>
 
+        {/* Foreground image */}
         <div className="relative z-10 max-w-96">
           <img 
             src={GarsettiFront} 
