@@ -17,12 +17,12 @@ export default function HeroSection() {
             ETCH YOUR VOICE INTO HISTORY 
           </h1>
           
-          <div className='flex gap-8 mb-10'>
-            <button  className='py-[16px] px-[40px] bg-[#FF5931] rounded-full text-base'>Join the Waitlist</button>
+          <div className='flex gap-8 mb-10 font-helvetica-neue-5'>
+            <button  className='py-[16px] px-[40px] bg-[#FF5931] rounded-full text-base '>Join the Waitlist</button>
             <button><a href="#" className='underline'>See what's in the box</a></button>
           </div>
 
-          <p className='font-base text-[#555963]'>
+          <p className='font-base text-[#555963] font-helvetica-neue-5'>
             GARSETTI® brings you its flagship multi-dimensional microphone,
             designed to capture every nuance of your voice with precision.
           </p>

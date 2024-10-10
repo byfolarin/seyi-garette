@@ -7,7 +7,8 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        'DepartureMono': ['DepartureMono', 'sans-serif'],
+        'DepartureMono': ['DepartureMono', 'mono-serif'],
+        'helvetica-neue-5': ['helvetica-neue-5', 'sans-serif'],
       },
     },
   },

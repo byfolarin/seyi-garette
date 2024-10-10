@@ -5,6 +5,14 @@
     font-style: normal;
   }
 
+  @font-face {
+    font-family: 'helvetica-neue-5';
+    src: url('./assets/DepartureMono-1.420/DepartureMono-1.420/HelveticaNeue.otf') format('truetype'); /* Adjust the path as necessary */
+    font-weight: normal;
+    font-style: normal;
+  }
+
+
 
 @tailwind base;
 @tailwind components;
