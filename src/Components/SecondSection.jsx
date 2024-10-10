@@ -1,4 +1,5 @@
 import GarsettiFront from '../../src/assets/images/iFront 1.png'
+import GarsettiSide from '../../src/assets/images/Side.png'
 
 export default function SecondSection() {
   return (
@@ -18,7 +19,6 @@ export default function SecondSection() {
             <h1 className="-translate-y-40">GARSE</h1>
                  <span className="w-42"></span>
             <h1 className="-translate-y-40">TTI1 <span className='font-helvetica-neue-5 text-[24px] align-text-top'>&#174;</span></h1> 
-
           </div>
         </div>
 

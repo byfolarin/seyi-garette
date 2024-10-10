@@ -9,7 +9,7 @@ function App() {
     <div>
       <HeroSection />
       <SecondSection />
-      {/* <ThirdSection /> */}
+      <ThirdSection />
     </div>
   )
 }
