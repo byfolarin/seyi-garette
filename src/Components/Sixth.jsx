@@ -19,10 +19,7 @@ export default function Sixth() {
                     Complete your GARSETTI One microphone setup with our range of high-performance accessories. Each accessory is designed to enhance your sound and make your recording process seamless.
                     </h2>
                 </div>
-                
-
-             ?
-  
+            
 
         </div>
 
