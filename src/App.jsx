@@ -7,7 +7,7 @@ import FourthSection from "./Components/FourthSection"
 
 function App() {
   return (
-    <div>
+    <div>     
       <HeroSection />
       <SecondSection />
       <ThirdSection />
