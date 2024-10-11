@@ -22,14 +22,22 @@ export default function FourthSection() {
 
         </div>
 
-        <div className="flex gap-4 pt-[72px]">
-            <div className="bg-slate-300 h-[807px] w-[50%]">
-                <img src={WomanMic} alt="" />
+            <div className="flex gap-4 pt-[64px]">
+                        <div className="w-1/2 h-[807px] overflow-hidden">
+                            <img 
+                            src={WomanMic} 
+                            alt="Woman with microphone" 
+                            className="w-full h-full object-cover"
+                            />
+                        </div>
+                        <div className="w-1/2 h-[807px] overflow-hidden">
+                            <img 
+                            src={StudioMic} 
+                            alt="Studio microphone" 
+                            className="w-full h-full object-cover"
+                            />
+                        </div>
             </div>
-            <div className="bg-slate-300 h-[807px] w-[50%]">
-                 <img src={StudioMic} alt="" className='object-cover w-full'/>
-            </div>
-        </div>
 
 
       </div>
