@@ -1,6 +1,6 @@
 import GarsettiSide from '../../src/assets/images/Side.png'
 
-export default function SecondSection() {
+export default function ThirdSection() {
   return (
     <div className="bg-[#CECECE] min-h-screen px-[48px] pt-[42px] relative overflow-hidden flex flex-col">
       
