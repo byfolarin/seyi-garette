@@ -3,6 +3,8 @@ import SecondSection from "./Components/SecondSection"
 import ThirdSection from "./Components/ThirdSection"
 import FourthSection from "./Components/FourthSection"
 import Fifth from "./Components/FifthSection"
+import Sixth from "./Components/Sixth"
+
 
 
 
@@ -14,6 +16,7 @@ function App() {
       <ThirdSection />
       <FourthSection/>
       <Fifth />
+      <Sixth />
     </div>
   )
 }

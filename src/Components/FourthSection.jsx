@@ -5,7 +5,7 @@ import StudioMic from '../../src/assets/images/micstudio.png'
 
 export default function FourthSection() {
     return (
-      <div className="px-[48px] pt-[42px]">
+      <div className="px-[48px] py-[42px]">
         <div className="flex justify-between">
 
           <h2 className="w-[60%] font-helvetica-neue-5 text-[32px] leading-tight">
