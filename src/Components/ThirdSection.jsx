@@ -16,13 +16,13 @@ export default function SecondSection() {
           <div className='flex justify-center items-center tracking-tighter font-DepartureMono text-[180px] text-white opacity-50'>
 
             <h1 className="-translate-y-40">GARSE</h1>
-                 <span className="w-42"></span>
-            <h1 className="-translate-y-40">TTI1 <span className='font-helvetica-neue-5 text-[24px] align-text-top'>&#174;</span></h1> 
+                 <span className="w-[128px]"></span>
+            <h1 className="-translate-y-40">TTI1 </h1> 
           </div>
         </div>
 
         {/* Foreground image */}
-        <div className="relative z-10 max-w-96">
+        <div className="relative z-10 w-[600px]">
           <img 
             src={GarsettiSide} 
             alt="Garrett with microphone" 

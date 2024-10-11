@@ -10,6 +10,7 @@ function App() {
       <HeroSection />
       <SecondSection />
       <ThirdSection />
+      <SecondSection />
     </div>
   )
 }
