@@ -17,7 +17,7 @@ export default function SecondSection() {
           <div className='flex justify-center items-center tracking-tighter font-DepartureMono text-[180px] text-white opacity-50'>
 
             <h1 className="-translate-y-40">GARSE</h1>
-                 {/* <span className="w-42"></span> */}
+                 <span className="w-42"></span>
             <h1 className="-translate-y-40">TTI1 <span className='font-helvetica-neue-5 text-[24px] align-text-top'>&#174;</span></h1> 
           </div>
         </div>

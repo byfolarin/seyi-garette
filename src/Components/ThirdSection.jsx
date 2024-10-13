@@ -16,7 +16,7 @@ export default function ThirdSection() {
           <div className='flex justify-center items-center tracking-tighter font-DepartureMono text-[180px] text-white opacity-50'>
 
             <h1 className="-translate-y-40">GARSE</h1>
-                 {/* <span className="w-[128px]"></span> */}
+                 <span className="w-[128px]"></span>
             <h1 className="-translate-y-40">TTI1 </h1> 
           </div>
         </div>
