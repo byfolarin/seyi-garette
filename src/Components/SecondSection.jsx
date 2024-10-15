@@ -7,7 +7,7 @@ export default function SecondSection() {
       
       <div className='absolute top-[42px] left-[48px] font-helvetica-neue-5'>
         <div className='underline'>
-          {/* Back to top */}
+          Back to top
         </div>
       </div>
 
