@@ -6,16 +6,16 @@ import Box2 from '../../src/assets/images/USBC Cable 1.png'
 
 export default function Sixth() {
     return (
-      <div className="px-[48px] py-[42px]">
+      <div className="px-[48px] py-[68px]">
         <div className="flex gap-6">
 
 
                 <div className='w-[70%] flex gap-12'>
-                    <div className='flex items-start w-full gap-8 mb-10 font-helvetica-neue-5 text-[#555963]'>
-                        Check out what’s <br /> in the box
+                    <div className='flex items-start w-full font-helvetica-neue-5 text-[#555963]'>
+                     <h4 className='border-l-[3px] pl-6 font-medium'>Check out what’s <br /> in the box</h4>   
                     </div>
 
-                    <h2 className="font-helvetica-neue-5 text-[32px] leading-tight ">
+                    <h2 className="font-helvetica-neue-5 text-2xl leading-tight ">
                     Complete your GARSETTI One microphone setup with our range of high-performance accessories. Each accessory is designed to enhance your sound and make your recording process seamless.
                     </h2>
                 </div>

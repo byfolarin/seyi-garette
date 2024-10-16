@@ -7,7 +7,7 @@ import Mid3 from '../../src/assets/images/mid3.png'
 
 export default function Fifth() {
     return (
-      <div className="px-[48px] py-[42px]">
+      <div className="px-[48px] py-[68px]">
         <div className="flex gap-10">
 
                 <div className='flex items-start pr-[48px] font-helvetica-neue-5 text-sm  text-[#555963]'>
