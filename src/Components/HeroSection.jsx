@@ -16,7 +16,7 @@ export default function HeroSection() {
         
         <div className="relative z-10 mb-[48px] w-[608px]  mt-[64px]">
 
-            <h1 className='text-5xl font-DepartureMono mb-10'>
+            <h1 className='text-5xl leading-[128%] font-DepartureMono mb-10'>
               ETCH YOUR VOICE INTO HISTORY 
             </h1>
             
@@ -32,7 +32,7 @@ export default function HeroSection() {
 
         </div>
 
-        
+
       </div>
       
       <div className="absolute top-0 right-0 w-[80%] h-full overflow-hidden">
