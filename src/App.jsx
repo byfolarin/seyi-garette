@@ -6,11 +6,13 @@ import ThirdSection from "./Components/ThirdSection";
 import FourthSection from "./Components/FourthSection";
 import Fifth from "./Components/FifthSection";
 import Sixth from "./Components/Sixth";
+import SeventhSection from "./Components/SeventhSection";
+
 
 function App() {
   useEffect(() => {
     const lenis = new Lenis({
-      duration: 0.4,
+      duration: 0.5,
       easing: (t) => t,
       smooth: true,
       smoothTouch: false,
@@ -36,6 +38,7 @@ function App() {
       <FourthSection />
       <Fifth />
       <Sixth />
+      <SeventhSection />
     </div>
   );
 }
