@@ -21,6 +21,15 @@ export default function EightSection() {
             <div className='relative'>
                  <img src={FooterImg} alt="" />
             </div>
+
+
+            <div>
+                <div className='flex border absolute  justify-center items-center tracking-tighter
+                font-DepartureMono text-[220px] text-[#FF5931]'>
+                    <h1 >GARSETTI1</h1>              
+                </div>
+            </div>
+            
           
     </div>
   )
