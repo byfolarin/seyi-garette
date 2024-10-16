@@ -13,6 +13,11 @@
   }
 
 
+  .h1-stroke{
+    -webkit-text-stroke: 4px #FF5931;
+
+  }
+
 
 @tailwind base;
 @tailwind components;

@@ -25,7 +25,7 @@ export default function EightSection() {
 
             <div>
                 <div className='flex absolute bottom-0 left-0 right-0 justify-center items-center tracking-tighter font-DepartureMono text-[220px] text-[#FF5931]'>
-                    <h1 >GARSETTI1</h1>              
+                    <h1 className='h1-stroke' >GARSETTI1</h1>              
                 </div>
             </div>
             
