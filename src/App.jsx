@@ -34,17 +34,17 @@ function App() {
 
   return (
     <div>
-      <div className="sticky">
+     
         <HeroSection />
-      </div>  
+
        
-      <SecondSection />
+      {/* <SecondSection />
       <ThirdSection />
       <FourthSection />
       <Fifth />
       <Sixth />
       <SeventhSection />
-      <EightSection />
+      <EightSection /> */}
     </div>
   );
 }

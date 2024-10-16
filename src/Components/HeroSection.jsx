@@ -21,7 +21,7 @@ export default function HeroSection() {
             </h1>
             
             <div className='flex gap-4 mb-10 font-helvetica-neue-5'>
-              <button  className='py-[17px] leading-none px-[40px] bg-[#FF5931] rounded-full text-sm '>Join the Waitlist</button>
+              <button  className='py-[17px] leading-none px-[40px] bg-[#FF5931]  rounded-full text-sm '>Join the Waitlist</button>
               <button><a href="#" className=' border-black border-b-[1.5px] text-sm py-[4px]'>See what's in the box</a></button>
             </div>
 
