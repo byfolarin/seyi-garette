@@ -15,20 +15,24 @@ export default function HeroSection() {
         </div>
         
         <div className="relative z-10 mb-[48px] w-[608px]  mt-[64px]">
-          <h1 className='text-5xl font-DepartureMono mb-10'>
-            ETCH YOUR VOICE INTO HISTORY 
-          </h1>
-          
-          <div className='flex gap-4 mb-10 font-helvetica-neue-5'>
-            <button  className='py-[16px] leading-none px-[40px] bg-[#FF5931] rounded-full text-sm '>Join the Waitlist</button>
-            <button><a href="#" className=' border-black border-b-[1.5px] text-sm py-[8px]'>See what's in the box</a></button>
-          </div>
 
-          <p className='text-sm text-[#555963] w-[420px]  font-helvetica-neue-5'>
-            GARSETTI® brings you its flagship multi-dimensional microphone,
-            designed to capture every nuance of your voice with precision.
-          </p>
+            <h1 className='text-5xl font-DepartureMono mb-10'>
+              ETCH YOUR VOICE INTO HISTORY 
+            </h1>
+            
+            <div className='flex gap-4 mb-10 font-helvetica-neue-5'>
+              <button  className='py-[16px] leading-none px-[40px] bg-[#FF5931] rounded-full text-sm '>Join the Waitlist</button>
+              <button><a href="#" className=' border-black border-b-[1.5px] text-sm py-[4px]'>See what's in the box</a></button>
+            </div>
+
+            <p className='text-sm text-[#555963] w-[420px]  font-helvetica-neue-5'>
+              GARSETTI® brings you its flagship multi-dimensional microphone,
+              designed to capture every nuance of your voice with precision.
+            </p>
+
         </div>
+
+        
       </div>
       
       <div className="absolute top-0 right-0 w-[80%] h-full overflow-hidden">

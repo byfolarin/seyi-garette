@@ -34,7 +34,10 @@ function App() {
 
   return (
     <div>
-      <HeroSection />
+      <div className="sticky">
+        <HeroSection />
+      </div>  
+       
       <SecondSection />
       <ThirdSection />
       <FourthSection />
