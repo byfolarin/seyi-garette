@@ -11,7 +11,7 @@ export default function Fifth() {
         <div className="flex gap-10">
 
                 <div className='flex items-start pr-[48px] font-helvetica-neue-5 text-sm  text-[#555963]'>
-                  <h4 className='border-l-[3px] pl-6 font-medium'>Why choose <br /> GARSETTI One?</h4>  
+                  <h4 className='border-l-[3px] border-[#E5E5E5] pl-6 font-medium'>Why choose <br /> GARSETTI One?</h4>  
                 </div>
 
                 <h2 className="font-DepartureMono text-[48px] leading-tight">
@@ -33,7 +33,7 @@ export default function Fifth() {
                             </div>
 
                             <div className='pt-8 font-helvetica-neue-5 flex flex-col gap-1'>
-                                <h5 className='font-bold text-xl'>Crisp Audio Capture</h5>
+                                <h5 className='font-bold text-xl tracking-tight'>Crisp Audio Capture</h5>
                                 <p className='font-helvetica-neue-5 text-sm w-[80%] '>Experience not just an engineering marvel but an artistic one as well. The GARSETTI One seeks to further revolutionise audio capturing. </p>
                             </div>
                         </div>
@@ -48,7 +48,7 @@ export default function Fifth() {
                             </div>
 
                             <div className='pt-8 font-helvetica-neue-5 flex flex-col gap-1'>
-                                <h5 className='font-bold text-xl'>Universal Port Compatibility</h5>
+                                <h5 className='font-bold text-xl tracking-tight'>Universal Port Compatibility</h5>
                                 <p className='font-helvetica-neue-5 text-sm w-[80%] '>Adapt to any recording environment with ease. Our universal port supports a wide range of setups, ensuring you’re always ready to create, no matter the device or platform.</p>
                             </div>
                         </div>
@@ -63,7 +63,7 @@ export default function Fifth() {
                             </div>
 
                             <div className='pt-8 font-helvetica-neue-5 flex flex-col gap-1'>
-                                <h5 className='font-bold text-xl'>Universal Port Compatibility</h5>
+                                <h5 className='font-bold text-xl tracking-tight'>Port Compatibility</h5>
                                 <p className='font-helvetica-neue-5 text-sm w-[80%] '>Adapt to any recording environment with ease. Our universal port supports a wide range of setups, ensuring you’re always ready to create, no matter the device or platform.</p>
                             </div>
                         </div>

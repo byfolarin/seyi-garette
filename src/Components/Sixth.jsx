@@ -12,7 +12,7 @@ export default function Sixth() {
 
                 <div className='w-[70%] flex gap-12'>
                     <div className='flex items-start w-full font-helvetica-neue-5 text-[#555963]'>
-                     <h4 className='border-l-[3px] pl-6 font-medium'>Check out what’s <br /> in the box</h4>   
+                     <h4 className='border-l-[3px] pl-6 font-medium border-[#E5E5E5]'>Check out what’s <br /> in the box</h4>   
                     </div>
 
                     <h2 className="font-helvetica-neue-5 text-2xl leading-tight ">
