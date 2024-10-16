@@ -15,8 +15,8 @@ export default function FourthSection() {
         <div className='flex justify-end align-middle items-start gap-8 mb-10 font-helvetica-neue-5 w-[45%]'>
 
             <div className="flex items-center gap-8">
-            <button  className='py-[16px] leading-none text-white px-[40px] bg-[#000000] rounded-full text-sm '>Join the Waitlist</button>
-            <button><a href="#" className=' border-black border-b-[1.5px] text-sm py-[8px]'>See what's in the box</a></button>
+                <button  className='py-[16px] leading-none text-white px-[40px] bg-[#000000] rounded-full text-sm '>Join the Waitlist</button>
+                <button><a href="#" className=' border-black border-b-[1.5px] text-sm py-[8px]'>See what's in the box</a></button>
             </div>
         </div>
 
