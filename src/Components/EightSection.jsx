@@ -3,7 +3,7 @@ import FooterImg from '../assets/images/Garsetti front  1.jpg'
 export default function EightSection() {
   return (
 
-    <div>
+    <div className='relative'>
             <div className=' bg-[#FF5931] absolute rounded-b-[80px] z-20 w-full  font-helvetica-neue-5 px-[49px]'>                 
                 <div className="flex flex-col gap-6 items-center py-[110px] w-full mx-auto justify-center">             
                         <h3 className="w-[70%] text-2xl  text-center">
@@ -24,8 +24,7 @@ export default function EightSection() {
 
 
             <div>
-                <div className='flex border absolute  justify-center items-center tracking-tighter
-                font-DepartureMono text-[220px] text-[#FF5931]'>
+                <div className='flex absolute bottom-0 left-0 right-0 justify-center items-center tracking-tighter font-DepartureMono text-[220px] text-[#FF5931]'>
                     <h1 >GARSETTI1</h1>              
                 </div>
             </div>
