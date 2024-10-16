@@ -4,10 +4,7 @@ export default function EightSection() {
   return (
 
     <div>
-
-
-
-            <div className=' bg-[#FF5931]  rounded-b-[80px]  font-helvetica-neue-5 px-[49px]'>                 
+            <div className=' bg-[#FF5931] absolute rounded-b-[80px] z-20 w-full  font-helvetica-neue-5 px-[49px]'>                 
                 <div className="flex flex-col gap-6 items-center py-[110px] w-full mx-auto justify-center">             
                         <h3 className="w-[70%] text-2xl  text-center">
                             Choose more than just a tool – choose to create something timeless. <br /> Choose GARSETTI One
@@ -21,7 +18,7 @@ export default function EightSection() {
             </div>
 
 
-            <div>
+            <div className='relative'>
                  <img src={FooterImg} alt="" />
             </div>
           
