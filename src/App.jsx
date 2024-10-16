@@ -7,6 +7,8 @@ import FourthSection from "./Components/FourthSection";
 import Fifth from "./Components/FifthSection";
 import Sixth from "./Components/Sixth";
 import SeventhSection from "./Components/SeventhSection";
+import EightSection from "./Components/EightSection";
+
 
 
 function App() {
@@ -39,6 +41,7 @@ function App() {
       <Fifth />
       <Sixth />
       <SeventhSection />
+      <EightSection />
     </div>
   );
 }

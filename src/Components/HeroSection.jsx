@@ -14,8 +14,8 @@ export default function HeroSection() {
           </p>
         </div>
         
-        <div className="relative z-10 mb-[48px] w-[408px]  mt-[64px]">
-          <h1 className='text-4xl font-DepartureMono mb-10'>
+        <div className="relative z-10 mb-[48px] w-[608px]  mt-[64px]">
+          <h1 className='text-5xl font-DepartureMono mb-10'>
             ETCH YOUR VOICE INTO HISTORY 
           </h1>
           
@@ -24,7 +24,7 @@ export default function HeroSection() {
             <button><a href="#" className=' border-black border-b-[1.5px] text-sm py-[8px]'>See what's in the box</a></button>
           </div>
 
-          <p className='text-sm text-[#555963]  font-helvetica-neue-5'>
+          <p className='text-sm text-[#555963] w-[420px]  font-helvetica-neue-5'>
             GARSETTI® brings you its flagship multi-dimensional microphone,
             designed to capture every nuance of your voice with precision.
           </p>
