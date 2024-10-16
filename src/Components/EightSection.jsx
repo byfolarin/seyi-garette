@@ -11,7 +11,7 @@ export default function EightSection() {
                         </h3>
 
                         <div className="flex items-center gap-8 ">
-                                <button  className='py-[16px] leading-none  px-[40px] text-white bg-[#000000] rounded-full text-sm '>Join the Waitlist</button>
+                                <button  className='py-[17px] leading-none  px-[40px] text-white bg-[#000000] rounded-full text-sm '>Join the Waitlist</button>
                                 <button><a href="#" className=' border-black text-black border-b-[1.5px] text-sm py-[8px]'>Contact the Designer</a></button>
                         </div>
                 </div>

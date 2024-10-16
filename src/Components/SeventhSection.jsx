@@ -15,7 +15,7 @@ export default function SeventhSection() {
                     </h2>
 
                     <div className="flex items-center gap-8 ">
-                            <button  className='py-[16px] leading-none  px-[40px] text-black bg-[#ffffff] rounded-full text-sm '>Join the Waitlist</button>
+                            <button  className='py-[17px] leading-none  px-[40px] text-black bg-[#ffffff] rounded-full text-sm '>Join the Waitlist</button>
                             <button><a href="#" className=' border-white text-white border-b-[1.5px] text-sm py-[8px]'>See what's in the box</a></button>
                     </div>
                 </div>
