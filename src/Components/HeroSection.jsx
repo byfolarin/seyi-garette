@@ -5,7 +5,9 @@ import GarretMobile from '../../src/assets/images/Garsetti-mobile.png'
 export default function HeroSection() {
   return (
     <div className="bg-[#B8BBC2] min-h-screen px-4 sm:px-6 lg:px-12 pt-6 lg:pt-[42px] relative overflow-hidden">
+
       <div className='flex flex-col justify-between min-h-screen w-full lg:w-[60%]'>
+
         <div className="relative z-10 w-full sm:w-[408px] mb-6 lg:mb-0">
           <p className="font-DepartureMono text-base lg:text-[12px] leading-tight">
             FOR YEARS, OUR WORLD HAS BEEN TRANSFORMED BY SPEECHES FROM GREAT MEN WHO STOOD UP TO BE COUNTED. 
@@ -13,13 +15,15 @@ export default function HeroSection() {
           </p>
         </div>
 
-        <div className="w-full sm:w-[451px] lg:hidden mt-2 mb-2">
+
+        <div className="w-full sm:w-[451px] lg:hidden border border-red-700">
           <img 
             src={GarretMobile} 
             alt="Garrett with microphone" 
             className="object-cover w-full h-auto"
           />
         </div>
+
         
         <div className="relative z-10 mb-8 lg:mb-12 w-full lg:w-[608px] mt-6 lg:mt-16">
           <h1 className='text-4xl sm:text-5xl leading-tight lg:leading-[128%] font-DepartureMono mb-8 lg:mb-10'>
@@ -36,6 +40,8 @@ export default function HeroSection() {
             designed to capture every nuance of your voice with precision.
           </p>
         </div>
+
+        
       </div>
       
       <div className="hidden lg:block lg:absolute lg:top-0 lg:right-0 lg:w-[80%] lg:h-full lg:overflow-hidden">
