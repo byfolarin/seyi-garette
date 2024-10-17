@@ -17,11 +17,14 @@ export default function SecondSection() {
 
           <div className='flex flex-col lg:flex-row justify-center items-center tracking-tighter font-DepartureMono text-[92px] lg:text-[220px] text-white opacity-50'>
 
-            <h1 className="lg:-translate-y-40">GARSE <span className='lg:hidden'>TTI1</span></h1>
+            <h1 className="lg:-translate-y-40 leading-[80%]">GARSE <span className='lg:hidden'>TTI1</span></h1>
                  {/* <span className="w-[128px]"></span> */}
-            <h1 className="hidden lg:-translate-y-40">TTI1</h1> 
+            <h1 className="hidden  md:block  lg:-translate-y-40">TTI1</h1> 
           </div>
         </div>
+        
+
+        
 
         {/* Foreground image */}
         <div className="lg:relative lg:z-10 max-w-96">
@@ -31,6 +34,21 @@ export default function SecondSection() {
             className="object-cover w-full h-auto"
           />
         </div>
+
+
+
+        <div className='lg:absolute lg:inset-0 flex justify-center items-center pointer-events-none'>
+
+          <div className='flex flex-col lg:flex-row justify-center items-center tracking-tighter font-DepartureMono text-[92px] lg:text-[220px] text-white opacity-50'>
+
+            <h1 className="lg:-translate-y-40 leading-[80%]">GARSE <span className='lg:hidden'>TTI1</span></h1>
+                 {/* <span className="w-[128px]"></span> */}
+            <h1 className="hidden  md:block  lg:-translate-y-40">TTI1</h1> 
+          </div>
+        </div>
+
+
+
       </div>
 
       <div className='absolute bottom-[42px] left-[48px] right-[48px] font-helvetica-neue-5 flex flex-col lg:flex-row justify-between'>
