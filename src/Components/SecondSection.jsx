@@ -11,20 +11,20 @@ export default function SecondSection() {
         </div>
       </div> */}
 
-      <div className='flex-grow flex items-center justify-center relative'>
+      <div className='flex-grow flex flex-col lg:flex-row items-center justify-center lg:relative'>
         {/* Background text */}
-        <div className='absolute inset-0 flex justify-center items-center pointer-events-none'>
+        <div className='lg:absolute lg:inset-0 flex justify-center items-center pointer-events-none'>
 
-          <div className='flex justify-center items-center tracking-tighter font-DepartureMono text-[220px] text-white opacity-50'>
+          <div className='flex flex-col lg:flex-row justify-center items-center tracking-tighter font-DepartureMono text-[92px] lg:text-[220px] text-white opacity-50'>
 
-            <h1 className="-translate-y-40">GARSE</h1>
+            <h1 className="lg:-translate-y-40">GARSE <span className='lg:hidden'>TTI1</span></h1>
                  {/* <span className="w-[128px]"></span> */}
-            <h1 className="-translate-y-40">TTI1</h1> 
+            <h1 className="hidden lg:-translate-y-40">TTI1</h1> 
           </div>
         </div>
 
         {/* Foreground image */}
-        <div className="relative z-10 max-w-96">
+        <div className="lg:relative lg:z-10 max-w-96">
           <img 
             src={GarsettiFront} 
             alt="Garrett with microphone" 
@@ -33,7 +33,7 @@ export default function SecondSection() {
         </div>
       </div>
 
-      <div className='absolute bottom-[42px] left-[48px] right-[48px] font-helvetica-neue-5 flex justify-between'>
+      <div className='absolute bottom-[42px] left-[48px] right-[48px] font-helvetica-neue-5 flex flex-col lg:flex-row justify-between'>
         <div className='w-[346px] text-xl leading-tight'>
           We believe you have a voice worth remembering just like every notable human that walked the earth.
           The mic for a notable voice.

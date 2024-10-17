@@ -35,11 +35,11 @@ function App() {
   return (
     <div>
      
-        <HeroSection />
+        {/* <HeroSection /> */}
 
        
-      {/* <SecondSection />
-      <ThirdSection />
+      <SecondSection />
+      {/* <ThirdSection />
       <FourthSection />
       <Fifth />
       <Sixth />
