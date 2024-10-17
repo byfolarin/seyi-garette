@@ -9,26 +9,30 @@ export default function HeroSection() {
       <div className='flex flex-col justify-between min-h-screen w-full lg:w-[60%]'>
 
           <div className="relative z-10 w-full sm:w-[408px] mb-6 lg:mb-0">
-            <p className="font-DepartureMono text-base lg:text-[12px] leading-tight">
+            <p className="font-DepartureMono text-[14px]  leading-tight">
               FOR YEARS, OUR WORLD HAS BEEN TRANSFORMED BY SPEECHES FROM GREAT MEN WHO STOOD UP TO BE COUNTED. 
               THINK OF WHAT THEY SAID. THINK OF HOW THEY SAID IT. HERE'S YOUR WINDOW TO BEING REMEMBERED
             </p>
           </div>
 
+          <div>
 
-          <div className="w-full sm:w-[451px] lg:hidden">
-            <img 
-              src={GarretMobile} 
-              alt="Garrett with microphone" 
-              className="object-cover w-full"
-            />
+         
+          {/* <div className="w-full sm:w-[451px] lg:hidden">
+              <img 
+                src={GarretMobile} 
+                alt="Garrett with microphone" 
+                className="object-fill w-full "
+              />
+            </div> */}
+
           </div>
 
         
         <div className="relative z-10 mb-8 lg:mb-12 w-full lg:w-[608px] mt-6 lg:mt-16">
 
               <h1 className='text-4xl sm:text-5xl leading-tight lg:leading-[128%] font-DepartureMono mb-8 lg:mb-10'>
-                ETCH YOUR VOICE INTO HISTORY 
+                ETCH YOUR VOICE <br /> INTO HISTORY 
               </h1>
               
               <div className='flex flex-col sm:flex-row gap-4 mb-8 lg:mb-10 font-helvetica-neue-5'>
