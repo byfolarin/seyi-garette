@@ -11,7 +11,7 @@ export default function HeroSection() {
       <div className='flex flex-col justify-between h-screen w-[40%]'>
 
         <div className="relative z-10 w-[408px]">
-          <p className="font-DepartureMono absolute text-sm leading-tight text-[12px]">
+          <p className="font-DepartureMono absolute text-sm leading-tight text-[16px] lg:text-[12px]">
             FOR YEARS, OUR WORLD HAS BEEN TRANSFORMED BY SPEECHES FROM GREAT MEN WHO STOOD UP TO BE COUNTED. 
             THINK OF WHAT THEY SAID. THINK OF HOW THEY SAID IT. HERE'S YOUR WINDOW TO BEING REMEMBERED
           </p>
@@ -26,9 +26,9 @@ export default function HeroSection() {
         />
       </div>
         
-        <div className="relative z-10 mb-[48px] w-[608px]  mt-[64px]">
+        <div className="relative z-10 mb-[48px]  lg:w-[608px]  mt-[64px]">
 
-            <h1 className='text-5xl border border-red-700 leading-[128%] font-DepartureMono mb-10'>
+            <h1 className='  text-5xl border border-red-700 leading-[128%] font-DepartureMono mb-10'>
               ETCH YOUR VOICE INTO HISTORY 
             </h1>
 
