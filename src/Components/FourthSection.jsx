@@ -15,9 +15,9 @@ export default function FourthSection() {
                    performing, GARSETTI® One captures your sound with stunning clarity, ensuring every word carries weight.
                 </h2>
         
-              <div className='flex flex-col lg:flex-row md:flex-row lg:justify-end align-middle items-start gap-8 mb-10 font-helvetica-neue-5 w-full lg:w-[45%]'>
+              <div className='flex flex-col lg:flex-row md:flex-row lg:justify-end align-middle lg:items-start gap-8 mb-10 font-helvetica-neue-5 w-full lg:w-[45%]'>
 
-                  <div className="flex flex-col  lg:flex-row md:flex-row md:items-center lg:items-center gap-8">
+                  <div className="flex flex-col lg:flex-row   md:flex-row   md:items-center lg:items-center gap-8">
                       <button  className='py-[17px] leading-none text-white px-[40px] bg-[#000000] text-nowrap rounded-full text-sm '>Join the Waitlist</button>
                       <button><a href="#" className=' border-black border-b-[1.5px] text-sm py-[8px]'>See what's in the box</a></button>
                   </div>
