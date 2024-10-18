@@ -47,8 +47,8 @@ export default function SecondSection() {
           <p className='text-[#555963] text-sm'>Experience not just an engineering marvel but an artistic one as well. The GARSETTI One seeks to further revolutionise audio capturing. </p>
           
           <div className='flex flex-col md:flex-row lg:flex-row gap-4 mb-10 font-helvetica-neue-5'>
-            <button className='py-[17px] leading-none px-[40px] bg-[#FF5931] rounded-full text-sm'>Join the Waitlist</button>
-            <button><a href="#" className='border-black border-b-[1.5px] text-sm py-[8px]'>See what's in the box</a></button>
+            <button className='py-[17px] leading-none px-[40px] bg-[#FF5931] rounded-full text-nowrap text-sm'>Join the Waitlist</button>
+            <button><a href="#" className='border-black border-b-[1.5px] text-sm text-nowrap py-[8px]'>See what's in the box</a></button>
           </div>
         </div>
       </div>
