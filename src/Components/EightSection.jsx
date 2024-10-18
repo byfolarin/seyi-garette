@@ -10,7 +10,7 @@ export default function EightSection() {
 
       <div className='absolute top-0 left-0 right-0 bg-[#FF5931] rounded-b-[24px] lg:rounded-b-[80px] z-20 w-full font-helvetica-neue-5 px-4 lg:px-12 xl:px-[49px]'>
         
-        <div className="flex flex-col gap-6 items-center py-12 lg:py-[110px] w-full mx-auto justify-center">
+        <div className="flex flex-col gap-6 lg:items-center py-12 lg:py-[110px] w-full mx-auto justify-center">
 
           <h3 className="w-full lg:w-[70%] text-lg lg:text-2xl text-center">
             Choose more than just a tool – choose to create something timeless. <br className="hidden lg:block" /> Choose GARSETTI One
