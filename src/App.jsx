@@ -41,8 +41,8 @@ function App() {
       <SecondSection />
       <ThirdSection />
       <FourthSection />
-      {/* <Fifth />
-      <Sixth />
+      <Fifth />
+      {/* <Sixth />
       <SeventhSection />
       <EightSection /> */}
     </div>
