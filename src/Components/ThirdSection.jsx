@@ -21,7 +21,7 @@ export default function SecondSection() {
         </div>
         
         {/* Foreground image */}
-        <div className="md:relative lg:relative md:z-10 lg:z-10 max-w-96 md:max-w-[450px] lg:max-w-[w-[600px]]">
+        <div className="w-[426px]  md:relative lg:relative md:z-10 lg:z-10 max-w-96 md:max-w-[450px] lg:max-w-[w-[600px]]">
           <img 
             src={GarsettiSide} 
             alt="Garrett with microphone" 

@@ -37,14 +37,20 @@ export default function SecondSection() {
         </div>
       </div>
 
+
+
       <div className='md:absolute lg:absolute bottom-[42px] pt-[52px] md:pt-0 lg:pt-0 md:left-[32px] md:right-[32px] lg:left-[48px] lg:right-[48px] font-helvetica-neue-5 flex flex-col md:flex-row lg:flex-row justify-between'>
         <div className='w-full md:w-[300px] lg:w-[346px] text-xl leading-tight mb-8 md:mb-0 lg:mb-0'>
           We believe you have a voice worth remembering just like every notable human that walked the earth.
           The mic for a notable voice.
         </div>
 
+
+
         <div className='w-full md:w-[300px] lg:w-[346px] flex flex-col gap-8 pt-[72px] md:pt-0 lg:pt-0'>
           <p className='text-[#555963] text-sm'>Experience not just an engineering marvel but an artistic one as well. The GARSETTI One seeks to further revolutionise audio capturing. </p>
+
+          
           
           <div className='flex flex-col md:flex-row lg:flex-row gap-4 mb-10 font-helvetica-neue-5'>
             <button className='py-[17px] leading-none px-[40px] bg-[#FF5931] rounded-full text-nowrap text-sm'>Join the Waitlist</button>
