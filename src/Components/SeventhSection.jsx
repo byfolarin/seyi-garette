@@ -11,7 +11,7 @@ export default function SeventhSection() {
 
    
                 <div className='flex flex-col gap-10'>
-                    <h2 className='text-[36px] pt-[45px] md:text-[48px] lg:text-[64px] tracking-tight font-helvetica-neue-5 leading-[98%] text-white'>An accompanying <br className='hidden lg:block' /> mobile app, for even <br />  granular controls
+                    <h2 className='text-4xl pt-[45px] md:text-[48px] lg:text-[64px] tracking-tight font-helvetica-neue-5 leading-[98%] text-white'>An accompanying <br className='hidden lg:block' /> mobile app, for even <br />  granular controls
                     </h2>
 
                     <div className="flex flex-col lg:flex-row lg:items-center gap-8 ">
