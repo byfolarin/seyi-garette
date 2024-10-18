@@ -44,7 +44,7 @@ function App() {
       <Fifth />
       <Sixth />
       <SeventhSection />
-      {/* <EightSection /> */}
+      <EightSection />
     </div>
   );
 }
