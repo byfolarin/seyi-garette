@@ -23,32 +23,26 @@ export default function Sixth() {
 
         </div>
 
-            <div className="flex flex-col lg:flex-row gap-4 pt-[64px]">
-
-                         <div className='w-full lg:w-2/3'>
-                            <div className=" h-[528px] overflow-hidden">
-                                <img 
-                                src={Box1} 
-                                alt="Studio microphone" 
-                                className="w-full h-full object-cover"
-                                />
-                            </div>
-                        </div>
-
-                        <div className='w-full lg:w-1/3'>
-                        <div className="h-[528px] overflow-hidden">
-                                <img 
-                                src={Box2} 
-                                alt="Studio microphone" 
-                                className="w-full h-full object-cover"
-                                />
-                            </div>
-                        </div>
-
-                        
-
-                       
-            </div>
+                    <div className="flex flex-col lg:flex-row gap-4 pt-[64px]">
+                                <div className='w-full lg:w-2/3'>
+                                    <div className=" h-[528px] overflow-hidden">
+                                        <img 
+                                        src={Box1} 
+                                        alt="Studio microphone" 
+                                        className="w-full h-full object-cover"
+                                        />
+                                    </div>
+                                </div>
+                                <div className='w-full lg:w-1/3'>
+                                <div className="h-[528px] overflow-hidden">
+                                        <img 
+                                        src={Box2} 
+                                        alt="Studio microphone" 
+                                        className="w-full h-full object-cover"
+                                        />
+                                    </div>
+                                </div>                                     
+                    </div>
 
 
       </div>
