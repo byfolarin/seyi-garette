@@ -43,8 +43,8 @@ function App() {
       <FourthSection />
       <Fifth />
       <Sixth />
-      {/* <SeventhSection />
-      <EightSection /> */}
+      <SeventhSection />
+      {/* <EightSection /> */}
     </div>
   );
 }

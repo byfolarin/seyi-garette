@@ -20,7 +20,6 @@ export default function Sixth() {
                     </h2>
                 </div>
             
-
         </div>
 
                     <div className="flex flex-col lg:flex-row gap-4 pt-[64px]">
