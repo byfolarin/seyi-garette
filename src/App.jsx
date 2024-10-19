@@ -14,7 +14,7 @@ import EightSection from "./Components/EightSection";
 function App() {
   useEffect(() => {
     const lenis = new Lenis({
-      duration: 0.5,
+      duration: 0.9,
       easing: (t) => t,
       smooth: true,
       smoothTouch: false,
