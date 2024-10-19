@@ -63,10 +63,13 @@ export default function HeroSection() {
         <div className="relative z-10 mb-8 lg:mb-32 w-full lg:w-[608px] mt-6 lg:mt-16">
           <div className='flex flex-col'>       
 
-
-            <div className='flex  align-middle gap-4 border border-red-500'>
-                <div className='w-[14px] h-[14px] bg-[#FC451A] border border-red-600 rounded-full'></div>
-                <p className='font-DepartureMono text-[12px] pb-[16px] border border-red-600'>I HAVE A DREAM - MARTIN LUTHER</p>
+            
+            <div className='flex items-center gap-4  mb-[16px]'>
+                <div className='w-[14px] h-[14px] bg-[#FC451A]  rounded-full'></div>
+                <div>
+                    <p className='font-DepartureMono text-[12px]'>I HAVE A DREAM - MARTIN LUTHER</p>
+                    <div className='w-[24px] h-[24px] bg-[#FC451A]'></div>
+                </div>         
             </div>
 
 
