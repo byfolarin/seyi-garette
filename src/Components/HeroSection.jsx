@@ -14,7 +14,7 @@ export default function HeroSection() {
               strings: [
                 "FOR YEARS, OUR WORLD HAS BEEN TRANSFORMED BY SPEECHES FROM GREAT MEN WHO STOOD UP TO BE COUNTED.",
                 "THINK OF WHAT THEY SAID. THINK OF HOW THEY SAID IT.",
-                "HERE'S YOUR WINDOW TO BEING REMEMBERED"
+                "HERE'S YOUR WINDOW TO BEING REMEMBERED..."
               ],
               autoStart: true,
               loop: true,
@@ -29,7 +29,7 @@ export default function HeroSection() {
                 .typeString("THINK OF WHAT THEY SAID. THINK OF HOW THEY SAID IT.")
                 .pauseFor(2000)
                 .deleteAll()
-                .typeString("HERE'S YOUR WINDOW TO BEING REMEMBERED")
+                .typeString("HERE'S YOUR WINDOW TO BEING REMEMBERED...")
                 .pauseFor(2000)
                 .start();
             }}
