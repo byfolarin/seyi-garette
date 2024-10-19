@@ -8,7 +8,7 @@ export default function HeroSection() {
   return (
     <div className="bg-[#B8BBC2] min-h-screen px-4 sm:px-6 lg:px-12 pt-6 lg:pt-[42px] relative overflow-hidden">
       <div className='flex justify-between items-start'>
-        <div className="relative font-DepartureMono z-10 w-full sm:w-[408px] mb-6 lg:mb-0 h-[100px]">
+        <div className="relative font-DepartureMono text-[12px] z-10 w-full sm:w-[408px] mb-6 lg:mb-0 h-[100px]">
           <Typewriter
             options={{
               strings: [
@@ -61,8 +61,9 @@ export default function HeroSection() {
         </div>
 
         <div className="relative z-10 mb-8 lg:mb-32 w-full lg:w-[608px] mt-6 lg:mt-16">
-          <div className='flex flex-col'>            
-            <h1 className='text-4xl sm:text-5xl leading-tight lg:leading-[128%] font-DepartureMono mb-4 lg:mb-10'>
+          <div className='flex flex-col'>       
+
+            <h1 className='text-4xl sm:text-5xl leading-tight lg:leading-[128%] font-DepartureMono mb-4 lg:mb-4'>
               ETCH YOUR VOICE <br /> INTO HISTORY 
             </h1>
             
