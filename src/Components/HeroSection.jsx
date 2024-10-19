@@ -1,5 +1,6 @@
 import React from 'react';
 import GarretImg from '../../src/assets/images/Garsetti mic hero  1.png'
+import Registered from '..//assets/images/registered.png'
 import GarretMobile from '../../src/assets/images/Garsetti-mobile.png'
 
 export default function HeroSection() {
@@ -18,13 +19,18 @@ export default function HeroSection() {
 
 
 
-            <div>
+            <div >
                 <ul className='font-DepartureMono text-[14px]'>
-                  <li id='stoked'>GARSETTI</li>
-                  <li>PRE-ORDER</li>
-                  <li>ABOUT GARSETTI ONE</li>
-                  <li>CONTENT IN BOX</li>
+                    <div className='flex items-center gap-1 pb-[8px]'>
+                      <li id='stoked'>GARSETTI</li>
+                      <span className='font-helvetica-neue-5 text-[18px]'><p>&#174;</p></span>
+                    </div>               
+                      <li className='pb-[8px]'>PRE-ORDER</li>
+                      <li className='pb-[8px]'>ABOUT GARSETTI ONE</li>
+                      <li className='pb-[8px]'>CONTENT IN BOX</li>
                 </ul>
+
+                
               </div>
 
       </div>
