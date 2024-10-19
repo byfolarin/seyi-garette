@@ -14,10 +14,10 @@ export default function SeventhSection() {
                     <h2 className='text-4xl pt-[45px] md:text-[48px] lg:text-[64px] tracking-tight font-helvetica-neue-5 leading-[98%] text-white'>An accompanying <br className='hidden lg:block' /> mobile app, for even <br />  granular controls
                     </h2>
 
-                    {/* <div className="flex flex-col lg:flex-row lg:items-center gap-8 ">
+                    <div className="flex flex-col lg:flex-row lg:items-center gap-8 ">
                             <button  className='py-[17px] leading-none  px-[40px] text-black bg-[#ffffff] rounded-full text-sm '>Join the Waitlist</button>
                             <button><a href="#" className=' border-white text-white border-b-[1.5px] text-sm py-[8px]'>See what's in the box</a></button>
-                    </div> */}
+                    </div>
                 </div>
 
                 <div className='pt-[32px]'>
