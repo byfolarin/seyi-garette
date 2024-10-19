@@ -11,7 +11,7 @@ export default function HeroSection() {
       <div className='flex justify-between items-start'>
 
           <div className="relative z-10 w-full sm:w-[408px] mb-6 lg:mb-0">
-                <p className="font-DepartureMono text-[14px]  leading-tight">
+                <p className="font-DepartureMono text-[12px] w-[408px]  leading-tight">
                   FOR YEARS, OUR WORLD HAS BEEN TRANSFORMED BY SPEECHES FROM GREAT MEN WHO STOOD UP TO BE COUNTED. 
                   THINK OF WHAT THEY SAID. THINK OF HOW THEY SAID IT. HERE'S YOUR WINDOW TO BEING REMEMBERED
                 </p>
@@ -20,14 +20,14 @@ export default function HeroSection() {
 
 
             <div >
-                <ul className='font-DepartureMono text-[14px]'>
-                    <div className='flex items-center gap-1 pb-[8px]'>
+                <ul className='font-DepartureMono text-[12px] text-right'>
+                    <div className='flex items-center justify-end gap-1 tracking-tighter pb-[4px]'>
                       <li id='stoked'>GARSETTI</li>
-                      <span className='font-helvetica-neue-5 text-[18px]'><p>&#174;</p></span>
+                      <span className='font-helvetica-neue-5 text-[12px]'><p>&#174;</p></span>
                     </div>               
-                      <li className='pb-[8px]'>PRE-ORDER</li>
-                      <li className='pb-[8px]'>ABOUT GARSETTI ONE</li>
-                      <li className='pb-[8px]'>CONTENT IN BOX</li>
+                      <li className='pb-[4px]'>PRE-ORDER</li>
+                      <li className='pb-[4px]'>ABOUT GARSETTI ONE</li>
+                      <li className='pb-[4px]'>CONTENT IN BOX</li>
                 </ul>
 
                 
@@ -37,56 +37,51 @@ export default function HeroSection() {
 
         
 
-      <div className='flex flex-col justify-between min-h-screen w-full lg:w-[60%]'>
+      <div className='flex flex-col justify-between min-h-screen w-full lg:w-[60%]'>   
+
+            <div>
+            {/* <div className="w-full sm:w-[451px] lg:hidden">
+                <img 
+                  src={GarretMobile} 
+                  alt="Garrett with microphone" 
+                  className="object-fill w-full "
+                />
+              </div> */}
+
+            </div>
+
+ 
+            <div className="relative z-10 mb-8 lg:mb-32 w-full lg:w-[608px] mt-6 lg:mt-16">
 
 
+                <div className='flex flex-col'>            
+                    <h1 className='text-4xl sm:text-4xl leading-tight lg:leading-[128%] font-DepartureMono mb-8 lg:mb-10'>
+                      ETCH YOUR VOICE <br /> INTO HISTORY 
+                    </h1>
+                    
+                    <div className='flex flex-col sm:flex-row gap-8 mb-8 lg:mb-10 font-helvetica-neue-5'>
+                          <button className='py-4 px-8 lg:py-[17px] lg:px-[40px] bg-[#FF5931] rounded-full text-sm whitespace-nowrap'>Join the Waitlist</button>
+                          <button className='py-1 sm:py-0'><a href="#" className='border-black border-b-[1.5px] text-sm py-1'>See what's in the box</a></button>
+                    </div>
 
-         
-         
+                  </div>
 
-          <div>
-          {/* <div className="w-full sm:w-[451px] lg:hidden">
-              <img 
-                src={GarretMobile} 
-                alt="Garrett with microphone" 
-                className="object-fill w-full "
-              />
-            </div> */}
-
-          </div>
-
-
-
-         
-
-        
-        <div className="relative z-10 mb-8 lg:mb-12 w-full lg:w-[608px] mt-6 lg:mt-16">
-
-              <h1 className='text-4xl sm:text-5xl leading-tight lg:leading-[128%] font-DepartureMono mb-8 lg:mb-10'>
-                ETCH YOUR VOICE <br /> INTO HISTORY 
-              </h1>
-              
-              <div className='flex flex-col sm:flex-row gap-4 mb-8 lg:mb-10 font-helvetica-neue-5'>
-                <button className='py-4 px-8 lg:py-[17px] lg:px-[40px] bg-[#FF5931] rounded-full text-sm whitespace-nowrap'>Join the Waitlist</button>
-                <button className='py-2 sm:py-0'><a href="#" className='border-black border-b-[1.5px] text-sm py-1'>See what's in the box</a></button>
-              </div>
-
-              <p className='text-sm text-[#555963] w-full sm:w-[420px] font-helvetica-neue-5'>
-                GARSETTI® brings you its flagship multi-dimensional microphone,
-                designed to capture every nuance of your voice with precision.
-              </p>
-              
-        </div>
+                  <p className='text-sm text-[#555963] w-full sm:w-[420px] font-helvetica-neue-5'>
+                    GARSETTI® brings you its flagship multi-dimensional microphone,
+                    designed to capture every nuance of your voice with precision.
+                  </p>
+                  
+            </div>
 
 
       </div>
       
-        <div className="hidden lg:block lg:absolute lg:top-0 lg:right-0 lg:w-[80%] lg:h-full lg:overflow-hidden">
-          <img 
-            src={GarretImg} 
-            alt="Garrett with microphone" 
-            className="object-cover w-full h-full"/>
-        </div>
+            <div className="hidden lg:block lg:absolute lg:top-0 lg:right-0 lg:w-[80%] lg:h-full lg:overflow-hidden">
+              <img 
+                src={GarretImg} 
+                alt="Garrett with microphone" 
+                className="object-cover w-full h-full"/>
+            </div>
 
 
     </div>
