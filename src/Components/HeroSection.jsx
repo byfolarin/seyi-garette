@@ -55,16 +55,18 @@ export default function HeroSection() {
 
 
                 <div className='flex flex-col'>            
-                    <h1 className='text-4xl sm:text-4xl leading-tight lg:leading-[128%] font-DepartureMono mb-8 lg:mb-10'>
+                    <h1 className='text-4xl sm:text-5xl leading-tight lg:leading-[128%] font-DepartureMono mb-4 lg:mb-10'>
                       ETCH YOUR VOICE <br /> INTO HISTORY 
                     </h1>
                     
-                    <div className='flex flex-col sm:flex-row gap-8 mb-8 lg:mb-10 font-helvetica-neue-5'>
+                    <div className='flex flex-col sm:flex-row gap-8 mb-4 lg:mb-10 font-helvetica-neue-5'>
                           <button className='py-4 px-8 lg:py-[17px] lg:px-[40px] bg-[#FF5931] rounded-full text-sm whitespace-nowrap'>Join the Waitlist</button>
                           <button className='py-1 sm:py-0'><a href="#" className='border-black border-b-[1.5px] text-sm py-1'>See what's in the box</a></button>
                     </div>
 
                   </div>
+
+
 
                   <p className='text-sm text-[#555963] w-full sm:w-[420px] font-helvetica-neue-5'>
                     GARSETTI® brings you its flagship multi-dimensional microphone,
