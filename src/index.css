@@ -15,7 +15,10 @@
 
   .h1-stroke{
     -webkit-text-stroke: 4px #FF5931;
+  }
 
+  #stoked{
+    -webkit-text-stroke: 0.3px black;
   }
 
 

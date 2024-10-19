@@ -6,18 +6,39 @@ export default function HeroSection() {
   return (
     <div className="bg-[#B8BBC2] min-h-screen px-4 sm:px-6 lg:px-12 pt-6 lg:pt-[42px] relative overflow-hidden">
 
-      <div className='flex flex-col justify-between min-h-screen w-full lg:w-[60%]'>
+
+      <div className='flex justify-between items-start'>
 
           <div className="relative z-10 w-full sm:w-[408px] mb-6 lg:mb-0">
-            <p className="font-DepartureMono text-[14px]  leading-tight">
-              FOR YEARS, OUR WORLD HAS BEEN TRANSFORMED BY SPEECHES FROM GREAT MEN WHO STOOD UP TO BE COUNTED. 
-              THINK OF WHAT THEY SAID. THINK OF HOW THEY SAID IT. HERE'S YOUR WINDOW TO BEING REMEMBERED
-            </p>
-          </div>
+                <p className="font-DepartureMono text-[14px]  leading-tight">
+                  FOR YEARS, OUR WORLD HAS BEEN TRANSFORMED BY SPEECHES FROM GREAT MEN WHO STOOD UP TO BE COUNTED. 
+                  THINK OF WHAT THEY SAID. THINK OF HOW THEY SAID IT. HERE'S YOUR WINDOW TO BEING REMEMBERED
+                </p>
+              </div>
 
-          <div>
+
+
+            <div>
+                <ul className='font-DepartureMono text-[14px]'>
+                  <li id='stoked'>GARSETTI</li>
+                  <li>PRE-ORDER</li>
+                  <li>ABOUT GARSETTI ONE</li>
+                  <li>CONTENT IN BOX</li>
+                </ul>
+              </div>
+
+      </div>
+
+        
+
+      <div className='flex flex-col justify-between min-h-screen w-full lg:w-[60%]'>
+
+
 
          
+         
+
+          <div>
           {/* <div className="w-full sm:w-[451px] lg:hidden">
               <img 
                 src={GarretMobile} 
@@ -27,6 +48,10 @@ export default function HeroSection() {
             </div> */}
 
           </div>
+
+
+
+         
 
         
         <div className="relative z-10 mb-8 lg:mb-12 w-full lg:w-[608px] mt-6 lg:mt-16">
