@@ -47,14 +47,11 @@ function App() {
   return (
     <div>
      
-{/* 
-      <main ref={container} className="relative h-[200vh] bg-[#B8BBC2]"> */}
-        {/* <HeroSection scrollYProgress={scrollYProgress}/>     
-        <SecondSection scrollYProgress={scrollYProgress} /> */}
 
-        <HeroSection />     
-        <SecondSection />
-      {/* </main> */}
+      <main ref={container} className="relative h-[200vh] bg-[#B8BBC2]">
+        <HeroSection scrollYProgress={scrollYProgress}/>     
+        <SecondSection scrollYProgress={scrollYProgress} />
+      </main>
     
 
 
