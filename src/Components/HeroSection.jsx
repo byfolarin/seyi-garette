@@ -67,10 +67,10 @@ export default function HeroSection() {
             
             <div className='flex items-center gap-4  mb-[16px]'>
 
-                <div className='w-[14px] h-[14px] bg-[#FC451A] overflow-hidden  rounded-full'></div>
+                <div className='w-[14px] h-[14px] bg-[#FC451A] overflow-hidden cursor-pointer  rounded-full'></div>
 
                 <div className='flex items-center w-[248px] h-[24px] relative'>
-                  <div className='w-[24px] h-full absolute left-0 z-10 bg-gradient-to-r from-[#B8BBC2] to-transparent'></div>
+                  {/* <div className='w-[24px] h-full absolute left-0 z-10 bg-gradient-to-r from-[#B8BBC2] to-transparent'></div> */}
                   <Marquee
                     speed={40}
                     direction='right'
