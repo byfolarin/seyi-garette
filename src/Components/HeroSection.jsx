@@ -68,9 +68,10 @@ export default function HeroSection() {
 
                 <div className='w-[14px] h-[14px] bg-[#FC451A]  rounded-full'></div>
 
-                <div className='flex items-center'>
-                    <div className='w-[24px] h-[24px] bg-gradient-to-r from-[#171717]'></div>
-                       <p className='font-DepartureMono text-[12px]'>I HAVE A DREAM - MARTIN LUTHER</p>
+                <div className='flex items-center border border-red-400 relative'>
+                    <div className='w-[24px] h-[24px] absolute bg-gradient-to-r from-[#171717]'></div>
+                       <p className='font-DepartureMono text-[12px]'>I HAVE A DREAM - MARTIN LUTHER</p> 
+  
                     <div className='w-[24px] h-[24px] bg-gradient-to-l from-[#090909]'></div>
                 </div>        
 
