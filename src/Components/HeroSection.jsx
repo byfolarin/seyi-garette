@@ -1,4 +1,5 @@
 import React from 'react';
+import { motion } from "framer-motion"
 import Typewriter from 'typewriter-effect';
 import GarretImg from '../../src/assets/images/Garsetti mic hero  1.png';
 import Marquee from "react-fast-marquee";
@@ -94,8 +95,36 @@ export default function HeroSection() {
             </h1>
             
             <div className='flex flex-col sm:flex-row gap-8 mb-4 lg:mb-10 font-helvetica-neue-5'>
-              <button className='py-4 px-8 lg:py-[17px] lg:px-[40px] bg-[#FF5931] rounded-full text-sm whitespace-nowrap'>Join the Waitlist</button>
-              <button className='py-1 sm:py-0'><a href="#" className='border-black border-b-[1.5px] text-sm py-1'>See what's in the box</a></button>
+              <button 
+              className='py-4 px-8 lg:py-[17px] lg:px-[40px] bg-[#FF5931] rounded-full text-sm whitespace-nowrap'>Join the Waitlist</button>
+
+
+              <motion.button 
+                    className='py-1 sm:py-0 relative group'
+                    whileHover="hover"
+                    initial="rest"
+                    animate="rest"
+                  >
+                    <a href="#" className='text-sm py-1 hover:text-[#3d3d3d] relative inline-block'>
+                      See what's in the box
+                      <motion.span
+                        className='absolute bottom-0 left-0 h-[1px] bg-black w-full'
+                        variants={{
+                          rest: { width: '100%', left: '0%' },
+                          hover: { 
+                            width: ['100%', '0%', '0%', '100%'],
+                            left: ['0%', '100%', '0%', '0%'],
+                            transition: { 
+                              duration: 0.4,
+                              times: [0, 0.4, 0.5, 1]
+                            }
+                          }
+                        }}
+                      />
+                    </a>
+                  </motion.button>
+
+
             </div>
           </div>
 
