@@ -8,17 +8,25 @@ import GarretMobile from '../../src/assets/images/Garsetti-mobile.png';
 import Frame50 from '../assets/images/Frame 50.png';
 
 
-export default function HeroSection({ scrollYProgress }) {
-
+export default function HeroSection() {
+  const { scrollYProgress } = useScroll();
   const scale = useTransform(scrollYProgress, [0, 1], [1, 1]);
+
+  const frame50Y = useTransform(scrollYProgress, [0, 0.5], ['100%', '0%']);
+
   
   return (
     <motion.div style={{scale}} className='sticky top-0'>
 
 
-      <div className='w-[394px] absolute z-[999] top-0 right-12'>
-         <img src={Frame50} alt="" />
-      </div>
+      <motion.div 
+        className='w-[394px] absolute z-[999] top-0 right-12'
+        style={{ y: frame50Y }}
+      >
+        <img src={Frame50} alt="" />
+      </motion.div>
+
+
 
     <div className="bg-[#B8BBC2] h-screen px-4 sm:px-6 lg:px-12 pt-6 lg:pt-[42px] relative overflow-hidden">
       <div className='flex justify-between items-start'>

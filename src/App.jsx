@@ -49,8 +49,11 @@ function App() {
      
 {/* 
       <main ref={container} className="relative h-[200vh] bg-[#B8BBC2]"> */}
-        <HeroSection scrollYProgress={scrollYProgress}/>     
-        <SecondSection scrollYProgress={scrollYProgress} />
+        {/* <HeroSection scrollYProgress={scrollYProgress}/>     
+        <SecondSection scrollYProgress={scrollYProgress} /> */}
+
+        <HeroSection />     
+        <SecondSection />
       {/* </main> */}
     
 
