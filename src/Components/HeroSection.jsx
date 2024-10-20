@@ -38,7 +38,7 @@ export default function HeroSection() {
           />
         </div>
 
-        <div>
+        <div className='cursor-pointer z-50'>
           <ul className='font-DepartureMono text-[12px] text-right'>
             <div className='flex items-center justify-end gap-1 tracking-tighter pb-[4px]'>
               <li id='stoked'>GARSETTI</li>
