@@ -1,8 +1,10 @@
 
+import { div } from 'framer-motion/client'
 import GarsettiSide from '../../src/assets/images/Side.png'
 
 export default function SecondSection() {
   return (
+    <div className=''>
     <div className="bg-[#CECECE] min-h-screen px-[16px] md:px-[32px] lg:px-[48px] pt-[42px] relative overflow-hidden flex flex-col">
       
       {/* <div className='absolute top-[42px] left-[48px] font-helvetica-neue-5'>
@@ -63,6 +65,7 @@ export default function SecondSection() {
 
 
 
+    </div>
     </div>
   )
 }
