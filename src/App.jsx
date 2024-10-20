@@ -16,10 +16,10 @@ import EightSection from "./Components/EightSection";
 function App() {
 
     const container = useRef()  
-    const {scrollYprogress} = useScroll({
+    const { scrollYProgress } = useScroll({
       target: container,
-      offset:["start start","end end"]
-    })
+      offset: ["start start", "end end"]
+    });
 
           useEffect(() => {
             const lenis = new Lenis({
@@ -47,9 +47,9 @@ function App() {
     <div>
      
 
-      <main ref={container} className="relative h-[200vh]">
-        <HeroSection scrollYprogress ={scrollYprogress}/>         
-        <SecondSection scrollYprogress ={scrollYprogress} />
+      <main ref={container} className="relative h-[200vh] bg-[#B8BBC2]">
+        <HeroSection scrollYProgress={scrollYProgress}/>         
+        <SecondSection scrollYProgress={scrollYProgress} />
       </main>
     
 
