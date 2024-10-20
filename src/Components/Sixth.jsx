@@ -6,7 +6,7 @@ import Box2 from '../../src/assets/images/USBC Cable 1.png'
 
 export default function Sixth() {
     return (
-      <div className="px-[16px] lg:px-[48px] py-[68px]">
+      <div className="px-[16px] lg:px-[48px] py-[68px] bg-white">
         <div className="flex flex-col lg:flex-col gap-6">
 
 

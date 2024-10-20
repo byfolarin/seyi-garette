@@ -8,15 +8,15 @@ import GarretMobile from '../../src/assets/images/Garsetti-mobile.png';
 import Frame50 from '../assets/images/Frame 50.png';
 
 
-export default function HeroSection({ scrollYProgress }) {
+export default function HeroSection() {
 
-  const scale = useTransform(scrollYProgress, [0, 1], [1, 1]);
+ 
   
   return (
-    <motion.div style={{scale}} className='sticky top-0'>
+    <motion.div  className='sticky top-0 z-[-999]'>
 
 
-      <div className='w-[394px] absolute z-[999] top-0 right-2'>
+      <div className='w-[394px] absolute z-[999] top-0 right-16'>
          <img src={Frame50} alt="" />
       </div>
 

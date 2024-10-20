@@ -48,10 +48,10 @@ function App() {
     <div>
      
 
-      <main ref={container} className="relative h-[200vh] bg-[#B8BBC2]">
-        <HeroSection scrollYProgress={scrollYProgress}/>     
-        <SecondSection scrollYProgress={scrollYProgress} />
-      </main>
+ 
+        <HeroSection />     
+        <SecondSection/>
+     
     
 
 
