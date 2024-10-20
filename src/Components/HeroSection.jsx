@@ -23,7 +23,7 @@ export default function HeroSection() {
     >
 
       <motion.div 
-        className='w-[394px] absolute z-[999] right-24'
+        className='w-[394px] absolute z-[999] right-32'
         style={{ y: frame50Y, rotate: frame50Rotate }}
       >
         <img src={Frame50} alt="" />
