@@ -69,17 +69,23 @@ export default function HeroSection() {
 
                 <div className='w-[14px] h-[14px] bg-[#FC451A] overflow-hidden  rounded-full'></div>
 
-                <div className='flex items-center w-[348px]  relative'>
-                    <div className='w-[24px] h-[24px] absolute z-40 bg-gradient-to-r from-[#B8BBC2]'></div>
-                    <Marquee>
-                      <p className='font-DepartureMono text-[12px]'>I HAVE A DREAM - MARTIN LUTHER</p> 
-                      <span className='w-8'></span>
-                      {/* <p className='font-DepartureMono text-[12px]'>MAKE AMERICA GREAT AGAIN- MAGA</p>  */}
-                    </Marquee>
-                      
-                    <div className='w-[24px] h-[24px] bg-gradient-to-l from-[#B8BBC2]'></div>
-                </div>        
-
+                <div className='flex items-center w-[248px] h-[24px] relative'>
+                  <div className='w-[24px] h-full absolute left-0 z-10 bg-gradient-to-r from-[#B8BBC2] to-transparent'></div>
+                  <Marquee
+                    speed={40}
+                    direction='right'
+                    gradient={false}
+                  >
+                    <p className='font-DepartureMono text-[12px] whitespace-nowrap'>
+                      I HAVE A DREAM - MARTIN LUTHER
+                    </p> 
+                    <span className='w-8'></span>
+                    {/* <p className='font-DepartureMono text-[12px] whitespace-nowrap'>
+                      MAKE AMERICA GREAT AGAIN - MAGA
+                    </p> */}
+                  </Marquee>
+                  <div className='w-[24px] h-full absolute right-0 z-10 bg-gradient-to-l from-[#B8BBC2] to-transparent'></div>
+                </div>
             </div>
 
 
