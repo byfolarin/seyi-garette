@@ -13,13 +13,8 @@ export default function HeroSection() {
   const frame50Rotate = useTransform(scrollY, [0, 1000], [20, 0]);
 
   return (
-    <div className='sticky top-0 h-screen z-[-999] overflow-hidden'>
-      <motion.div 
-        className='w-[394px] absolute z-[999] right-32'
-        style={{ y: frame50Y, rotate: frame50Rotate }}
-      >
-        <img src={Frame50} alt="" />
-      </motion.div>
+    <div className='sticky top-0 h-screen  overflow-hidden'>
+
 
 
       <motion.div 
@@ -28,6 +23,16 @@ export default function HeroSection() {
       >
         <img src={Frame50} alt="" />
       </motion.div>
+
+
+{/* 
+
+      <motion.div 
+        className='w-[394px] absolute z-[999] right-32'
+        style={{ y: frame50Y, rotate: frame50Rotate }}
+      >
+        <img src={Frame50} alt="" />
+      </motion.div> */}
 
       <div className="bg-[#B8BBC2] h-screen px-4 sm:px-6 lg:px-12 pt-6 lg:pt-[42px] relative overflow-hidden">
         <div className='flex justify-between items-start'>
@@ -69,7 +74,7 @@ export default function HeroSection() {
             />
           </div>
 
-          <div className="relative z-10 mb-8 lg:mb-32 w-full lg:w-[608px] mt-6 lg:mt-16">
+          <div className="relative z-[9999] mb-8 lg:mb-32 w-full lg:w-[608px] mt-6 lg:mt-16">
             <div className='flex flex-col'>       
               <div className='flex items-center gap-4  mb-[16px]'>
                 <div className='w-[14px] h-[14px] bg-[#FC451A] overflow-hidden cursor-pointer  rounded-full'></div>
@@ -92,8 +97,12 @@ export default function HeroSection() {
               </h1>
               
               <div className='flex flex-col sm:flex-row gap-8 mb-4 lg:mb-10 font-helvetica-neue-5'>
+
                 <button 
-                className='py-4 px-8 lg:py-[17px] lg:px-[40px] bg-[#FF5931] rounded-full text-sm whitespace-nowrap'>Join the Waitlist</button>
+                onClick={()=> console.log('clicked button')}
+                    className='py-4 cursor-pointer px-8 lg:py-[17px] lg:px-[40px] bg-[#FF5931] 
+                    rounded-full text-sm whitespace-nowrap'>Join the Waitlist
+                </button>
 
                 <motion.button 
                   className='py-1 sm:py-0 relative group'
@@ -126,6 +135,7 @@ export default function HeroSection() {
               GARSETTI® brings you its flagship multi-dimensional microphone,
               designed to capture every nuance of your voice with precision.
             </p>
+
           </div>
         </div>
         

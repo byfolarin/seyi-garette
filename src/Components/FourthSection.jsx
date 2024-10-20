@@ -5,9 +5,7 @@ import StudioMic from '../../src/assets/images/micstudio.png'
 
 export default function FourthSection() {
     return (
-      <div className="px-[16px] lg:px-[48px] py-[92px] bg-white">
-
-
+      <div className="relative z-[21] px-[16px] lg:px-[48px] py-[92px] bg-white">
         <div className="flex flex-col gap-6 lg:flex-row md:flex-row justify-between">
 
                 <h2 className="w-full md:w-[50%] lg:w-[50%] font-helvetica-neue-5 md:text-2xl text-xl lg:text-2xl leading-tight">

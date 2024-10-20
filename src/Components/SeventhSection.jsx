@@ -2,7 +2,7 @@ import mockup from '../assets/images/iPhone 14 Pro.png'
 
 export default function SeventhSection() {
   return (
-    <div className='bg-[#FF5931]  font-helvetica-neue-5 px-[16px] lg:px-[49px]'>
+    <div className='bg-[#FF5931] relative z-[25]  font-helvetica-neue-5 px-[16px] lg:px-[49px]'>
 
 
     <div className='pb-[60px]'>
