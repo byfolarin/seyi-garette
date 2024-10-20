@@ -16,7 +16,7 @@ export default function HeroSection({ scrollYProgress }) {
     <motion.div style={{scale}} className='sticky top-0'>
 
 
-      <div className='w-[394px] absolute z-[999]'>
+      <div className='w-[394px] absolute z-[999] top-0 right-12'>
          <img src={Frame50} alt="" />
       </div>
 
