@@ -1,3 +1,4 @@
+
 import GarsettiSide from '../../src/assets/images/Side.png'
 
 export default function ThirdSection() {

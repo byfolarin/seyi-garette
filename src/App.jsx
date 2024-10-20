@@ -1,5 +1,4 @@
-import React from 'react';
-import { useEffect } from "react";
+import React, { useEffect } from 'react';
 import Lenis from "@studio-freight/lenis";
 import HeroSection from "./Components/HeroSection";
 import SecondSection from "./Components/SecondSection";
@@ -34,8 +33,10 @@ function App() {
   return (
     <div>
       <HeroSection />
-      <div style={{ marginTop: '200vh' }}> {/* This pushes content below the sticky hero */}
-        <SecondSection />
+      <div style={{ marginTop: '200vh' }}> {/* Reduced margin to allow SecondSection to start earlier */}   </div>
+     
+          <SecondSection />
+     
         <ThirdSection />
         <FourthSection />
         <Fifth />
@@ -43,7 +44,7 @@ function App() {
         <SeventhSection />
         <EightSection />
       </div>
-    </div>
+  
   );
 }
 

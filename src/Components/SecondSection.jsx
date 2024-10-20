@@ -1,10 +1,8 @@
-import React from 'react';
 import GarsettiFront from '../../src/assets/images/iFront 1.png'
-import GarsettiSide from '../../src/assets/images/Side.png'
 
 export default function SecondSection() {
   return (
-    <div className="bg-[#CECECE] min-h-screen sticky top-0 z-[-555]">
+    <div className="bg-[#CECECE] min-h-screen sticky top-0 z-[-355]">
       <div className="h-screen px-4 md:px-8 lg:px-12 pt-10 relative overflow-hidden flex flex-col">
         <div className='flex-grow flex flex-col md:flex-row lg:flex-row items-center justify-center md:relative lg:relative'>
           {/* Background text */}
