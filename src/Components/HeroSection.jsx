@@ -5,10 +5,13 @@ import GarretImg from '../../src/assets/images/Garsetti mic hero  1.png';
 import Marquee from "react-fast-marquee";
 import Registered from '../assets/images/registered.png';
 import GarretMobile from '../../src/assets/images/Garsetti-mobile.png';
+import { div } from 'framer-motion/client';
 
 export default function HeroSection() {
   return (
-    <div className="bg-[#B8BBC2] min-h-screen px-4 sm:px-6 lg:px-12 pt-6 lg:pt-[42px] relative overflow-hidden">
+
+    <div className='sticky top-0'>
+    <div className="bg-[#B8BBC2] h-screen px-4 sm:px-6 lg:px-12 pt-6 lg:pt-[42px] relative overflow-hidden">
       <div className='flex justify-between items-start'>
         <div className="relative font-DepartureMono text-[12px] z-10 w-full sm:w-[408px] mb-6 lg:mb-0 h-[100px]">
           <Typewriter
@@ -142,6 +145,7 @@ export default function HeroSection() {
           className="object-cover w-full h-full"
         />
       </div>
+    </div>
     </div>
   )
 }

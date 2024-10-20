@@ -49,7 +49,6 @@ export default function SecondSection() {
 
         <div className='w-full md:w-[300px] lg:w-[346px] flex flex-col gap-8 pt-[72px] md:pt-0 lg:pt-0'>
           <p className='text-[#555963] text-sm'>Experience not just an engineering marvel but an artistic one as well. The GARSETTI One seeks to further revolutionise audio capturing. </p>
-
           
           
           <div className='flex flex-col md:flex-row lg:flex-row gap-4 mb-10 font-helvetica-neue-5'>

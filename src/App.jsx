@@ -35,16 +35,20 @@ function App() {
   return (
     <div>
      
-        <HeroSection />
 
-       
-      <SecondSection />
-      <ThirdSection />
+      <main className="relative h-[200vh]">
+        <HeroSection />         
+        <SecondSection />
+      </main>
+    
+
+
+      {/* <ThirdSection />
       <FourthSection />
       <Fifth />
       <Sixth />
       <SeventhSection />
-      <EightSection />
+      <EightSection /> */}
     </div>
   );
 }
