@@ -10,6 +10,7 @@ export default function HeroSection() {
   const { scrollY } = useScroll();
   
   const frame50Y = useTransform(scrollY, [0, 1000], ['100%', '0%']);
+  const frame50Rotate = useTransform(scrollY, [0, 1000], [20, 0]);
 
   return (
     <motion.div 
@@ -20,9 +21,10 @@ export default function HeroSection() {
         height: '100vh',
       }}
     >
+
       <motion.div 
-        className='w-[394px] absolute z-[999] right-16'
-        style={{ y: frame50Y }}
+        className='w-[394px] absolute z-[999] right-24'
+        style={{ y: frame50Y, rotate: frame50Rotate }}
       >
         <img src={Frame50} alt="" />
       </motion.div>
