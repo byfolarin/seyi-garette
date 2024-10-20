@@ -15,12 +15,25 @@ export default function ThirdSection() {
           </div>
           
           {/* Foreground image */}
-          <div className="md:relative lg:relative md:z-10 lg:z-10 max-w-80 md:max-w-96 lg:max-w-[400px]">
-            <img 
-              src={GarsettiSide} 
-              alt="Garrett with microphone" 
-              className="object-cover w-full h-auto"
-            />
+          <div>   
+{/* 
+              <div className="md:relative lg:relative md:z-10 lg:z-10 max-w-80 md:max-w-96 lg:max-w-[400px]">
+                <img 
+                  src={GarsettiSide} 
+                  alt="Garrett with microphone" 
+                  className="object-cover w-full h-auto"
+                />
+              </div> */}
+
+
+              <div className="md:relative lg:relative md:z-10 lg:z-10 max-w-80 md:max-w-96 lg:max-w-[400px]">
+                <img 
+                  src={GarsettiSide} 
+                  alt="Garrett with microphone" 
+                  className="object-cover w-full h-auto"
+                />
+              </div>
+
           </div>
 
           <div className='md:absolute lg:absolute md:inset-0 lg:inset-0 flex justify-center items-center pointer-events-none'>

@@ -1,4 +1,6 @@
 import GarsettiFront from '../../src/assets/images/iFront 1.png'
+import GarsettiSide from '../../src/assets/images/Side.png'
+
 
 export default function SecondSection() {
   return (
@@ -14,13 +16,29 @@ export default function SecondSection() {
           </div>
           
           {/* Foreground image */}
-          <div className="md:relative lg:relative md:z-10 lg:z-10 max-w-80 md:max-w-96 lg:max-w-[300px]">
-            <img 
-              src={GarsettiFront} 
-              alt="Garrett with microphone" 
-              className="object-cover w-full h-auto"
-            />
-          </div>
+          <div className='flex'>
+
+            
+              <div className="md:relative lg:relative md:z-10 lg:z-10 max-w-80 md:max-w-96 lg:max-w-[300px]">
+                <img 
+                  src={GarsettiFront} 
+                  alt="Garrett with microphone" 
+                  className="object-cover w-full h-auto"
+                />
+              </div>
+
+              <div className="md:relative lg:relative md:z-10 lg:z-10 max-w-80 md:max-w-96 lg:max-w-[500px]">
+                    <img 
+                      src={GarsettiSide} 
+                      alt="Garrett with microphone" 
+                      className="object-cover w-full h-auto"
+                    />
+                  </div>
+
+              </div>
+
+              
+
 
           <div className='md:absolute lg:absolute md:inset-0 lg:inset-0 flex justify-center items-center pointer-events-none'>
             <div className='flex flex-col md:flex-row lg:flex-row justify-center items-center tracking-tighter font-DepartureMono text-[72px] md:text-[140px] lg:text-[180px] ml-4 md:ml-0 lg:ml-0 text-white opacity-50'>

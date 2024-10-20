@@ -37,12 +37,12 @@ function App() {
      
           <SecondSection />
      
-        <ThirdSection />
+        {/* <ThirdSection />
         <FourthSection />
         <Fifth />
         <Sixth />
         <SeventhSection />
-        <EightSection />
+        <EightSection /> */}
       </div>
   
   );
