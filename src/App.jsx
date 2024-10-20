@@ -1,9 +1,8 @@
-import { useEffect, useRef } from "react";
-import { useScroll } from "framer-motion";
+import React from 'react';
+import { useEffect } from "react";
 import Lenis from "@studio-freight/lenis";
 import HeroSection from "./Components/HeroSection";
 import SecondSection from "./Components/SecondSection";
-
 import ThirdSection from "./Components/ThirdSection";
 import FourthSection from "./Components/FourthSection";
 import Fifth from "./Components/FifthSection";
@@ -11,57 +10,39 @@ import Sixth from "./Components/Sixth";
 import SeventhSection from "./Components/SeventhSection";
 import EightSection from "./Components/EightSection";
 
-
-
-
 function App() {
-
-    const container = useRef()  
-    const { scrollYProgress } = useScroll({
-      target: container,
-      offset: ["start start", "end end"]
+  useEffect(() => {
+    const lenis = new Lenis({
+      duration: 0.9,
+      easing: (t) => t,
+      smooth: true,
+      smoothTouch: false,
     });
 
-          useEffect(() => {
-            const lenis = new Lenis({
-              duration: 0.9,
-              easing: (t) => t,
-              smooth: true,
-              smoothTouch: false,
-            });
+    function raf(time) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
 
-            function raf(time) {
-              lenis.raf(time);
-              requestAnimationFrame(raf);
-            }
+    requestAnimationFrame(raf);
 
-            requestAnimationFrame(raf);
-
-            return () => {
-              lenis.destroy();
-            };
-          }, []);
-
-
+    return () => {
+      lenis.destroy();
+    };
+  }, []);
 
   return (
     <div>
-     
-
-     <div style={{ height: '300vh' }}> {/* Adjust height as needed */}
-        <HeroSection />
-      </div>   
-        <SecondSection/>
-     
-    
-
-
-      <ThirdSection />
-      <FourthSection />
-      <Fifth />
-      <Sixth />
-      <SeventhSection />
-      <EightSection />
+      <HeroSection />
+      <div style={{ marginTop: '200vh' }}> {/* This pushes content below the sticky hero */}
+        <SecondSection />
+        <ThirdSection />
+        <FourthSection />
+        <Fifth />
+        <Sixth />
+        <SeventhSection />
+        <EightSection />
+      </div>
     </div>
   );
 }

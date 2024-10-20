@@ -13,14 +13,14 @@ export default function HeroSection() {
   const frame50Rotate = useTransform(scrollY, [0, 1000], [20, 0]);
 
   return (
-    <motion.div 
-      className='sticky top-0 h-screen z-10 overflow-hidden'
-      style={{
-        position: 'sticky',
-        top: 0,
-        height: '100vh',
-      }}
-    >
+    <div className='sticky top-0 h-screen z-[-999] overflow-hidden'>
+      <motion.div 
+        className='w-[394px] absolute z-[999] right-32'
+        style={{ y: frame50Y, rotate: frame50Rotate }}
+      >
+        <img src={Frame50} alt="" />
+      </motion.div>
+
 
       <motion.div 
         className='w-[394px] absolute z-[999] right-32'
@@ -137,6 +137,6 @@ export default function HeroSection() {
           />
         </div>
       </div>
-    </motion.div>
+    </div>
   );
 }
