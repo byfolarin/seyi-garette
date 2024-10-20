@@ -48,8 +48,9 @@ function App() {
     <div>
      
 
- 
-        <HeroSection />     
+     <div style={{ height: '300vh' }}> {/* Adjust height as needed */}
+        <HeroSection />
+      </div>   
         <SecondSection/>
      
     
