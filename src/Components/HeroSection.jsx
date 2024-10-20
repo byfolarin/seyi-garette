@@ -1,6 +1,7 @@
 import React from 'react';
 import Typewriter from 'typewriter-effect';
 import GarretImg from '../../src/assets/images/Garsetti mic hero  1.png';
+import Marquee from "react-fast-marquee";
 import Registered from '../assets/images/registered.png';
 import GarretMobile from '../../src/assets/images/Garsetti-mobile.png';
 
@@ -66,13 +67,17 @@ export default function HeroSection() {
             
             <div className='flex items-center gap-4  mb-[16px]'>
 
-                <div className='w-[14px] h-[14px] bg-[#FC451A]  rounded-full'></div>
+                <div className='w-[14px] h-[14px] bg-[#FC451A] overflow-hidden  rounded-full'></div>
 
-                <div className='flex items-center border border-red-400 relative'>
-                    <div className='w-[24px] h-[24px] absolute bg-gradient-to-r from-[#171717]'></div>
-                       <p className='font-DepartureMono text-[12px]'>I HAVE A DREAM - MARTIN LUTHER</p> 
-  
-                    <div className='w-[24px] h-[24px] bg-gradient-to-l from-[#090909]'></div>
+                <div className='flex items-center w-[348px]  relative'>
+                    <div className='w-[24px] h-[24px] absolute bg-gradient-to-r from-[#B8BBC2]'></div>
+                    <Marquee>
+                      <p className='font-DepartureMono text-[12px]'>I HAVE A DREAM - MARTIN LUTHER</p> 
+                      <span className='w-8'></span>
+                      <p className='font-DepartureMono text-[12px]'>MAKE AMERICA GREAT AGAIN- MAGA</p> 
+                    </Marquee>
+                      
+                    <div className='w-[24px] h-[24px] bg-gradient-to-l from-[#B8BBC2]'></div>
                 </div>        
 
             </div>
