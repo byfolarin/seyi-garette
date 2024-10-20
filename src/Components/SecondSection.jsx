@@ -1,7 +1,7 @@
 import GarsettiFront from '../../src/assets/images/iFront 1.png'
 import GarsettiSide from '../../src/assets/images/Side.png'
 
-export default function SecondSection() {
+export default function SecondSection({scrollYprogress}) {
   return (
     <div className="bg-[#CECECE] min-h-screen px-[16px] md:px-[32px] lg:px-[48px] pt-[42px] relative overflow-hidden flex flex-col">
       

@@ -1,5 +1,5 @@
 import React from 'react';
-import { motion } from "framer-motion"
+import { motion, useTransform } from "framer-motion"
 import Typewriter from 'typewriter-effect';
 import GarretImg from '../../src/assets/images/Garsetti mic hero  1.png';
 import Marquee from "react-fast-marquee";
@@ -7,10 +7,16 @@ import Registered from '../assets/images/registered.png';
 import GarretMobile from '../../src/assets/images/Garsetti-mobile.png';
 import { div } from 'framer-motion/client';
 
-export default function HeroSection() {
-  return (
+export default function HeroSection({scrollYprogress}) {
 
-    <div className='sticky top-0'>
+
+  const scale = useTransform(scrollYprogress, [0,1],[1,0.8])
+
+
+
+
+  return (
+    <motion.div style={scale} className='sticky top-0'>
     <div className="bg-[#B8BBC2] h-screen px-4 sm:px-6 lg:px-12 pt-6 lg:pt-[42px] relative overflow-hidden">
       <div className='flex justify-between items-start'>
         <div className="relative font-DepartureMono text-[12px] z-10 w-full sm:w-[408px] mb-6 lg:mb-0 h-[100px]">
@@ -146,6 +152,6 @@ export default function HeroSection() {
         />
       </div>
     </div>
-    </div>
+    </motion.div>
   )
 }

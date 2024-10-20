@@ -1,4 +1,5 @@
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
+import { useScroll } from "framer-motion";
 import Lenis from "@studio-freight/lenis";
 import HeroSection from "./Components/HeroSection";
 import SecondSection from "./Components/SecondSection";
@@ -11,34 +12,44 @@ import EightSection from "./Components/EightSection";
 
 
 
+
 function App() {
-  useEffect(() => {
-    const lenis = new Lenis({
-      duration: 0.9,
-      easing: (t) => t,
-      smooth: true,
-      smoothTouch: false,
-    });
 
-    function raf(time) {
-      lenis.raf(time);
-      requestAnimationFrame(raf);
-    }
+    const container = useRef()  
+    const {scrollYprogress} = useScroll({
+      target: container,
+      offset:["start start","end end"]
+    })
 
-    requestAnimationFrame(raf);
+          useEffect(() => {
+            const lenis = new Lenis({
+              duration: 0.9,
+              easing: (t) => t,
+              smooth: true,
+              smoothTouch: false,
+            });
 
-    return () => {
-      lenis.destroy();
-    };
-  }, []);
+            function raf(time) {
+              lenis.raf(time);
+              requestAnimationFrame(raf);
+            }
+
+            requestAnimationFrame(raf);
+
+            return () => {
+              lenis.destroy();
+            };
+          }, []);
+
+
 
   return (
     <div>
      
 
-      <main className="relative h-[200vh]">
-        <HeroSection />         
-        <SecondSection />
+      <main ref={container} className="relative h-[200vh]">
+        <HeroSection scrollYprogress ={scrollYprogress}/>         
+        <SecondSection scrollYprogress ={scrollYprogress} />
       </main>
     
 
