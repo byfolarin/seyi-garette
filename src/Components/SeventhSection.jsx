@@ -21,7 +21,7 @@ export default function SeventhSection() {
                 </div>
 
                 <div className='pt-[32px]'>
-                    <img src={mockup} alt="" className='w-[330px] h-' />
+                    <img src={mockup} alt="" className='w-[330px]' />
                 </div>
 
             </div>
