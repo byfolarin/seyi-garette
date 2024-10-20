@@ -10,11 +10,10 @@ export default function EightSection() {
 
       <div className='absolute top-0 left-0 right-0 bg-[#FF5931] rounded-b-[24px] lg:rounded-b-[80px] z-20 w-full font-helvetica-neue-5 px-4 lg:px-12 xl:px-[49px]'>
         
-        <div className="flex flex-col gap-6 lg:items-center py-12 lg:py-[110px] w-full mx-auto justify-center">
+        <div className="flex gap-6 lg:items-center py-12 lg:py-[110px] w-full mx-auto justify-between">
 
-          <h3 className="w-full lg:w-[70%] text-lg lg:text-2xl text-center">
-            Choose more than just a tool – choose to create something timeless. <br className="hidden lg:block" /> Choose GARSETTI One
-          </h3>
+          <h3 className="w-full font-medium lg:w-[60%] text-lg lg:text-5xl font-helvetica-neue-5 tracking-tighter leading-[98%] text-left">
+          You haven't just seen an ordinary mic. You've just witnessed the GARSETTI ® One          </h3>
 
           <div className="flex flex-col sm:flex-row lg:items-center gap-4 lg:gap-8">
             <button className='w-full sm:w-auto py-3 lg:py-[17px] px-6 lg:px-[40px] text-white bg-[#000000] rounded-full text-sm'>

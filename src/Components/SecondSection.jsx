@@ -1,4 +1,5 @@
 import GarsettiFront from '../../src/assets/images/iFront 1.png'
+import GarsettiSide from '../../src/assets/images/Side.png'
 
 export default function SecondSection() {
   return (
