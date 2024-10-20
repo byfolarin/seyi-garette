@@ -3,6 +3,7 @@ import { useScroll } from "framer-motion";
 import Lenis from "@studio-freight/lenis";
 import HeroSection from "./Components/HeroSection";
 import SecondSection from "./Components/SecondSection";
+import Frame50 from "./Components/Frame50";
 import ThirdSection from "./Components/ThirdSection";
 import FourthSection from "./Components/FourthSection";
 import Fifth from "./Components/FifthSection";
@@ -48,7 +49,8 @@ function App() {
      
 
       <main ref={container} className="relative h-[200vh] bg-[#B8BBC2]">
-        <HeroSection scrollYProgress={scrollYProgress}/>         
+        <HeroSection scrollYProgress={scrollYProgress}/>   
+        <Frame50 />      
         <SecondSection scrollYProgress={scrollYProgress} />
       </main>
     

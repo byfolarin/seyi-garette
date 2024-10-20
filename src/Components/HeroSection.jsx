@@ -9,7 +9,7 @@ import GarretMobile from '../../src/assets/images/Garsetti-mobile.png';
 
 export default function HeroSection({ scrollYProgress }) {
 
-  const scale = useTransform(scrollYProgress, [0, 1], [1, 0.94]);
+  const scale = useTransform(scrollYProgress, [0, 1], [1, 1]);
   
   return (
     <motion.div style={{scale}} className='sticky top-0'>
