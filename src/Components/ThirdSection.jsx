@@ -1,4 +1,4 @@
-import GarsettiSide from '../../src/assets/images/Side.png'
+import GarsettiSide from '../../src/assets/images/Side-min.png'
 
 export default function SecondSection() {
   return (
