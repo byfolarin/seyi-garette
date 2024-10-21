@@ -1,5 +1,5 @@
-import Box1 from '../../src/assets/images/In the box 1.png'
-import Box2 from '../../src/assets/images/USBC Cable 1.png'
+import Box1 from '../../src/assets/images/In the box 1.jpg'
+import Box2 from '../../src/assets/images/USBC Cable 1.jpg'
 
 
 
