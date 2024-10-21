@@ -42,7 +42,11 @@ function App() {
         <Fifth />
         <Sixth />
         <SeventhSection />
-        <EightSection />
+
+        <div className='relative'>
+            <EightSection />
+        </div>
+       
       </div>
   
   );
