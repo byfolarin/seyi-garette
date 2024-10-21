@@ -1,5 +1,5 @@
-import WomanMic from '../../src/assets/images/womanmic.png'
-import StudioMic from '../../src/assets/images/micstudio.png'
+import WomanMic from '../../src/assets/images/womanmic.jpg'
+import StudioMic from '../../src/assets/images/micstudio.jpg'
 
 
 
@@ -19,7 +19,8 @@ export default function FourthSection() {
                       <button  className='py-[17px] leading-none text-white px-[40px] bg-[#000000] text-nowrap rounded-full text-sm '>Join the Waitlist</button>
                       <button><a href="#" className=' border-black border-b-[1.5px] text-sm py-[8px]'>See what's in the box</a></button>
                   </div>
-              </div>
+              </div>git add .
+              git
 
         </div>
 
