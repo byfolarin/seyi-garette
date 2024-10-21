@@ -39,9 +39,20 @@ export default function EightSection() {
   
 
       <div className='absolute bottom-0 z-50 left-0 right-0 overflow-hidden'>
-        <div className='flex justify-center items-center tracking-tighter font-DepartureMono text-[71px] sm:text-[16vw] lg:text-[220px] text-[#FF5931]'>
-          <h1 className='h1-stroke'>GARSETTI1</h1>
+
+        <div className='flex flex-col justify-center items-center tracking-tighter font-DepartureMono text-[71px] sm:text-[16vw] lg:text-[220px] text-[#FF5931]'>
+
+              <div className='flex justify-between font-helvetica-neue-5 text-xl tracking-tight text-[#717682]'>
+                  <p >product design | visual design | website design</p>
+                  <p>©2024 SEYIONIYITAN</p>
+              </div>
+              
+            
+              <h1 className='h1-stroke'>GARSETTI1</h1>
+
         </div>
+
+
       </div>
     </div>
   )
