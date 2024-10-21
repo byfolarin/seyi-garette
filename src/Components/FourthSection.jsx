@@ -1,5 +1,8 @@
 import WomanMic from '../../src/assets/images/womanmic.jpg'
 import StudioMic from '../../src/assets/images/micstudio.jpg'
+import { motion } from 'framer-motion'
+
+
 
 
 
@@ -19,9 +22,39 @@ export default function FourthSection() {
               <div className='flex flex-col lg:flex-row md:flex-row lg:justify-end align-middle lg:items-start gap-8 mb-10 font-helvetica-neue-5 w-full lg:w-[45%]'>
 
                   <div className="flex flex-col lg:flex-row   md:flex-row   md:items-center lg:items-center gap-8">
-                      <button  className='py-[17px] leading-none text-white px-[40px] bg-[#000000] text-nowrap rounded-full text-sm '>Join the Waitlist</button>
-                      <button><a href="#" className=' border-black border-b-[1.5px] text-sm py-[8px]'>See what's in the box</a></button>
+                  <button 
+                onClick={()=> console.log('clicked button')}
+                    className='py-4 cursor-pointer px-8 lg:py-[17px] lg:px-[40px] text-white bg-[#000000] 
+                    rounded-full text-sm whitespace-nowrap'>Join the Waitlist
+                </button>
+
+                <motion.button 
+                  className='py-1 sm:py-0 relative group'
+                  whileHover="hover"
+                  initial="rest"
+                  animate="rest"
+                >
+                  <a href="#" className='text-sm py-1 hover:text-[#3d3d3d] relative inline-block'>
+                    See what's in the box
+                    <motion.span
+                      className='absolute bottom-0 left-0 h-[1px] bg-black w-full'
+                      variants={{
+                        rest: { width: '100%', left: '0%' },
+                        hover: { 
+                          width: ['100%', '0%', '0%', '100%'],
+                          left: ['0%', '100%', '0%', '0%'],
+                          transition: { 
+                            duration: 0.4,
+                            times: [0, 0.4, 0.5, 1]
+                          }
+                        }
+                      }}
+                    />
+                  </a>
+                </motion.button>
                   </div>
+
+
               </div>
               
         </div>

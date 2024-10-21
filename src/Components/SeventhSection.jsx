@@ -1,4 +1,6 @@
+import { motion } from 'framer-motion'
 import mockup from '../assets/images/iPhone 14 Pro.png'
+
 
 export default function SeventhSection() {
   return (
@@ -15,8 +17,36 @@ export default function SeventhSection() {
                     </h2>
 
                     <div className="flex flex-col lg:flex-row lg:items-center gap-8 ">
-                            <button  className='py-[17px] leading-none  px-[40px] text-black bg-[#ffffff] rounded-full text-sm '>Join the Waitlist</button>
-                            <button><a href="#" className=' border-white text-white border-b-[1.5px] text-sm py-[8px]'>See what's in the box</a></button>
+                    <button 
+                onClick={()=> console.log('clicked button')}
+                    className='py-4 cursor-pointer px-8 lg:py-[17px] lg:px-[40px] text-black bg-[#ffffff] 
+                    rounded-full text-sm whitespace-nowrap'>Join the Waitlist
+                </button>
+
+                <motion.button 
+                  className='py-1 sm:py-0 relative group'
+                  whileHover="hover"
+                  initial="rest"
+                  animate="rest"
+                >
+                  <a href="#" className='text-sm py-1 hover:text-[#b6b6b6] text-white relative inline-block'>
+                  Contact the designer
+                    <motion.span
+                      className='absolute bottom-0 left-0 h-[1px] bg-white w-full'
+                      variants={{
+                        rest: { width: '100%', left: '0%' },
+                        hover: { 
+                          width: ['100%', '0%', '0%', '100%'],
+                          left: ['0%', '100%', '0%', '0%'],
+                          transition: { 
+                            duration: 0.4,
+                            times: [0, 0.4, 0.5, 1]
+                          }
+                        }
+                      }}
+                    />
+                  </a>
+                </motion.button>
                     </div>
                 </div>
 

@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion'
 import FooterImg from '../assets/images/Garsetti front  1.jpg'
 
 export default function EightSection() {
@@ -16,14 +17,36 @@ export default function EightSection() {
           You haven't just seen an ordinary mic. You've just witnessed the GARSETTI ® One          </h3>
 
           <div className="flex flex-col sm:flex-row lg:items-center gap-4 lg:gap-8 pt-[24px]">
-            <button className='w-full sm:w-auto py-3 lg:py-[17px] px-6 lg:px-[40px] text-white bg-[#000000] rounded-full text-sm'>
-              Join the Waitlist
-            </button>
-            <button className='w-full sm:w-auto lg:text-center sm:text-left'>
-              <a href="#" className='border-black text-black border-b-[1.5px] text-sm py-2 lg:py-[8px]'>
-                Contact the Designer
-              </a>
-            </button>
+          <button 
+                onClick={()=> console.log('clicked button')}
+                    className='py-4 cursor-pointer px-8 lg:py-[17px] lg:px-[40px] text-white bg-[#000000] 
+                    rounded-full text-sm whitespace-nowrap'>Join the Waitlist
+                </button>
+
+                <motion.button 
+                  className='py-1 sm:py-0 relative group'
+                  whileHover="hover"
+                  initial="rest"
+                  animate="rest"
+                >
+                  <a href="#" className='text-sm py-1 hover:text-[#3d3d3d] relative inline-block'>
+                  Contact the designer
+                    <motion.span
+                      className='absolute bottom-0 left-0 h-[1px] bg-black w-full'
+                      variants={{
+                        rest: { width: '100%', left: '0%' },
+                        hover: { 
+                          width: ['100%', '0%', '0%', '100%'],
+                          left: ['0%', '100%', '0%', '0%'],
+                          transition: { 
+                            duration: 0.4,
+                            times: [0, 0.4, 0.5, 1]
+                          }
+                        }
+                      }}
+                    />
+                  </a>
+                </motion.button>
           </div>
           
         </div>
