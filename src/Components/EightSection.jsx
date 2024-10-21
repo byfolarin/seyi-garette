@@ -55,7 +55,7 @@ export default function EightSection() {
       </div>
 
       {/* Footer text (stays at bottom) */}
-      <div className='fixed bottom-0 z-30 left-0 right-0 overflow-hidden'>
+      <div className='absolute bottom-0 z-30 left-0 right-0 overflow-hidden'>
         <div className='lg:px-[70px]'>
           <div className='flex justify-between font-helvetica-neue-5 text-xm tracking-tight text-[#717682]'>
             <div className='flex gap-4'>

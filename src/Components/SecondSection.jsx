@@ -1,9 +1,9 @@
-import GarsettiFront from '../../src/assets/images/iFront 1.png'
-import GarsettiSide from '../../src/assets/images/Side.png'
+import GarsettiFront from '../../src/assets/images/iFront 1-min.png'
+
 
 export default function SecondSection() {
   return (
-    <div className="bg-[#CECECE] min-h-screen sticky top-0 z-[10]">
+    <div className="bg-[#CECECE] h-screen sticky top-0 z-[10]">
       <div className="h-screen px-4 md:px-8 lg:px-12 pt-10 relative overflow-hidden flex flex-col">
         <div className='flex-grow flex flex-col md:flex-row lg:flex-row items-center justify-center md:relative lg:relative'>
           {/* Background text */}
@@ -22,8 +22,6 @@ export default function SecondSection() {
               className="object-cover w-full h-auto"
             />
           </div>
-
-          
 
           <div className='md:absolute lg:absolute md:inset-0 lg:inset-0 flex justify-center items-center pointer-events-none'>
             <div className='flex flex-col md:flex-row lg:flex-row justify-center items-center tracking-tighter font-DepartureMono text-[72px] md:text-[140px] lg:text-[180px] ml-4 md:ml-0 lg:ml-0 text-white opacity-50'>
