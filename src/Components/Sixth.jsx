@@ -20,7 +20,7 @@ export default function Sixth() {
 
                 <div className='flex flex-col justify-between'>
 
-                     <h2 className="font-helvetica-neue-5 text-2xl leading-tight ">
+                     <h2 className="font-helvetica-neue-5 text-2xl leading-tight  ">
                         Complete your GARSETTI One microphone setup with our range of high-performance accessories. Each accessory is designed to enhance your sound and make your recording process seamless.
                     </h2>
 
