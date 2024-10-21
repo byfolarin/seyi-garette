@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion, useTransform, useScroll } from "framer-motion";
 import Typewriter from 'typewriter-effect';
-import GarretImg from '../../src/assets/images/Garsetti mic hero  1.png';
+import GarretImg from '../../src/assets/images/Garsetti mic hero  1-min.png';
 import Marquee from "react-fast-marquee";
 import Frame50 from '../assets/images/Frame 50.png';
 import GarretMobile from '../../src/assets/images/Garsetti-mobile.png';
