@@ -25,7 +25,7 @@ export default function SecondSection() {
           
 
           <div className='md:absolute lg:absolute md:inset-0 lg:inset-0 flex justify-center items-center pointer-events-none'>
-            <div className='flex flex-col md:flex-row lg:flex-row justify-center items-center tracking-tighter font-DepartureMono text-[72px] md:text-[140px] lg:text-[180px] ml-4 md:ml-0 lg:ml-0 text-[#FF5931]'>
+            <div className='flex flex-col md:flex-row lg:flex-row justify-center items-center tracking-tighter font-DepartureMono text-[72px] md:text-[140px] lg:text-[180px] ml-4 md:ml-0 lg:ml-0 text-[#ffffff]'>
               <h1 className="md:-translate-y-16 lg:-translate-y-32 leading-[80%]">GARSE <span className='sm:flex md:hidden lg:hidden'>TTI1</span></h1>
               <h1 className="hidden md:block lg:block md:-translate-y-16 lg:-translate-y-32">TTI1</h1> 
             </div>
