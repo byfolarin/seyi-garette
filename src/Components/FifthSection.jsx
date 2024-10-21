@@ -1,6 +1,6 @@
-import Mid1 from '../../src/assets/images/mid1.png'
-import Mid2 from '../../src/assets/images/mid2.png'
-import Mid3 from '../../src/assets/images/mid3.png'
+import Mid1 from '../../src/assets/images/mid1.jpg'
+import Mid2 from '../../src/assets/images/mid2.jpg'
+import Mid3 from '../../src/assets/images/mid3.jpg'
 
 
 
