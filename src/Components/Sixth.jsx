@@ -7,13 +7,18 @@ export default function Sixth() {
     return (
         <div className="relative z-[24] px-4 md:px-8 lg:px-12 py-16 font-helvetica-neue-5 bg-white">
             {/* Previous content remains the same until the images section */}
+
+            
             <div className="flex flex-col lg:flex-row gap-6">
+
                 <div className='w-full lg:w-[70%] flex flex-col lg:flex-row gap-12'>
                     <div className='flex items-start w-full font-helvetica-neue-5 text-[#555963]'>
                         <h4 className='border-l-[3px] pl-6 font-medium border-[#E5E5E5]'>Check out what's <br /> in the box</h4>   
                     </div>
 
                     <div className='flex flex-col justify-between'>
+
+
                         <h2 className="font-helvetica-neue-5 text-2xl leading-tight">
                             Complete your GARSETTI One microphone setup with our range of high-performance accessories. Each accessory is designed to enhance your sound and make your recording process seamless.
                         </h2>

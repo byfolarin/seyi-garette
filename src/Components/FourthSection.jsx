@@ -1,24 +1,10 @@
 import WomanMic from '../../src/assets/images/womanmic.jpg'
 import StudioMic from '../../src/assets/images/micstudio.jpg'
-import { motion, useScroll, useTransform } from 'framer-motion'
-import { useRef } from 'react'
+import { motion } from 'framer-motion'
 
 export default function FourthSection() {
-    const containerRef = useRef(null);
-    const { scrollYProgress } = useScroll({
-        target: containerRef,
-        offset: ["start end", "end start"]
-    });
-
-    // Create separate transforms for each image
-    const y1 = useTransform(scrollYProgress, [0, 1], [0, -100]);
-    const y2 = useTransform(scrollYProgress, [0, 1], [0, -150]);
-
     return (
-      <div 
-        ref={containerRef}
-        className="relative z-[21] px-[16px] lg:px-[48px] py-[92px] bg-white"
-      >
+      <div className="relative z-[21] px-[16px] lg:px-[48px] py-[92px] bg-white">
         <div className="flex flex-col gap-6 lg:flex-row md:flex-row justify-between">
           <h2 className="w-full md:w-[50%] lg:w-[50%] font-helvetica-neue-5 md:text-2xl text-xl lg:text-2xl leading-tight">
             Your words deserve to be remembered and voice deserves to be heard clearly. Whether you're podcasting or
@@ -76,16 +62,11 @@ export default function FourthSection() {
             }}
             viewport={{ once: true }}
           >
-            <motion.div 
-              className="w-full h-[120%] -mt-[10%]" // Added extra height and negative margin for smooth parallax
-              style={{ y: y1 }}
-            >
-              <img 
-                src={WomanMic} 
-                alt="Woman with microphone" 
-                className="w-full h-full object-cover"
-              />
-            </motion.div>
+            <img 
+              src={WomanMic} 
+              alt="Woman with microphone" 
+              className="w-full h-full object-cover"
+            />
           </motion.div>
           
           <motion.div 
@@ -97,21 +78,16 @@ export default function FourthSection() {
               transition: {
                 duration: 1,
                 ease: "easeOut",
-                delay: 0.2
+                delay: 0.5 // This creates the stagger effect
               }
             }}
             viewport={{ once: true }}
           >
-            <motion.div 
-              className="w-full h-[120%] -mt-[10%]" // Added extra height and negative margin for smooth parallax
-              style={{ y: y2 }}
-            >
-              <img 
-                src={StudioMic} 
-                alt="Studio microphone" 
-                className="w-full h-full object-cover"
-              />
-            </motion.div>
+            <img 
+              src={StudioMic} 
+              alt="Studio microphone" 
+              className="w-full h-full object-cover"
+            />
           </motion.div>
         </div>
       </div>

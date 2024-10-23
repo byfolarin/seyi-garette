@@ -63,7 +63,7 @@ export default function Fifth() {
                         />
                     </div>
                     <div className='pt-8 font-helvetica-neue-5 flex flex-col gap-2'>
-                        <h5 className='font-bold text-2xl font-DepartureMono tracking-tight'>Crisp Audio Capture</h5>
+                        <h5 className='font-bold text-2xl tracking-tight'>Crisp Audio Capture</h5>
                         <p className='font-helvetica-neue-5 text-sm w-full lg:w-[80%]'>
                             Experience not just an engineering marvel but an artistic one as well. The GARSETTI One seeks to further revolutionise audio capturing.
                         </p>
@@ -82,7 +82,7 @@ export default function Fifth() {
                         />
                     </div>
                     <div className='pt-8 font-helvetica-neue-5 flex flex-col gap-2'>
-                        <h5 className='font-bold text-2xl text-nowrap font-DepartureMono tracking-tight'>Universal Compatibility</h5>
+                        <h5 className='font-bold text-2xl text-nowrap tracking-tight'>Universal Compatibility</h5>
                         <p className='font-helvetica-neue-5 text-sm w-full lg:w-[80%]'>
                             Adapt to any recording environment with ease. Our universal port supports a wide range of setups, ensuring you're always ready to create, no matter the device or platform.
                         </p>
@@ -101,7 +101,7 @@ export default function Fifth() {
                         />
                     </div>
                     <div className='pt-8 font-helvetica-neue-5 flex flex-col gap-2'>
-                        <h5 className='font-bold text-2xl font-DepartureMono tracking-tight'>Port Compatibility</h5>
+                        <h5 className='font-bold text-2xl tracking-tight'>Port Compatibility</h5>
                         <p className='font-helvetica-neue-5 text-sm w-full lg:w-[80%]'>
                             Adapt to any recording environment with ease. Our universal port supports a wide range of setups, ensuring you're always ready to create, no matter the device or platform.
                         </p>

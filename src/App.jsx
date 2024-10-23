@@ -31,24 +31,23 @@ function App() {
   }, []);
 
   return (
-    <div>
-      <HeroSection />
-      <div style={{ marginTop: '200vh' }}> {/* Reduced margin to allow SecondSection to start earlier */}   </div>
-     
-          <SecondSection />
-     
+    // Outer div for full-width background effects if needed
+    <div className="w-full min-h-screen bg-white">
+      {/* Inner container for max-width constraint */}
+      <div className="max-w-[1440px] mx-auto relative">
+        <HeroSection />
+        <div style={{ marginTop: '200vh' }} />
+        <SecondSection />
         <ThirdSection />
         <FourthSection />
         <Fifth />
         <Sixth />
         <SeventhSection />
-
-        <div className='relative'>
-            <EightSection />
+        <div className="relative">
+          <EightSection />
         </div>
-       
       </div>
-  
+    </div>
   );
 }
 
