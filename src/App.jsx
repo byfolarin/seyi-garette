@@ -10,25 +10,25 @@ import SeventhSection from "./Components/SeventhSection";
 import EightSection from "./Components/EightSection";
 
 function App() {
-  useEffect(() => {
-    const lenis = new Lenis({
-      duration: 0.9,
-      easing: (t) => t,
-      smooth: true,
-      smoothTouch: false,
-    });
+  // useEffect(() => {
+  //   const lenis = new Lenis({
+  //     duration: 0.9,
+  //     easing: (t) => t,
+  //     smooth: true,
+  //     smoothTouch: false,
+  //   });
 
-    function raf(time) {
-      lenis.raf(time);
-      requestAnimationFrame(raf);
-    }
+  //   function raf(time) {
+  //     lenis.raf(time);
+  //     requestAnimationFrame(raf);
+  //   }
 
-    requestAnimationFrame(raf);
+  //   requestAnimationFrame(raf);
 
-    return () => {
-      lenis.destroy();
-    };
-  }, []);
+  //   return () => {
+  //     lenis.destroy();
+  //   };
+  // }, []);
 
   return (
     // Outer div for full-width background effects if needed
