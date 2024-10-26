@@ -90,7 +90,7 @@ export default function HeroSection() {
 
                 <button 
                 onClick={()=> console.log('clicked button')}
-                    className='py-4 cursor-pointer px-8 lg:py-[16px] lg:px-[40px] bg-[#FF5931] 
+                    className='py-4 cursor-pointer leading-[100%] px-8 lg:py-[16px] lg:px-[40px] bg-[#FF5931] 
                     rounded-full text-sm whitespace-nowrap'>Join the Waitlist
                 </button>
 
@@ -118,6 +118,9 @@ export default function HeroSection() {
                     />
                   </a>
                 </motion.button>
+
+
+                
               </div>
             </div>
 
