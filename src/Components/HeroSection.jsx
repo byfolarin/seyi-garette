@@ -94,36 +94,39 @@ export default function HeroSection() {
 
 
 
-                <button 
-                onClick={()=> console.log('clicked button')}
-                    className='py-4 cursor-pointer leading-[100%] px-8 lg:py-[16px] lg:px-[40px] bg-[#FF5931] 
-                    rounded-full text-[16px] whitespace-nowrap'>Join the Waitlist
-                </button>
+                {/* First button with corrected line-height */}
+                      <button 
+                          onClick={() => console.log('clicked button')}
+                          className="py-4 cursor-pointer leading-normal px-8 lg:py-[16px] lg:px-[40px] bg-[#FF5931] 
+                                    rounded-full text-sm whitespace-nowrap">
+                          Join the Waitlist
+                      </button>
 
-                <motion.button 
-                  className='py-1 sm:py-0 relative group'
-                  whileHover="hover"
-                  initial="rest"
-                  animate="rest"
-                >
-                  <a href="#" className='text-[16px] py-1 hover:text-[#3d3d3d] relative inline-block'>
-                    See what's in the box
-                    <motion.span
-                      className='absolute bottom-0 left-0 h-[1px] bg-black w-full'
-                      variants={{
-                        rest: { width: '100%', left: '0%' },
-                        hover: { 
-                          width: ['100%', '0%', '0%', '100%'],
-                          left: ['0%', '100%', '0%', '0%'],
-                          transition: { 
-                            duration: 0.4,
-                            times: [0, 0.4, 0.5, 1]
-                          }
-                        }
-                      }}
-                    />
-                  </a>
-                </motion.button>
+                      {/* Second button with corrected line-height */}
+                      <motion.button 
+                          className="py-1 sm:py-0 relative group leading-normal"
+                          whileHover="hover"
+                          initial="rest"
+                          animate="rest"
+                      >
+                          <a href="#" className="text-sm py-1 hover:text-[#3d3d3d] relative inline-block leading-normal">
+                              See what's in the box
+                              <motion.span
+                                  className="absolute bottom-0 left-0 h-[1px] bg-black w-full"
+                                  variants={{
+                                      rest: { width: '100%', left: '0%' },
+                                      hover: { 
+                                          width: ['100%', '0%', '0%', '100%'],
+                                          left: ['0%', '100%', '0%', '0%'],
+                                          transition: { 
+                                              duration: 0.4,
+                                              times: [0, 0.4, 0.5, 1]
+                                          }
+                                      }
+                                  }}
+                              />
+                          </a>
+                      </motion.button>
 
 
 
