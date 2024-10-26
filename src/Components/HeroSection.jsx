@@ -9,7 +9,7 @@ import GarretMobile from '../../src/assets/images/Garsetti-mobile.png';
 export default function HeroSection() {
   const { scrollY } = useScroll();
   
-  const frame50Y = useTransform(scrollY, [0, 1000], ['100%', '0%']);
+  const frame50Y = useTransform(scrollY, [0, 1000], ['150%', '0%']);
   const frame50Rotate = useTransform(scrollY, [0, 1000], [20, 0]);
 
   return (
