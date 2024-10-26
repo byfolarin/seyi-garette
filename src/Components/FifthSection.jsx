@@ -35,10 +35,15 @@ export default function Fifth() {
 
             <div className="flex flex-col lg:flex-row gap-4 lg:gap-10">
 
-                <div className='flex items-start pr-[48px] font-helvetica-neue-5 text-sm text-[#555963]'>
-                    <h4 className='border-l-[3px] border-[#E5E5E5] pl-6 font-medium'>
-                        Why choose <br /> GARSETTI One?
-                    </h4>  
+
+                <div>              
+
+                    <div className='flex items-start pr-[48px] font-helvetica-neue-5 text-sm text-[#555963]'>
+                        <h4 className='border-l-[3px] border-[#E5E5E5] pl-6 font-medium'>
+                            Why choose <br /> GARSETTI One?
+                        </h4>  
+                    </div>
+
                 </div>
 
 
