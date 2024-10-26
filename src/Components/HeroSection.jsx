@@ -88,10 +88,16 @@ export default function HeroSection() {
               
               <div className='flex flex-col sm:flex-row gap-8 mb-4 lg:mb-10 font-helvetica-neue-5'>
 
+
+
+
+
+
+
                 <button 
                 onClick={()=> console.log('clicked button')}
                     className='py-4 cursor-pointer leading-[100%] px-8 lg:py-[16px] lg:px-[40px] bg-[#FF5931] 
-                    rounded-full text-sm whitespace-nowrap'>Join the Waitlist
+                    rounded-full text-[16px] whitespace-nowrap'>Join the Waitlist
                 </button>
 
                 <motion.button 
@@ -118,6 +124,8 @@ export default function HeroSection() {
                     />
                   </a>
                 </motion.button>
+
+
 
 
                 
