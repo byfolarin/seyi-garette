@@ -106,7 +106,7 @@ export default function HeroSection() {
                   initial="rest"
                   animate="rest"
                 >
-                  <a href="#" className='text-sm py-1 hover:text-[#3d3d3d] relative inline-block'>
+                  <a href="#" className='text-[16px] py-1 hover:text-[#3d3d3d] relative inline-block'>
                     See what's in the box
                     <motion.span
                       className='absolute bottom-0 left-0 h-[1px] bg-black w-full'
