@@ -32,16 +32,26 @@ export default function Fifth() {
 
     return (
         <div className="relative z-[22] px-[16px] md:px[32px] lg:px-[48px] py-[68px] bg-white">
+
             <div className="flex flex-col lg:flex-row gap-4 lg:gap-10">
+
                 <div className='flex items-start pr-[48px] font-helvetica-neue-5 text-sm text-[#555963]'>
                     <h4 className='border-l-[3px] border-[#E5E5E5] pl-6 font-medium'>
                         Why choose <br /> GARSETTI One?
                     </h4>  
                 </div>
 
-                <h2 className="font-DepartureMono text-[48px] leading-tight">
-                    THE GARSETTI <br /> ARTISTIC MARVEL
-                </h2>
+
+                <div>
+                    <h2 className="font-DepartureMono text-[48px] leading-tight">
+                        THE GARSETTI
+                    </h2>
+
+                    <h2 className="font-DepartureMono text-[48px] leading-tight">
+                        ARTISTIC MARVEL
+                    </h2>
+                </div>
+
             </div>
 
             <motion.div 
