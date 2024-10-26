@@ -7,30 +7,22 @@ import Frame50 from '../assets/images/Frame 50-min.png';
 import GarretMobile from '../../src/assets/images/Garsetti-mobile.png';
 
 export default function HeroSection() {
-  const { scrollY } = useScroll();
-  
+
+
+  const { scrollY } = useScroll();  
   const frame50Y = useTransform(scrollY, [0, 1000], ['200%', '0%']);
   const frame50Rotate = useTransform(scrollY, [0, 1000], [40, 0]);
 
+
   return (
     <div className='sticky top-0 h-screen  overflow-hidden'>
-
+      
       <motion.div 
         className='w-[394px] absolute z-[999] right-32'
         style={{ y: frame50Y, rotate: frame50Rotate }}
       >
         <img src={Frame50} alt="" />
       </motion.div>
-
-
-{/* 
-
-      <motion.div 
-        className='w-[394px] absolute z-[999] right-32'
-        style={{ y: frame50Y, rotate: frame50Rotate }}
-      >
-        <img src={Frame50} alt="" />
-      </motion.div> */}
 
       <div className="bg-[#B8BBC2] h-screen px-4 sm:px-6 lg:px-12 pt-6 lg:pt-[42px] relative overflow-hidden">
         <div className='flex justify-between items-start'>
