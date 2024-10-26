@@ -64,7 +64,7 @@ export default function HeroSection() {
             />
           </div>
 
-          <div className="relative z-[9999] mb-8 lg:mb-32 w-full lg:w-[608px] mt-6 lg:mt-16">
+          <div className="relative z-[9999] mb-8 lg:mb-8 w-full lg:w-[608px] mt-6 lg:mt-16">
             <div className='flex flex-col'>       
               <div className='flex items-center gap-4  mb-[16px]'>
                 <div className='w-[14px] h-[14px] bg-[#FC451A] overflow-hidden cursor-pointer  rounded-full'></div>
