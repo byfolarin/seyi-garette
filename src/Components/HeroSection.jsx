@@ -15,8 +15,6 @@ export default function HeroSection() {
   return (
     <div className='sticky top-0 h-screen  overflow-hidden'>
 
-
-
       <motion.div 
         className='w-[394px] absolute z-[999] right-32'
         style={{ y: frame50Y, rotate: frame50Rotate }}
