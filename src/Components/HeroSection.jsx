@@ -92,15 +92,15 @@ export default function HeroSection() {
 
 
 
-
+ 
 
                 {/* First button with corrected line-height */}
-                      <button 
-                          onClick={() => console.log('clicked button')}
-                          className="py-4 cursor-pointer leading-normal px-8 lg:py-[16px] lg:px-[40px] bg-[#FF5931] 
-                                    rounded-full text-sm whitespace-nowrap">
-                          Join the Waitlist
-                      </button>
+                <button 
+                    onClick={() => console.log('clicked button')} 
+                    className="flex items-center justify-center h-[56px] cursor-pointer leading-[1.5] px-8 lg:px-[40px] bg-[#FF5931] rounded-full text-sm whitespace-nowrap"
+                >
+                    Join the Waitlist
+                </button>
 
                       {/* Second button with corrected line-height */}
                       <motion.button 
@@ -126,12 +126,7 @@ export default function HeroSection() {
                                   }}
                               />
                           </a>
-                      </motion.button>
-
-
-
-
-                
+                      </motion.button>               
               </div>
             </div>
 
