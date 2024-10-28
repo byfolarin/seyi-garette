@@ -15,7 +15,7 @@ export default function SecondSection() {
           </div>
           
           {/* Foreground image */}
-          <div className="md:relative lg:relative md:z-10 lg:z-10 max-w-80 md:max-w-96 lg:max-w-[300px]">
+          <div className="md:relative lg:relative md:z-10 lg:z-10 max-w-80 md:max-w-96 lg:max-w-[30%]">
             <img 
               src={GarsettiFront} 
               alt="Garrett with microphone" 
@@ -31,7 +31,7 @@ export default function SecondSection() {
           </div>
         </div>
 
-        <div className='md:absolute lg:absolute bottom-10 pt-12 md:pt-0 lg:pt-0 md:left-8 md:right-8 lg:left-12 lg:right-12 font-helvetica-neue-5 flex flex-col md:flex-row lg:flex-row justify-between'>
+        <div className='md:absolute lg:absolute bottom-10 py-12 md:pt-0 lg:py-32 lg:mb-32 md:left-8 md:right-8 lg:left-12 lg:right-12 font-helvetica-neue-5 flex flex-col md:flex-row lg:flex-row justify-between'>
           <div className='w-full md:w-72 lg:w-80 text-lg leading-tight mb-6 md:mb-0 lg:mb-0'>
             We believe you have a voice worth remembering just like every notable human that walked the earth.
             The mic for a notable voice.
@@ -46,6 +46,8 @@ export default function SecondSection() {
             </div>
           </div>
         </div>
+
+
       </div>
     </div>
   )

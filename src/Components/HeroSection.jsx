@@ -25,7 +25,9 @@ export default function HeroSection() {
       </motion.div>
 
       <div className="bg-[#B8BBC2] h-screen px-4 sm:px-6 lg:px-12 pt-6 lg:pt-[42px] relative overflow-hidden">
+
         <div className='flex justify-between items-start'>
+
           <div className="relative font-DepartureMono text-[12px] z-10 w-full sm:w-[408px] mb-6 lg:mb-0 h-[100px]">
             <Typewriter
               options={{
@@ -42,6 +44,7 @@ export default function HeroSection() {
             />
           </div>
 
+
           <div className='cursor-pointer z-50'>
             <ul className='font-DepartureMono text-[12px] text-right'>
               <div className='flex items-center justify-end gap-1 tracking-tighter pb-[4px]'>
@@ -53,7 +56,9 @@ export default function HeroSection() {
               <li className='pb-[4px]'>CONTENT IN BOX</li>
             </ul>
           </div>
+
         </div>
+        
 
         <div className='flex flex-col justify-between min-h-screen w-full lg:w-[60%]'>   
           <div className="lg:hidden w-full sm:w-[451px] mt-6">
@@ -65,6 +70,7 @@ export default function HeroSection() {
           </div>
 
           <div className="relative z-[9999] mb-8 lg:mb-8 w-full lg:w-[608px] mt-6 lg:mt-16">
+
             <div className='flex flex-col'>       
               <div className='flex items-center gap-4  mb-[16px]'>
                 <div className='w-[14px] h-[14px] bg-[#FC451A] overflow-hidden cursor-pointer  rounded-full'></div>
