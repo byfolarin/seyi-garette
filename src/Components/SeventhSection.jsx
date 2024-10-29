@@ -6,6 +6,8 @@ export default function SeventhSection() {
   return (
     <div className='bg-[#FF5931] relative z-[25]  font-helvetica-neue-5 px-[16px] lg:px-[49px]'>
 
+      <div className="max-w-[1440px] mx-auto">
+
 
     <div className='pb-[60px]'>
       <div className='bg-[#232323]  rounded-b-[32px]'>
@@ -57,6 +59,8 @@ export default function SeventhSection() {
             </div>
         </div>
      </div>
+     </div>
+
 
     </div>
   )

@@ -7,7 +7,7 @@ export default function Sixth() {
     return (
         <div className="relative z-[24] px-4 md:px-8 lg:px-12 py-16 font-helvetica-neue-5 bg-white">
             {/* Previous content remains the same until the images section */}
-
+            <div className="max-w-[1440px] mx-auto">
             
             <div className="flex flex-col lg:flex-row justify-between">
 
@@ -152,6 +152,7 @@ export default function Sixth() {
                         </motion.div>
                     </div>
                 </motion.div>
+            </div>
             </div>
         </div>
     )
