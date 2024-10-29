@@ -3,7 +3,7 @@ import GarsettiSide from '../../src/assets/images/Side-min.png'
 export default function SecondSection() {
   return (
     <div className="bg-[#CECECE] min-h-screen sticky top-0 z-[10]">
-      <div className="h-screen px-4 md:px-8 lg:px-12 pt-10 relative overflow-hidden flex flex-col">
+      <div className="h-screen px-4 md:px-8 lg:px-12 pt-10 relative overflow-hidden flex flex-col max-w-[1440px] mx-auto">
         <div className='flex-grow flex flex-col md:flex-row lg:flex-row items-center justify-center md:relative lg:relative'>
           {/* Background text */}
           <div className='md:absolute lg:absolute md:inset-0 lg:inset-0 flex justify-center items-center pointer-events-none'>
@@ -14,15 +14,13 @@ export default function SecondSection() {
           </div>
           
           {/* Foreground image */}
-          <div className="md:relative lg:relative md:z-10 lg:z-10 max-w-80 md:max-w-96 lg:max-w-[500px]">
+          <div className="md:relative lg:relative md:z-10 lg:z-10 max-w-80 md:max-w-96 lg:max-w-[50%]">
             <img 
               src={GarsettiSide} 
               alt="Garrett with microphone" 
               className="object-cover w-full h-auto"
             />
           </div>
-
-          
 
           <div className='md:absolute lg:absolute md:inset-0 lg:inset-0 flex justify-center items-center pointer-events-none'>
             <div className='flex flex-col md:flex-row lg:flex-row justify-center items-center tracking-tighter font-DepartureMono text-[72px] md:text-[140px] lg:text-[180px] ml-4 md:ml-0 lg:ml-0 text-[#E8E8E8]'>
@@ -31,8 +29,6 @@ export default function SecondSection() {
             </div>
           </div>
         </div>
-
-
 
         <div className='md:absolute lg:absolute bottom-10 pt-12 md:pt-0 lg:pt-0 md:left-8 md:right-8 lg:left-12 lg:right-12 font-helvetica-neue-5 flex flex-col md:flex-row lg:flex-row justify-between'>
           <div className='w-full md:w-72 lg:w-80 text-lg leading-tight mb-6 md:mb-0 lg:mb-0'>
@@ -49,10 +45,6 @@ export default function SecondSection() {
             </div>
           </div>
         </div>
-
-
-
-        
       </div>
     </div>
   )
