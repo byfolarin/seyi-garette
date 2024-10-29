@@ -1,10 +1,9 @@
 import GarsettiFront from '../../src/assets/images/iFront 1-min.png'
 
-
 export default function SecondSection() {
   return (
     <div className="bg-[#CECECE] h-screen sticky top-0 z-[10]">
-      <div className="h-screen px-4 md:px-8 lg:px-12 pt-10 relative overflow-hidden flex flex-col">
+      <div className="h-screen px-4 md:px-8 max-w-[1440px] mx-auto lg:px-12 pt-10 relative overflow-hidden flex flex-col">
         <div className='flex-grow flex flex-col md:flex-row lg:flex-row items-center justify-center md:relative lg:relative'>
           {/* Background text */}
           <div className='md:absolute lg:absolute md:inset-0 lg:inset-0 flex justify-center items-center pointer-events-none'>
@@ -46,8 +45,6 @@ export default function SecondSection() {
             </div>
           </div>
         </div>
-
-
       </div>
     </div>
   )
