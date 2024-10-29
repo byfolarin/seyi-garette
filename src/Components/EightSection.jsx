@@ -18,7 +18,7 @@ export default function EightSection() {
           <div className="max-w-[1440px] mx-auto px-4 lg:px-12 xl:px-[49px]">
             <div className="flex gap-6 lg:items-start py-12 lg:py-[110px] w-full mx-auto justify-between">
               <h3 className="w-full font-medium lg:w-[60%] text-lg lg:text-5xl font-helvetica-neue-5 tracking-tighter leading-[98%] text-left">
-                You haven't just seen an ordinary mic. You've just witnessed the GARSETTI ® One
+                You haven't just seen an <br /> ordinary mic. You've just <br /> witnessed the GARSETTI ® One
               </h3>
               <div className="flex flex-col sm:flex-row lg:items-center gap-4 lg:gap-8 pt-[24px]">
                 <button 
