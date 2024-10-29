@@ -1,9 +1,10 @@
-import GarsettiFront from '../../src/assets/images/iFront 1-min.png'
+import GarsettiFront from '../../src/assets/images/iFront 1-min.png';
+// import GarsettiSide from '../../src/assets/images/Side-min.png';
 
 export default function SecondSection() {
   return (
-    <div className="bg-[#CECECE] h-screen sticky top-0 z-[10]">
-      <div className="h-screen px-4 md:px-8 max-w-[1440px] mx-auto lg:px-12 pt-10 relative overflow-hidden flex flex-col">
+    <div className="bg-[#CECECE] min-h-screen sticky top-0 z-[10]">
+      <div className="max-w-[1440px] mx-auto h-screen px-4 md:px-8 lg:px-12 pt-10 relative overflow-hidden flex flex-col">
         <div className='flex-grow flex flex-col md:flex-row lg:flex-row items-center justify-center md:relative lg:relative'>
           {/* Background text */}
           <div className='md:absolute lg:absolute md:inset-0 lg:inset-0 flex justify-center items-center pointer-events-none'>
@@ -23,14 +24,14 @@ export default function SecondSection() {
           </div>
 
           <div className='md:absolute lg:absolute md:inset-0 lg:inset-0 flex justify-center items-center pointer-events-none'>
-            <div className='flex flex-col md:flex-row lg:flex-row justify-center items-center tracking-tighter font-DepartureMono text-[72px] md:text-[140px] lg:text-[180px] ml-4 md:ml-0 lg:ml-0 text-[#E8E8E8] opacity-50'>
+            <div className='flex flex-col md:flex-row lg:flex-row justify-center items-center tracking-tighter font-DepartureMono text-[72px] md:text-[140px] lg:text-[180px] ml-4 md:ml-0 lg:ml-0 text-[#E8E8E8]'>
               <h1 className="md:-translate-y-16 lg:-translate-y-32 leading-[80%]">GARSE <span className='sm:flex md:hidden lg:hidden'>TTI1</span></h1>
               <h1 className="hidden md:block lg:block md:-translate-y-16 lg:-translate-y-32">TTI1</h1> 
             </div>
           </div>
         </div>
 
-        <div className='md:absolute lg:absolute bottom-10 py-12 md:pt-0 lg:py-32 lg:mb-32 md:left-8 md:right-8 lg:left-12 lg:right-12 font-helvetica-neue-5 flex flex-col md:flex-row lg:flex-row justify-between'>
+        <div className='md:absolute lg:absolute bottom-10 pt-12 md:pt-0 lg:pt-0 md:left-8 md:right-8 lg:left-12 lg:right-12 font-helvetica-neue-5 flex flex-col md:flex-row lg:flex-row justify-between'>
           <div className='w-full md:w-72 lg:w-80 text-lg leading-tight mb-6 md:mb-0 lg:mb-0'>
             We believe you have a voice worth remembering just like every notable human that walked the earth.
             The mic for a notable voice.

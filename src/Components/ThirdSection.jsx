@@ -1,20 +1,20 @@
-import GarsettiSide from '../../src/assets/images/Side-min.png'
+import GarsettiSide from '../../src/assets/images/Side-min.png';
 
 export default function SecondSection() {
   return (
     <div className="bg-[#CECECE] min-h-screen sticky top-0 z-[10]">
-      <div className="h-screen px-4 md:px-8 lg:px-12 pt-10 relative overflow-hidden flex flex-col max-w-[1440px] mx-auto">
+      <div className="max-w-[1440px] mx-auto h-screen px-4 md:px-8 lg:px-12 pt-10 relative overflow-hidden flex flex-col">
         <div className='flex-grow flex flex-col md:flex-row lg:flex-row items-center justify-center md:relative lg:relative'>
           {/* Background text */}
           <div className='md:absolute lg:absolute md:inset-0 lg:inset-0 flex justify-center items-center pointer-events-none'>
             <div className='md:flex lg:flex flex-col md:flex-row lg:flex-row justify-center items-center tracking-tighter font-DepartureMono text-[72px] md:text-[140px] lg:text-[180px] hidden text-white opacity-50'>
-              <h1 className="md:-translate-y-16 lg:-translate-y-32 leading-[80%]">GARSE <span className='md:hidden lg:hidden'>TTI1</span></h1>
-              <h1 className="hidden md:block lg:block md:-translate-y-16 lg:-translate-y-32">TTI1</h1> 
+              <h1 className="stoked md:-translate-y-16 lg:-translate-y-32 leading-[80%]">GARSE <span className='md:hidden lg:hidden'>TTI1</span></h1>
+              <h1 className="stoked hidden md:block lg:block md:-translate-y-16 lg:-translate-y-32">TTI1</h1> 
             </div>
           </div>
           
           {/* Foreground image */}
-          <div className="md:relative lg:relative md:z-10 lg:z-10 max-w-80 md:max-w-96 lg:max-w-[40%]">
+          <div className="md:relative lg:relative md:z-10 lg:z-10 max-w-80 md:max-w-96 lg:max-w-[40%] md:translate-y-[10%] lg:translate-y-[8%]">
             <img 
               src={GarsettiSide} 
               alt="Garrett with microphone" 
@@ -47,5 +47,5 @@ export default function SecondSection() {
         </div>
       </div>
     </div>
-  )
+  );
 }
