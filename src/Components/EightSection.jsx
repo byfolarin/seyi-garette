@@ -59,6 +59,8 @@ export default function EightSection() {
           </div>
         </div>
 
+
+
         {/* Footer - full width */}
         <div className='absolute bottom-0 z-30 left-0 right-0 overflow-hidden w-full'>
           {/* Content container with max-width */}
@@ -81,6 +83,7 @@ export default function EightSection() {
             </div>
           </div>
         </div>
+
 
 
 
