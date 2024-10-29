@@ -67,19 +67,24 @@ export default function EightSection() {
           <div className="max-w-[1440px] mx-auto">
             <div className='lg:px-[70px]'>
               <div className='flex justify-between font-helvetica-neue-5 text-xm tracking-tight text-[#717682]'>
+
                 <div className='flex gap-4'>
                   <p>Product Design | Visual Design | Website Design</p>
                   <p className='font-bold'>Seyi Oniyitan</p>
                 </div>
+
                 <div className='flex gap-4'>
                   <p>©2024 SEYIONIYITAN</p>
                   <p>all rights reserved</p>
                 </div>       
+
               </div>
+
               <div className='flex flex-col justify-center items-center 
-                tracking-tighter font-DepartureMono text-[71px] sm:text-[16vw] lg:text-[220px] text-[#FF5931]'>            
+                tracking-tighter font-DepartureMono text-7xl sm:text-[16vw] lg:text-[220px] text-[#FF5931]'>            
                 <h1 className='h1-stroke'>GARSETTI1</h1>
               </div>
+              
             </div>
           </div>
         </div>
