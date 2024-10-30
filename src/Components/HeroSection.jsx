@@ -128,7 +128,7 @@ export default function HeroSection() {
           </div>
         </div>
         
-        <div className="hidden lg:block lg:absolute lg:top-0 lg:right-0 lg:w-[80%] lg:h-full lg:overflow-hidden">
+        <div className="hidden lg:block lg:absolute lg:top-0 lg:right-0 lg:w-[80%] xl:pr-64 lg:h-full lg:overflow-hidden">
           <img 
             src={GarretImg} 
             alt="Garrett with microphone" 
