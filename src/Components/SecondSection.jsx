@@ -1,4 +1,6 @@
+import { motion } from 'framer-motion';
 import GarsettiFront from '../../src/assets/images/iFront 1-min.png';
+
 // import GarsettiSide from '../../src/assets/images/Side-min.png';
 
 export default function SecondSection() {
@@ -41,8 +43,38 @@ export default function SecondSection() {
             <p className='text-[#555963] text-xs'>Experience not just an engineering marvel but an artistic one as well. The GARSETTI One seeks to further revolutionise audio capturing. </p>
             
             <div className='flex flex-col md:flex-row lg:flex-row gap-3 mb-8 font-helvetica-neue-5'>
-              <button className='py-3 leading-none px-8 bg-[#FF5931] rounded-full text-nowrap text-xs'>Join the Waitlist</button>
-              <button><a href="#" className='border-black border-b-[1px] text-xs text-nowrap py-2'>See what's in the box</a></button>
+            <button 
+                    onClick={() => console.log('clicked button')} 
+                    className="flex items-center justify-center h-[56px] cursor-pointer leading-[1.5] px-8 lg:px-[40px] bg-[#FF5931] rounded-full text-sm whitespace-nowrap"
+                >
+                    Join the Waitlist
+                </button>
+
+                      {/* Second button with corrected line-height */}
+                      <motion.button 
+                          className="py-1 sm:py-0 relative group leading-normal"
+                          whileHover="hover"
+                          initial="rest"
+                          animate="rest"
+                      >
+                          <a href="#" className="text-sm py-1 hover:text-[#3d3d3d] relative text-nowrap inline-block leading-normal">
+                              See what's in the box
+                              <motion.span
+                                  className="absolute bottom-0 left-0 h-[1px] bg-black w-full"
+                                  variants={{
+                                      rest: { width: '100%', left: '0%' },
+                                      hover: { 
+                                          width: ['100%', '0%', '0%', '100%'],
+                                          left: ['0%', '100%', '0%', '0%'],
+                                          transition: { 
+                                              duration: 0.4,
+                                              times: [0, 0.4, 0.5, 1]
+                                          }
+                                      }
+                                  }}
+                              />
+                          </a>
+                      </motion.button>    
             </div>
           </div>
         </div>
