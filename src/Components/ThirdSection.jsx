@@ -2,7 +2,7 @@ import GarsettiSide from '../../src/assets/images/Side-min.png';
 
 export default function SecondSection() {
   return (
-    <div className="bg-[#CECECE] min-h-screen sticky top-0 z-[10]">
+    <div className="bg-[#C4C5C8] min-h-screen sticky top-0 z-[10]">
       <div className="max-w-[1440px] mx-auto h-screen px-4 md:px-8 lg:px-12 pt-10 relative overflow-hidden flex flex-col">
         <div className='flex-grow flex flex-col md:flex-row lg:flex-row items-center justify-center md:relative lg:relative'>
           {/* Background text */}
