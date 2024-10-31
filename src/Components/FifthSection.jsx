@@ -43,18 +43,18 @@ export default function Fifth() {
                     </div>
 
                     <div>
-                        <h2 className="font-DepartureMono text-[48px] leading-tight">
+                        <h2 className="font-DepartureMono text-[32px] lg:text-[48px] leading-tight">
                             THE GARSETTI
                         </h2>
 
-                        <h2 className="font-DepartureMono text-[48px] leading-tight">
+                        <h2 className="font-DepartureMono text-[32px] lg:text-[48px] leading-tight">
                             ARTISTIC MARVEL
                         </h2>
                     </div>
                 </div>
 
                 <motion.div 
-                    className="flex flex-col lg:flex-row gap-16 lg:gap-4 pt-[64px]"
+                    className="flex flex-col lg:flex-row gap-[40px] lg:gap-4 pt-[51px] lg:pt-[64px]"
                     variants={containerVariants}
                     initial="hidden"
                     whileInView="show"
@@ -64,14 +64,14 @@ export default function Fifth() {
                         className='w-full lg:w-1/3'
                         variants={itemVariants}
                     >
-                        <div className="h-[528px] overflow-hidden">
+                        <div className="h-[361px] lg:h-[528px] overflow-hidden">
                             <img 
                                 src={Mid1} 
                                 alt="Studio microphone" 
                                 className="w-full h-full object-cover"
                             />
                         </div>
-                        <div className='pt-8 font-helvetica-neue-5 flex flex-col gap-2'>
+                        <div className='pt-4 lg:pt-8 font-helvetica-neue-5 flex flex-col gap-2'>
                             <h5 className='font-bold text-[20px] tracking-tight'>Crisp Audio Capture</h5>
                             <p className='font-helvetica-neue-5 text-base w-full lg:w-[80%]'>
                                 Experience not just an engineering marvel but an artistic one as well. The GARSETTI One seeks to further revolutionise audio capturing.
@@ -83,8 +83,8 @@ export default function Fifth() {
                         className='w-full lg:w-1/3'
                         variants={itemVariants}
                     >
-                        <div className="h-[528px] overflow-hidden">
-                            <img 
+                        <div className="h-[361px] lg:h-[528px] overflow-hidden">
+                        <img 
                                 src={Mid2} 
                                 alt="Studio microphone" 
                                 className="w-full h-full object-cover"
@@ -102,8 +102,8 @@ export default function Fifth() {
                         className='w-full lg:w-1/3'
                         variants={itemVariants}
                     >
-                        <div className="h-[528px] overflow-hidden">
-                            <img 
+                        <div className="h-[361px] lg:h-[528px] overflow-hidden">
+                        <img 
                                 src={Mid3} 
                                 alt="Studio microphone" 
                                 className="w-full h-full object-cover"
