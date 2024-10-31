@@ -29,10 +29,6 @@ export default function EightSection() {
               </h3>
 
 
-
-
-
-
               <div className="flex flex-col sm:flex-row lg:items-center gap-4 lg:gap-8 pt-[24px]">
                 <button 
                   onClick={() => console.log('clicked button')}
@@ -79,14 +75,14 @@ export default function EightSection() {
           {/* Content container with max-width */}
           <div className="max-w-[1440px]  mx-auto">
             <div  >
-              <div className='flex justify-between font-helvetica-neue-5 text-xm tracking-tight text-[#717682]'>
+              <div className='flex flex-col lg:flex-row justify-between font-helvetica-neue-5 text-xm tracking-tight text-[#717682]'>
 
                 <div className='flex gap-4 '>
                   <p>Product Design | Visual Design | Website Design</p>
                   <p className='font-bold'>Seyi Oniyitan</p>
                 </div>
 
-                <div className='flex gap-4 '>
+                <div className='flex flex-col lg:flex-row gap-4 '>
                   <p>©2024 SEYIONIYITAN</p>
                   <p>all rights reserved</p>
                 </div>       
