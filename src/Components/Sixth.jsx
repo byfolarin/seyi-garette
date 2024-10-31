@@ -5,14 +5,11 @@ import Tick from '../../src/assets/images/Vector 4.svg'
 
 export default function Sixth() {
     return (
-        <div className="relative z-[24] px-4 md:px-8 lg:px-12 py-16 font-helvetica-neue-5 bg-white">
+        <div className="relative z-[24] px-4 md:px-8 lg:px-12 py-[60px] lg:py-16 font-helvetica-neue-5 bg-white">
             {/* Previous content remains the same until the images section */}
             <div className="max-w-[1440px] mx-auto">
             
             <div className="flex flex-col lg:flex-row justify-between">
-
-
-
                 <div className='w-full lg:w-[70%] flex flex-col lg:flex-row gap-4'>
 
 
@@ -25,12 +22,12 @@ export default function Sixth() {
                     <div className='flex flex-col justify-between'>
 
 
-                        <h2 className="font-helvetica-neue-5 text-2xl leading-tight">
+                        <h2 className="font-helvetica-neue-5 pt-[32px] text-2xl leading-tight">
                             Complete your GARSETTI One microphone setup with our range of high-performance accessories. Each accessory is designed to enhance your sound and make your recording process seamless.
                         </h2>
 
 
-                        <div className="flex flex-col lg:flex-row md:flex-row md:items-center lg:items-center gap-8">
+                        <div className="flex flex-col lg:flex-row md:flex-row md:items-center pt-[40px] lg:items-center gap-8">
 
                             <button 
                                 onClick={()=> console.log('clicked button')}
@@ -74,7 +71,7 @@ export default function Sixth() {
 
                 </div>
 
-                <div className='font-helvetica-neue-5'>
+                <div className='font-helvetica-neue-5 pt-[61px] lg:pt-0'>
                     <ul>
                         <div className='flex gap-4 items-center pb-4'>
                             <img src={Tick} alt="" />
@@ -100,7 +97,7 @@ export default function Sixth() {
                 </div>
             </div>
 
-            <div className="flex flex-col lg:flex-row gap-4 pt-16">
+            <div className="flex flex-col lg:flex-row gap-4 pt-[32px] lg:pt-16 ">
                 <motion.div 
                     className='w-full lg:w-2/3'
                     initial={{ opacity: 0, y: 50 }}
@@ -111,7 +108,7 @@ export default function Sixth() {
                     }}
                     viewport={{ once: true }}
                 >
-                    <div className="h-[528px] overflow-hidden">
+                    <div className="lg:h-[528px] h-[260.5px] overflow-hidden">
                         <motion.div 
                             className="w-full h-full"
                             whileHover={{ scale: 1.05 }}
@@ -137,8 +134,8 @@ export default function Sixth() {
                     }}
                     viewport={{ once: true }}
                 >
-                    <div className="h-[528px] overflow-hidden ">
-                        <motion.div 
+                    <div className="lg:h-[528px] h-[260.5px] overflow-hidden">
+                    <motion.div 
                             className="w-full h-full"
                             whileHover={{ scale: 1.05 }}
                             transition={{ duration: 0.5, ease: "easeOut" }}
