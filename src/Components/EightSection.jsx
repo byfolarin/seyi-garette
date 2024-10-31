@@ -8,7 +8,7 @@ export default function EightSection() {
       {/* Full width container */}
       <div className="relative w-full">
         {/* Background image - full width */}
-        <div className='relative z-10 w-full'>
+        <div className='relative z-10  w-full'>
           <img src={FooterImg} alt="" className='w-full h-[693px] lg:h-[1734px] object-cover' />
         </div>
 
@@ -16,8 +16,9 @@ export default function EightSection() {
         <div className='absolute top-0 left-0 right-0 bg-[#FF5931] rounded-b-[24px] lg:rounded-b-[80px] z-20 w-full'>
           {/* Content container with max-width */}
           <div className="max-w-[1440px] mx-auto px-4 lg:px-12 xl:px-[49px]">
-            <div className="flex gap-6 lg:items-start py-12 lg:py-[110px] w-full mx-auto justify-between">
-              <h3 className="w-full font-medium lg:w-[60%] text-lg lg:text-5xl font-helvetica-neue-5 tracking-tighter leading-[98%] text-left">
+
+            <div className="flex flex-col lg:flex-row gap-6 lg:items-start py-12 lg:py-[110px] w-full mx-auto justify-between">
+              <h3 className="w-full font-medium lg:w-[60%] text-[36px] lg:text-5xl  font-helvetica-neue-5 tracking-tighter leading-[98%] text-left">
                 You haven't just seen an <br /> ordinary mic. You've just <br /> witnessed the GARSETTI ® One
               </h3>
               <div className="flex flex-col sm:flex-row lg:items-center gap-4 lg:gap-8 pt-[24px]">
