@@ -4,7 +4,7 @@ import { motion } from 'framer-motion'
 
 export default function FourthSection() {
     return (
-      <div className="relative z-[21] px-[16px] lg:px-[48px] py-[92px] bg-white">
+      <div className="relative z-[21] px-[16px] lg:px-[48px] py-[50px] lg:py-[92px] bg-white">
         <div className="max-w-[1440px] mx-auto">
           <div className="flex flex-col gap-6 lg:flex-row md:flex-row justify-between">
             <h2 className="w-full md:w-[50%] lg:w-[50%] font-helvetica-neue-5 md:text-2xl text-xl lg:text-2xl leading-tight">
@@ -49,9 +49,9 @@ export default function FourthSection() {
             </div>
           </div>
 
-          <div className="flex flex-col lg:flex-row md:flex-row gap-4 pt-[64px]">
+          <div className="flex flex-col lg:flex-row md:flex-row gap-4 pt-[58px] lg:pt-[64px]">
             <motion.div 
-              className="w-full md:w-1/2 lg:w-1/2 h-[807px] overflow-hidden"
+              className="w-full md:w-1/2 lg:w-1/2 lg:h-[807px] h-[356.5px] overflow-hidden"
               initial={{ y: 100, opacity: 0 }}
               whileInView={{ 
                 y: 0,
@@ -71,7 +71,7 @@ export default function FourthSection() {
             </motion.div>
             
             <motion.div 
-              className="w-full md:w-1/2 lg:w-1/2 h-[807px] overflow-hidden"
+              className="w-full md:w-1/2 lg:w-1/2 lg:h-[807px] h-[356.5px] overflow-hidden"
               initial={{ y: 100, opacity: 0 }}
               whileInView={{ 
                 y: 0,
