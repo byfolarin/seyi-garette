@@ -5,6 +5,7 @@ import GarretImg from '../../src/assets/images/Garsetti mic hero  1-min.png';
 import Marquee from "react-fast-marquee";
 import Frame50 from '../assets/images/Frame 50-min.png';
 import GarretMobile from '../../src/assets/images/Garsetti-mobile.png';
+import SignUpModal from './SignUpModal';
 
 export default function HeroSection() {
   const { scrollY } = useScroll();  
@@ -19,9 +20,12 @@ export default function HeroSection() {
     }
 
 
-
   return (
     <div className='sticky top-0 h-screen overflow-hidden'>
+        <div className='px-12'>
+           <SignUpModal />
+        </div>
+     
       <div className='relative mx-auto max-w-[1440px]'>
         <motion.div 
           className='w-[394px] absolute z-[999] right-32'
