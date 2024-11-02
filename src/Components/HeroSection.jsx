@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { motion, useTransform, useScroll } from "framer-motion";
 import Typewriter from 'typewriter-effect';
 import GarretImg from '../../src/assets/images/Garsetti mic hero  1-min.png';
@@ -10,6 +10,15 @@ export default function HeroSection() {
   const { scrollY } = useScroll();  
   const frame50Y = useTransform(scrollY, [0, 1000], ['200%', '0%']);
   const frame50Rotate = useTransform(scrollY, [0, 1000], [40, 0]);
+
+  const [joinlist, setJoinList] = useState()
+
+
+    function handleClick (){
+
+    }
+
+
 
   return (
     <div className='sticky top-0 h-screen overflow-hidden'>
