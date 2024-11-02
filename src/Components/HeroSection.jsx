@@ -11,21 +11,15 @@ export default function HeroSection() {
   const { scrollY } = useScroll();  
   const frame50Y = useTransform(scrollY, [0, 1000], ['200%', '0%']);
   const frame50Rotate = useTransform(scrollY, [0, 1000], [40, 0]);
+  const [showSignUp, setShowSignUp] = useState(false);
 
-  const [joinlist, setJoinList] = useState()
 
-
-    function handleClick (){
-
-    }
-
+  const handleClose = () => {
+    setShowSignUp(false);
+  };
 
   return (
     <div className='sticky top-0 h-screen overflow-hidden'>
-        <div className='px-12'>
-           <SignUpModal />
-        </div>
-     
       <div className='relative mx-auto max-w-[1440px]'>
         <motion.div 
           className='w-[394px] absolute z-[999] right-32'
@@ -77,66 +71,70 @@ export default function HeroSection() {
             </div>
 
             <div className="relative z-[9999] mb-8 lg:mb-8 w-full lg:w-[608px] mt-6 lg:mt-16">
-              <div className='flex flex-col'>       
-                <div className='flex items-center gap-4  mb-[16px]'>
-                  <div className='w-[14px] h-[14px] bg-[#FC451A] overflow-hidden cursor-pointer rounded-full'></div>
-                  <div className='flex items-center w-[248px] h-[24px] relative'>
-                    <Marquee
-                      speed={40}
-                      direction='right'
-                      gradient={false}
-                    >
-                      <p className='font-DepartureMono text-[12px] whitespace-nowrap'>
-                        I HAVE A DREAM - MARTIN LUTHER
-                      </p> 
-                      <span className='w-8'></span>
-                    </Marquee>
+            {showSignUp ? (
+               <SignUpModal onClose={handleClose} /> 
+            ): (
+                <div className='flex flex-col'>       
+                  <div className='flex items-center gap-4  mb-[16px]'>
+                    <div className='w-[14px] h-[14px] bg-[#FC451A] overflow-hidden cursor-pointer rounded-full'></div>
+                    <div className='flex items-center w-[248px] h-[24px] relative'>
+                      <Marquee
+                        speed={40}
+                        direction='right'
+                        gradient={false}
+                      >
+                        <p className='font-DepartureMono text-[12px] whitespace-nowrap'>
+                          I HAVE A DREAM - MARTIN LUTHER
+                        </p> 
+                        <span className='w-8'></span>
+                      </Marquee>
+                    </div>
                   </div>
-                </div>
 
-                <h1 className='text-4xl sm:text-5xl leading-tight lg:leading-[128%] font-DepartureMono mb-4 lg:mb-4'>
-                  ETCH YOUR VOICE <br /> INTO HISTORY 
-                </h1>
-                
-                <div className='flex flex-col sm:flex-row gap-8 mb-4 lg:mb-10 font-helvetica-neue-5'>
+                  <h1 className='text-4xl sm:text-5xl leading-tight lg:leading-[128%] font-DepartureMono mb-4 lg:mb-4'>
+                    ETCH YOUR VOICE <br /> INTO HISTORY 
+                  </h1>
+                  
+                  <div className='flex flex-col sm:flex-row gap-8 mb-4 lg:mb-10 font-helvetica-neue-5'>
                   <button 
-                    onClick={() => console.log('clicked button')} 
-                    className="flex items-center justify-center h-[56px] cursor-pointer leading-[1.5] px-8 lg:px-[40px] bg-[#FF5931] rounded-full text-sm whitespace-nowrap"
-                  >
-                    Join the Waitlist
-                  </button>
+                      onClick={() => setShowSignUp(true)} 
+                      className="flex items-center justify-center h-[56px] cursor-pointer leading-[1.5] px-8 lg:px-[40px] bg-[#FF5931] rounded-full text-sm whitespace-nowrap"
+                    >
+                      Join the Waitlist
+                    </button>
 
-                  <motion.button 
-                    className="py-1 sm:py-0 relative group leading-normal"
-                    whileHover="hover"
-                    initial="rest"
-                    animate="rest"
-                  >
-                    <a href="#" className="text-sm py-1 hover:text-[#3d3d3d] relative inline-block leading-normal">
-                      See what's in the box
-                      <motion.span
-                        className="absolute bottom-0 left-0 h-[1px] bg-black w-full"
-                        variants={{
-                          rest: { width: '100%', left: '0%' },
-                          hover: { 
-                            width: ['100%', '0%', '0%', '100%'],
-                            left: ['0%', '100%', '0%', '0%'],
-                            transition: { 
-                              duration: 0.4,
-                              times: [0, 0.4, 0.5, 1]
+                    <motion.button 
+                      className="py-1 sm:py-0 relative group leading-normal"
+                      whileHover="hover"
+                      initial="rest"
+                      animate="rest"
+                    >
+                      <a href="#" className="text-sm py-1 hover:text-[#3d3d3d] relative inline-block leading-normal">
+                        See what's in the box
+                        <motion.span
+                          className="absolute bottom-0 left-0 h-[1px] bg-black w-full"
+                          variants={{
+                            rest: { width: '100%', left: '0%' },
+                            hover: { 
+                              width: ['100%', '0%', '0%', '100%'],
+                              left: ['0%', '100%', '0%', '0%'],
+                              transition: { 
+                                duration: 0.4,
+                                times: [0, 0.4, 0.5, 1]
+                              }
                             }
-                          }
-                        }}
-                      />
-                    </a>
-                  </motion.button>               
-                </div>
-              </div>
+                          }}
+                        />
+                      </a>
+                    </motion.button>               
+                  </div>
 
-              <p className='text-sm text-[#555963] w-full sm:w-[420px] font-helvetica-neue-5'>
-                GARSETTI® brings you its flagship multi-dimensional microphone,
-                designed to capture every nuance of your voice with precision.
-              </p>
+                  <p className='text-sm text-[#555963] w-full sm:w-[420px] font-helvetica-neue-5'>
+                    GARSETTI® brings you its flagship multi-dimensional microphone,
+                    designed to capture every nuance of your voice with precision.
+                  </p>
+                </div>
+              )}
             </div>
           </div>
         </div>
