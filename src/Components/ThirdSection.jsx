@@ -51,7 +51,7 @@ export default function SecondSection() {
         <div className='flex-grow flex flex-col md:flex-row lg:flex-row items-center justify-center md:relative lg:relative'>
           {/* Background text */}
           <div className='md:absolute lg:absolute md:inset-0 lg:inset-0 flex justify-center items-center pointer-events-none'>
-            <div className='md:flex lg:flex flex-col md:flex-row lg:flex-row justify-center items-center tracking-tighter font-DepartureMono text-[72px] md:text-[140px] lg:text-[180px] hidden text-white opacity-50'>
+            <div className='md:flex lg:flex flex-col md:flex-row lg:flex-row justify-center items-center tracking-tighter font-DepartureMono text-[72px] md:text-[140px] lg:text-[200px] hidden text-white opacity-50'>
               <h1 className="stoked md:-translate-y-16 lg:-translate-y-32 leading-[80%]">
                 {word.slice(0, 5).split('').map((letter, index) => (
                   <AnimatedLetter key={index} target={letter} delay={index * 0.1} inView={isInView} />
@@ -79,8 +79,8 @@ export default function SecondSection() {
             />
           </div>
 
-          <div className='md:absolute lg:absolute md:inset-0 lg:inset-0 flex justify-center items-center pointer-events-none'>
-            <div className='flex flex-col md:flex-row lg:flex-row justify-center items-center tracking-tighter font-DepartureMono text-[72px] md:text-[140px] lg:text-[180px] ml-4 md:ml-0 lg:ml-0 text-[#E8E8E8]'>
+          {/* <div className='md:absolute lg:absolute md:inset-0 lg:inset-0 flex justify-center items-center pointer-events-none'>
+            <div className='flex flex-col md:flex-row lg:flex-row justify-center items-center tracking-tighter font-DepartureMono text-[72px] md:text-[140px] lg:text-[200px] ml-4 md:ml-0 lg:ml-0 text-[#E8E8E8]'>
               <h1 className="md:-translate-y-16 lg:-translate-y-32 leading-[80%]">
                 {word.slice(0, 5).split('').map((letter, index) => (
                   <AnimatedLetter key={index} target={letter} delay={index * 0.1} inView={isInView} />
@@ -97,7 +97,7 @@ export default function SecondSection() {
                 ))}
               </h1>
             </div>
-          </div>
+          </div> */}
         </div>
 
         <div className='md:absolute lg:absolute bottom-10 pt-12 md:pt-0 lg:pt-0 md:left-8 md:right-8 lg:left-12 lg:right-12 font-helvetica-neue-5 flex flex-col md:flex-row lg:flex-row justify-between'>
@@ -109,7 +109,7 @@ export default function SecondSection() {
           <div className='w-full md:w-72 lg:w-80 flex flex-col gap-6 pt-16 md:pt-0 lg:pt-0'>
             <p className='text-[#555963] text-xs'>Experience not just an engineering marvel but an artistic one as well. The GARSETTI One seeks to further revolutionise audio capturing. </p>
             
-            <div className='flex flex-col md:flex-row lg:flex-row gap-3 mb-8 font-helvetica-neue-5'>
+            <div className='flex flex-col md:flex-row lg:flex-row gap-8 mb-8 font-helvetica-neue-5'>
               <button 
                 onClick={() => console.log('clicked button')} 
                 className="flex items-center justify-center h-[56px] cursor-pointer leading-[1.5] px-8 lg:px-[40px] bg-[#FF5931] rounded-full text-sm whitespace-nowrap"
