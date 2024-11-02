@@ -16,7 +16,8 @@ export default function SecondSection() {
           </div>
           
           {/* Foreground image */}
-        <div className="md:relative lg:relative md:z-10 lg:z-10 max-w-80 md:max-w-96 xl:pt-0 lg:max-w-[40%] md:translate-y-[10%] lg:translate-y-[8%] self-end"> {/* Added self-end */}
+       {/* Foreground image */}
+        <div className="md:relative lg:relative md:z-10 lg:z-10 w-80 md:w-96 lg:w-[40%] xl:w-[45%] 2xl:w-[50%] md:translate-y-[10%] lg:translate-y-[8%] self-end">
           <img 
             src={GarsettiSide} 
             alt="Garrett with microphone" 
