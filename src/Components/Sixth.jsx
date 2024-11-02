@@ -10,7 +10,7 @@ export default function Sixth() {
             <div className="max-w-[1440px] mx-auto">
             
             <div className="flex flex-col lg:flex-row justify-between">
-                <div className='w-full lg:w-[70%] flex flex-col lg:flex-row border border-red-600 gap-4'>
+                <div className='w-full lg:w-[70%] flex flex-col lg:flex-row  items-start gap-4'>
 
                     <div className='flex items-start w-full font-helvetica-neue-5 text-[#555963]'>
                         <h4 className='border-l-[3px] pl-6 font-medium border-[#E5E5E5]'>Check out what's <br /> in the box</h4>   
@@ -21,12 +21,12 @@ export default function Sixth() {
                     <div className='flex flex-col justify-between'>
 
 
-                        <h2 className="font-helvetica-neue-5 pt-[32px] text-2xl leading-tight">
+                        <h2 className="font-helvetica-neue-5 pt-[32px] lg:pt-[0px] text-2xl  leading-tight">
                             Complete your GARSETTI One microphone setup with our range of high-performance accessories. Each accessory is designed to enhance your sound and make your recording process seamless.
                         </h2>
 
 
-                        <div className="flex flex-col lg:flex-row md:flex-row md:items-center pt-[40px] lg:items-center gap-8">
+                        <div className="flex flex-col  lg:flex-row md:flex-row md:items-center pt-[40px] lg:items-center gap-8">
 
                             <button 
                                 onClick={()=> console.log('clicked button')}
