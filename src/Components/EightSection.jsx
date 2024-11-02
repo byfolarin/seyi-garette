@@ -63,7 +63,9 @@ export default function EightSection() {
               </div>
             </div>
             <div className='font-DepartureMono text-[28px] py-[105px]'>
-              <p id='bottom-g' className='tracking-tighter'>GARSETTI <span className='font-helvetica-neue-5'>®</span></p>
+                <p id='bottom-g' className='tracking-tighter inline-flex items-center '>
+                    GARSETTI<span className='font-helvetica-neue-5 ml-[6px]'>®</span>
+                </p>
             </div>
           </div>
         </div>
