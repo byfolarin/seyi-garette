@@ -71,7 +71,7 @@ export default function HeroSection() {
           </div>
 
           {/* Bottom section with heading and content */}
-          <div className="mt-auto mb-8 relative z-[9999] w-full lg:w-[608px]">
+          <div className="mt-auto mb-24 relative z-[9999] w-full lg:w-[608px]">
             {showSignUp ? (
               <SignUpModal onClose={handleClose} />
             ) : (

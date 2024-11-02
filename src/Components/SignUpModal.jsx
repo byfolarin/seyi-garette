@@ -7,7 +7,7 @@ const SignUpModal = ({ onClose }) => {
   return ( 
     <div className='w-[476px] flex flex-col gap-8'>
         <div className='flex justify-between items-center'>
-            <h2 className='text-[36px] font-helvetica-neue-5'>Join the waitlist</h2>
+            <h2 className='text-[36px] font-helvetica-neue-5 tracking-tight'>Join the waitlist</h2>
             <motion.button 
                 onClick={onClose}
                 className="py-1 sm:py-0 relative group leading-normal"
@@ -39,7 +39,7 @@ const SignUpModal = ({ onClose }) => {
             <input 
                 type="email"
                 placeholder="Enter your email address"
-                className='text-base bg-transparent placeholder-[#333333] outline-none w-full'
+                className='text-base bg-transparent font-helvetica-neue-5 tracking-normal placeholder-[#000000] outline-none w-full'
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
             />
