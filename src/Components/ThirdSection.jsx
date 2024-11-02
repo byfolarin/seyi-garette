@@ -16,13 +16,13 @@ export default function SecondSection() {
           </div>
           
           {/* Foreground image */}
-          <div className="md:relative lg:relative md:z-10 lg:z-10 max-w-80 md:max-w-96 xl:pt-32  lg:max-w-[40%] md:translate-y-[10%] lg:translate-y-[8%]">
-            <img 
-              src={GarsettiSide} 
-              alt="Garrett with microphone" 
-              className="object-cover w-full h-auto"
-            />
-          </div>
+        <div className="md:relative lg:relative md:z-10 lg:z-10 max-w-80 md:max-w-96 xl:pt-0 lg:max-w-[40%] md:translate-y-[10%] lg:translate-y-[8%] self-end"> {/* Added self-end */}
+          <img 
+            src={GarsettiSide} 
+            alt="Garrett with microphone" 
+            className="object-contain w-full h-auto"
+          />
+        </div>
 
           <div className='md:absolute lg:absolute md:inset-0 lg:inset-0 flex justify-center items-center pointer-events-none'>
             <div className='flex flex-col md:flex-row lg:flex-row justify-center items-center tracking-tighter font-DepartureMono text-[72px] md:text-[140px] lg:text-[180px] ml-4 md:ml-0 lg:ml-0 text-[#E8E8E8]'>
