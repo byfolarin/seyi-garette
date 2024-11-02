@@ -10,8 +10,7 @@ export default function Sixth() {
             <div className="max-w-[1440px] mx-auto">
             
             <div className="flex flex-col lg:flex-row justify-between">
-                <div className='w-full lg:w-[70%] flex flex-col lg:flex-row gap-4'>
-
+                <div className='w-full lg:w-[70%] flex flex-col lg:flex-row border border-red-600 gap-4'>
 
                     <div className='flex items-start w-full font-helvetica-neue-5 text-[#555963]'>
                         <h4 className='border-l-[3px] pl-6 font-medium border-[#E5E5E5]'>Check out what's <br /> in the box</h4>   

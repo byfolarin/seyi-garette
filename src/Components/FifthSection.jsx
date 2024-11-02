@@ -33,16 +33,16 @@ export default function Fifth() {
     return (
         <div className="relative z-[22] px-[16px] md:px[32px] lg:px-[48px] py-[68px] bg-white">
             <div className="max-w-[1440px] mx-auto">
-                <div className="flex flex-col lg:flex-row gap-4 lg:gap-10">
+                <div className="flex flex-col items-start border border-red-500 lg:flex-row gap-4 lg:gap-10">
                     <div>              
-                        <div className='flex items-start pr-[48px] font-helvetica-neue-5 text-sm text-[#555963]'>
+                        <div className='flex items-start pr-[48px] border border-red-500 font-helvetica-neue-5 text-sm text-[#555963]'>
                             <h4 className='border-l-[3px] border-[#E5E5E5] pl-6 font-medium'>
                                 Why choose <br /> GARSETTI One?
                             </h4>  
                         </div>
                     </div>
 
-                    <div>
+                    <div className='border border-red-600'>
                         <h2 className="font-DepartureMono text-[32px] lg:text-[48px] leading-tight">
                             THE GARSETTI
                         </h2>
