@@ -43,7 +43,7 @@ const AnimatedLetter = ({ target, delay, inView }) => {
 export default function SecondSection() {
   const word = "GARSETTI1";
   const sectionRef = useRef(null);
-  const isInView = useInView(sectionRef, { once: true, amount: 0.3 });
+  const isInView = useInView(sectionRef, { once: true, amount: 0.4 });
   
   return (
     <div className="bg-[#CECECE] min-h-screen sticky top-0 z-[10]" ref={sectionRef}>
