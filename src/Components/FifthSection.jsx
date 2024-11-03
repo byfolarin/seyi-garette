@@ -9,7 +9,7 @@ export default function Fifth() {
         show: {
             opacity: 1,
             transition: {
-                staggerChildren: 0.6,
+                staggerChildren: 0.3,
                 delayChildren: 0.6
             }
         }
@@ -18,14 +18,14 @@ export default function Fifth() {
     const itemVariants = {
         hidden: { 
             opacity: 0,
-            y: 50
+            y: 60
         },
         show: {
             opacity: 1,
             y: 0,
             transition: {
                 duration: 0.8,
-                ease: "easeOut"
+                ease: [0.4, 0, 0.2, 1]
             }
         }
     };
