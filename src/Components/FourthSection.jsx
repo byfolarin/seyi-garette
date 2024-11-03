@@ -52,13 +52,13 @@ export default function FourthSection() {
           <div className="flex flex-col lg:flex-row md:flex-row gap-4 pt-[58px] lg:pt-[64px]">
             <motion.div 
               className="w-full md:w-1/2 lg:w-1/2 lg:h-[807px] h-[356.5px] overflow-hidden"
-              initial={{ y: 100, opacity: 0 }}
+              initial={{ y: 60, opacity: 0 }}
               whileInView={{ 
                 y: 0,
                 opacity: 1,
                 transition: {
-                  duration: 1,
-                  ease: "easeOut"
+                  duration: 0.8,
+                  ease: [0.4, 0, 0.2, 1]
                 }
               }}
               viewport={{ once: true }}
@@ -72,14 +72,14 @@ export default function FourthSection() {
             
             <motion.div 
               className="w-full md:w-1/2 lg:w-1/2 lg:h-[807px] h-[356.5px] overflow-hidden"
-              initial={{ y: 100, opacity: 0 }}
+              initial={{ y: 60, opacity: 0 }}
               whileInView={{ 
                 y: 0,
                 opacity: 1,
                 transition: {
-                  duration: 1,
-                  ease: "easeOut",
-                  delay: 0.5 // This creates the stagger effect
+                  duration: 0.8,
+                  ease: [0.4, 0, 0.2, 1],
+                  delay: 0.3
                 }
               }}
               viewport={{ once: true }}
