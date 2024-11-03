@@ -1,5 +1,5 @@
-import React, { useState, useRef } from 'react';
-import { motion, useTransform, useScroll, useInView } from "framer-motion";
+import React, { useState } from 'react';
+import { motion, useTransform, useScroll } from "framer-motion";
 import Typewriter from 'typewriter-effect';
 import GarretImg from '../../src/assets/images/Garsetti mic hero  1-min.png';
 import Marquee from "react-fast-marquee";
@@ -7,53 +7,11 @@ import Frame50 from '../assets/images/Frame 50-min.png';
 import GarretMobile from '../../src/assets/images/Garsetti-mobile.png';
 import SignUpModal from './SignUpModal';
 
-const AnimatedLetter = ({ target, delay, inView }) => {
-    const [currentLetter, setCurrentLetter] = useState('A');
-    const alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ ';
-    
-    React.useEffect(() => {
-        if (!inView) return;
-        
-        let currentIndex = 0;
-        const targetIndex = target === ' ' ? alphabet.length - 1 : alphabet.indexOf(target);
-        
-        if (targetIndex === -1) {
-            setCurrentLetter(target);
-            return;
-        }
-        
-        const interval = setInterval(() => {
-            if (currentIndex <= targetIndex) {
-                setCurrentLetter(alphabet[currentIndex]);
-                currentIndex++;
-            } else {
-                clearInterval(interval);
-            }
-        }, 50);
-        
-        return () => clearInterval(interval);
-    }, [target, inView]);
-    
-    return (
-        <motion.span
-            initial={{ opacity: 0 }}
-            animate={{ opacity: inView ? 1 : 0 }}
-            transition={{ duration: 0.9, delay }}
-        >
-            {currentLetter}
-        </motion.span>
-    );
-};
-
 export default function HeroSection() {
   const { scrollY } = useScroll();  
   const frame50Y = useTransform(scrollY, [0, 1000], ['200%', '0%']);
   const frame50Rotate = useTransform(scrollY, [0, 1000], [40, 0]);
   const [showSignUp, setShowSignUp] = useState(false);
-  const titleRef = useRef(null);
-  const isInView = useInView(titleRef, { once: true, amount: 0.4 });
-  const line1 = "ETCH YOUR VOICE";
-  const line2 = "INTO HISTORY";
 
   const handleClose = () => {
     setShowSignUp(false);
@@ -134,27 +92,8 @@ export default function HeroSection() {
                   </div>
                 </div>
 
-                <h1 ref={titleRef} className='text-4xl sm:text-5xl leading-tight lg:leading-[128%] font-DepartureMono mb-4 lg:mb-4'>
-                  <span className="block">
-                    {line1.split('').map((letter, index) => (
-                      <AnimatedLetter 
-                        key={`line1-${index}`}
-                        target={letter} 
-                        delay={index * 0.1} 
-                        inView={isInView}
-                      />
-                    ))}
-                  </span>
-                  <span className="block">
-                    {line2.split('').map((letter, index) => (
-                      <AnimatedLetter 
-                        key={`line2-${index}`}
-                        target={letter} 
-                        delay={(index + line1.length) * 0.1} 
-                        inView={isInView}
-                      />
-                    ))}
-                  </span>
+                <h1 className='text-4xl sm:text-5xl leading-tight lg:leading-[128%] font-DepartureMono mb-4 lg:mb-4'>
+                  ETCH YOUR VOICE <br /> INTO HISTORY 
                 </h1>
                 
                 <div className='flex flex-col sm:flex-row gap-8 mb-4 lg:mb-10 font-helvetica-neue-5'>
