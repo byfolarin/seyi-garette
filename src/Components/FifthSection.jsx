@@ -1,9 +1,53 @@
+import React, { useState, useEffect, useRef } from 'react';
 import Mid1 from '../../src/assets/images/mid1.jpg'
 import Mid2 from '../../src/assets/images/mid2.jpg'
 import Mid3 from '../../src/assets/images/mid3.jpg'
-import { motion } from 'framer-motion'
+import { motion, useInView } from 'framer-motion'
+
+const AnimatedLetter = ({ target, delay, inView }) => {
+    const [currentLetter, setCurrentLetter] = useState('A');  // Fixed this line
+    const alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ ';
+    
+    useEffect(() => {
+        if (!inView) return;
+        
+        let currentIndex = 0;
+        const targetIndex = target === ' ' ? alphabet.length - 1 : alphabet.indexOf(target.toUpperCase());
+        
+        if (targetIndex === -1) {
+            setCurrentLetter(target);
+            return;
+        }
+        
+        const interval = setInterval(() => {
+            if (currentIndex <= targetIndex) {
+                setCurrentLetter(alphabet[currentIndex]);
+                currentIndex++;
+            } else {
+                clearInterval(interval);
+            }
+        }, 50);
+        
+        return () => clearInterval(interval);
+    }, [target, inView]);
+    
+    return (
+        <motion.span
+            initial={{ opacity: 0 }}
+            animate={{ opacity: inView ? 1 : 0 }}
+            transition={{ duration: 0.9, delay }}
+        >
+            {currentLetter}
+        </motion.span>
+    );
+};
 
 export default function Fifth() {
+    const titleRef = useRef(null);
+    const isInView = useInView(titleRef, { once: true, amount: 0.4 });
+    const line1 = "THE GARSETTI";
+    const line2 = "ARTISTIC MARVEL";
+
     const containerVariants = {
         hidden: { opacity: 0 },
         show: {
@@ -33,22 +77,36 @@ export default function Fifth() {
     return (
         <div className="relative z-[22] px-[16px] md:px[32px] lg:px-[48px] py-[68px] bg-white">
             <div className="max-w-[1440px] mx-auto">
-                <div className="flex flex-col items-start  lg:flex-row gap-4 lg:gap-10">
+                <div className="flex flex-col items-start lg:flex-row gap-4 lg:gap-10">
                     <div>              
-                        <div className='flex items-start pr-[48px]   font-helvetica-neue-5 text-sm text-[#555963]'>
-                            <h4 className='border-l-[3px] border-[#E5E5E5] pt-[8px] pl-6  font-medium'>
+                        <div className='flex items-start pr-[48px] font-helvetica-neue-5 text-sm text-[#555963]'>
+                            <h4 className='border-l-[3px] border-[#E5E5E5] pt-[8px] pl-6 font-medium'>
                                 Why choose <br /> GARSETTI One?
                             </h4>  
                         </div>
                     </div>
 
-                    <div >
+                    <div ref={titleRef}>
                         <h2 className="font-DepartureMono text-[32px] lg:text-[48px] leading-tight">
-                            THE GARSETTI
+                            {line1.split('').map((letter, index) => (
+                                <AnimatedLetter 
+                                    key={`line1-${index}`}
+                                    target={letter} 
+                                    delay={index * 0.1} 
+                                    inView={isInView}
+                                />
+                            ))}
                         </h2>
 
                         <h2 className="font-DepartureMono text-[32px] lg:text-[48px] leading-tight">
-                            ARTISTIC MARVEL
+                            {line2.split('').map((letter, index) => (
+                                <AnimatedLetter 
+                                    key={`line2-${index}`}
+                                    target={letter} 
+                                    delay={(index + line1.length) * 0.1} 
+                                    inView={isInView}
+                                />
+                            ))}
                         </h2>
                     </div>
                 </div>
@@ -84,7 +142,7 @@ export default function Fifth() {
                         variants={itemVariants}
                     >
                         <div className="h-[361px] lg:h-[528px] overflow-hidden">
-                        <img 
+                            <img 
                                 src={Mid2} 
                                 alt="Studio microphone" 
                                 className="w-full h-full object-cover"
@@ -103,7 +161,7 @@ export default function Fifth() {
                         variants={itemVariants}
                     >
                         <div className="h-[361px] lg:h-[528px] overflow-hidden">
-                        <img 
+                            <img 
                                 src={Mid3} 
                                 alt="Studio microphone" 
                                 className="w-full h-full object-cover"
