@@ -129,11 +129,11 @@ export default function HeroSection() {
                     </a>
                   </motion.button>               
                 </div>
-{/* 
+
                 <p className='text-sm text-[#555963] w-full sm:w-[420px] font-helvetica-neue-5'>
                   GARSETTI® brings you its flagship multi-dimensional microphone,
                   designed to capture every nuance of your voice with precision.
-                </p> */}
+                </p>
               </div>
             )}
           </div>
