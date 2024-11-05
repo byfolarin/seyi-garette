@@ -123,7 +123,7 @@ export default function SecondSection() {
                 initial="rest"
                 animate="rest"
               >
-                <a href="#" className="text-sm py-1 hover:text-[#3d3d3d] relative text-nowrap inline-block leading-normal">
+                <a href="#" className="text-sm py-1 hover:text-[#3d3d3d] relative text-nowrap whitespace-nowrap inline-block leading-normal">
                   See what's in the box
                   <motion.span
                     className="absolute bottom-0 left-0 h-[1px] bg-black w-full"
