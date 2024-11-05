@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { motion, useTransform, useScroll } from "framer-motion";
 import Typewriter from 'typewriter-effect';
 import GarretImg from '../../src/assets/images/Garsetti mic hero  1-min.png';
@@ -7,11 +7,55 @@ import Frame50 from '../assets/images/Frame 50-min.png';
 import GarretMobile from '../../src/assets/images/Garsetti-mobile.png';
 import SignUpModal from './SignUpModal';
 
+// Custom hook for scramble effect
+const useScramble = (finalText, duration = 1500) => {
+  const [text, setText] = useState('');
+  const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()';
+
+  const scramble = useCallback(() => {
+    let iterations = 0;
+    const finalLength = finalText.length;
+    const intervalDuration = duration / (finalLength * 3);
+    
+    const interval = setInterval(() => {
+      setText(current => {
+        const result = finalText
+          .split('')
+          .map((char, index) => {
+            if (char === ' ') return ' ';
+            if (char === '\n') return '\n';
+            if (index < iterations) return finalText[index];
+            return characters[Math.floor(Math.random() * characters.length)];
+          })
+          .join('');
+
+        iterations += 1/3;
+        if (iterations >= finalLength) {
+          clearInterval(interval);
+          return finalText;
+        }
+        return result;
+      });
+    }, intervalDuration);
+
+    return () => clearInterval(interval);
+  }, [finalText, duration]);
+
+  useEffect(() => {
+    const cleanup = scramble();
+    return cleanup;
+  }, [scramble]);
+
+  return text;
+};
+
 export default function HeroSection() {
   const { scrollY } = useScroll();  
   const frame50Y = useTransform(scrollY, [0, 1000], ['200%', '0%']);
   const frame50Rotate = useTransform(scrollY, [0, 1000], [40, 0]);
   const [showSignUp, setShowSignUp] = useState(false);
+  
+  const scrambledText = useScramble("ETCH YOUR VOICE \nINTO HISTORY");
 
   const handleClose = () => {
     setShowSignUp(false);
@@ -92,8 +136,8 @@ export default function HeroSection() {
                   </div>
                 </div>
 
-                <h1 className='text-4xl sm:text-5xl leading-tight lg:leading-[128%] font-DepartureMono mb-4 lg:mb-4'>
-                  ETCH YOUR VOICE <br /> INTO HISTORY 
+                <h1 className='text-4xl sm:text-5xl leading-tight lg:leading-[128%] font-DepartureMono mb-4 lg:mb-4 whitespace-pre-line'>
+                  {scrambledText}
                 </h1>
                 
                 <div className='flex flex-col sm:flex-row gap-8 mb-4 lg:mb-10 font-helvetica-neue-5'>
