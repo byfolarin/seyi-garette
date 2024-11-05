@@ -8,14 +8,16 @@ import GarretMobile from '../../src/assets/images/Garsetti-mobile.png';
 import SignUpModal from './SignUpModal';
 
 // Custom hook for scramble effect
-const useScramble = (finalText, duration = 1500) => {
+const useScramble = (finalText, duration = 4000) => {
   const [text, setText] = useState('');
   const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()';
 
   const scramble = useCallback(() => {
     let iterations = 0;
     const finalLength = finalText.length;
-    const intervalDuration = duration / (finalLength * 3);
+    const intervalDuration = 50; // Fixed interval for smoother animation
+    const totalIterations = duration / intervalDuration;
+    const iterationStep = finalLength / (totalIterations * 0.7); // Use 70% of duration for revealing letters
     
     const interval = setInterval(() => {
       setText(current => {
@@ -29,7 +31,7 @@ const useScramble = (finalText, duration = 1500) => {
           })
           .join('');
 
-        iterations += 1/3;
+        iterations += iterationStep;
         if (iterations >= finalLength) {
           clearInterval(interval);
           return finalText;
@@ -38,7 +40,20 @@ const useScramble = (finalText, duration = 1500) => {
       });
     }, intervalDuration);
 
-    return () => clearInterval(interval);
+    // Initial delay before starting the scramble
+    const startDelay = setTimeout(() => {
+      // Fill with random characters initially
+      setText(finalText.split('').map(char => {
+        if (char === ' ') return ' ';
+        if (char === '\n') return '\n';
+        return characters[Math.floor(Math.random() * characters.length)];
+      }).join(''));
+    }, 500);
+
+    return () => {
+      clearInterval(interval);
+      clearTimeout(startDelay);
+    };
   }, [finalText, duration]);
 
   useEffect(() => {
