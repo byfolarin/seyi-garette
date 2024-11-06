@@ -35,6 +35,7 @@ function App() {
   return (
     // Outer div for full-width background effects if needed
     <div className="w-full min-h-screen bg-[#B8BBC2]">
+      <img src="" alt="" />
       {/* Inner container for max-width constraint */}
       <div className=" mx-auto relative">
         <HeroSection />
