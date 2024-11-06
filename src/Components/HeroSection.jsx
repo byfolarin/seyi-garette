@@ -140,11 +140,13 @@ export default function HeroSection() {
         </div>
         
         <div className="hidden lg:block lg:absolute lg:top-0 lg:right-0 lg:w-[80%] xl:pr-16 lg:h-full lg:overflow-hidden">
-          <img 
-            src={GarretImg} 
-            alt="Garrett with microphone" 
-            className="object-cover w-full h-full"
-          />
+          <div className="relative w-full h-full">
+            <img 
+              src={GarretImg} 
+              alt="Garrett with microphone" 
+              className="absolute top-0 left-0 w-full h-full object-cover object-left"
+            />
+          </div>
         </div>
       </div>
     </div>
