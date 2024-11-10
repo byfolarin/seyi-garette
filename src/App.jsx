@@ -72,11 +72,11 @@ function App() {
         </section>
 
         {/* Third Section - Comes on top of second section */}
-        {/* <section 
+        <section 
           id="section3" 
           ref={thirdRef}
           className="relative min-h-screen z-30"
-        > */}
+        >
           <ThirdSection />
         </section>
 
