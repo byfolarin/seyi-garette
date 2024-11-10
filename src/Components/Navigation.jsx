@@ -9,11 +9,11 @@ export default function Navigation() {
                 <div>Our belief of your voice</div>
         </div>
      
+        <div>Back to top</div>
+
+        <button>Join the Waitlist</button>
 
 
-      <div>Back to top</div>
-
-      <button>Join the Waitlist</button>
     </div>
   )
 }
