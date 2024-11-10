@@ -14,28 +14,9 @@ import Navigation from './Components/Navigation';
 function App() {
 
   
-  // useEffect(() => {
-  //   const lenis = new Lenis({
-  //     duration: 0.9,
-  //     easing: (t) => t,
-  //     smooth: true,
-  //     smoothTouch: false,
-  //   });
-
-  //   function raf(time) {
-  //     lenis.raf(time);
-  //     requestAnimationFrame(raf);
-  //   }
-
-  //   requestAnimationFrame(raf);
-
-  //   return () => {
-  //     lenis.destroy();
-  //   };
-  // }, []);
 
   return (
-    // Outer div for full-width background effects if needed
+
 
     
     <div className="w-full min-h-screen bg-[#B8BBC2]">
