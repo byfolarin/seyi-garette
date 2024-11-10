@@ -14,25 +14,6 @@ import Navigation from './Components/Navigation';
 function App() {
 
   
-  // useEffect(() => {
-  //   const lenis = new Lenis({
-  //     duration: 0.9,
-  //     easing: (t) => t,
-  //     smooth: true,
-  //     smoothTouch: false,
-  //   });
-
-  //   function raf(time) {
-  //     lenis.raf(time);
-  //     requestAnimationFrame(raf);
-  //   }
-
-  //   requestAnimationFrame(raf);
-
-  //   return () => {
-  //     lenis.destroy();
-  //   };
-  // }, []);
 
   return (
     // Outer div for full-width background effects if needed
@@ -44,18 +25,40 @@ function App() {
       <img src="" alt="" />
       {/* Inner container for max-width constraint */}
       <div className=" mx-auto relative">
-        <HeroSection />
-       
-        <div style={{ marginTop: '200vh' }} />
-        <SecondSection />
-        <ThirdSection />
-        <FourthSection />
-        <Fifth />
-        <Sixth />
-        <SeventhSection />
-        <div className="relative">
-          <EightSection />
-        </div>
+
+              <div id="section1">
+                <HeroSection />
+              </div>
+            
+            
+              <div id="section2">
+                <SecondSection />
+              </div>
+
+              <div id="section3">
+                <ThirdSection />
+              </div>
+
+              <div id="section4">
+                <FourthSection />
+              </div>
+
+              <div id="section5">
+                <Fifth />
+              </div>
+
+              <div id="section6">
+                <Sixth />
+              </div>
+
+              <div id="section7">
+                <SeventhSection />
+              </div>
+
+              <div id="section8" className="relative">
+                <EightSection />
+              </div>
+
       </div>
     </div>
   );
