@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 const Navigation = () => {
   const [isFirstSection, setIsFirstSection] = useState(true);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState('section1');
 
   const sections = [
     { id: 'section1', title: 'Etch your voice' },
@@ -20,6 +21,22 @@ const Navigation = () => {
       const firstSectionHeight = window.innerHeight;
       const scrollPosition = window.scrollY;
       setIsFirstSection(scrollPosition <= firstSectionHeight * 0.7);
+
+      // Determine active section
+      const sectionElements = sections.map(section => ({
+        id: section.id,
+        element: document.getElementById(section.id)
+      }));
+
+      const currentSection = sectionElements.find(section => {
+        if (!section.element) return false;
+        const rect = section.element.getBoundingClientRect();
+        return rect.top <= window.innerHeight / 2 && rect.bottom >= window.innerHeight / 2;
+      });
+
+      if (currentSection) {
+        setActiveSection(currentSection.id);
+      }
     };
 
     window.addEventListener('scroll', handleScroll);
@@ -33,110 +50,125 @@ const Navigation = () => {
   const handleSectionClick = (sectionId) => {
     const element = document.getElementById(sectionId);
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+      const offset = element.offsetTop - 100; // Adjust this value as needed
+      window.scrollTo({
+        top: offset,
+        behavior: 'smooth'
+      });
     }
     setIsMenuOpen(false);
+    setActiveSection(sectionId);
   };
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  const currentSection = sections.find(section => section.id === activeSection);
+
   return (
-    <div className="fixed bottom-0 left-0 right-0 z-50 pb-[42px] font-helvetica-neue-5">
-      <motion.div 
-        className="mx-auto"
-        initial={{ width: '340px' }}
-        animate={{ 
-          width: isFirstSection ? '340px' : '705px',
-        }}
-        transition={{ duration: 0.3 }}
-      >
-        <div className="flex justify-between items-center py-[12px] pl-[32px] pr-[16px] text-white backdrop-blur-lg rounded-full bg-[#1F1F1F]/50 border border-[#0000001e]">
-          <div 
-            className="flex gap-2 py-[16px] cursor-pointer items-center whitespace-nowrap"
-            onClick={toggleMenu}
-            role="button"
-            tabIndex={0}
-            onKeyDown={(e) => e.key === 'Enter' && toggleMenu()}
-          >
-            <div className="mix-blend-soft-light">Section 01:</div>
-            <div className="flex items-center gap-2">
-              <div>Our belief of your voice</div>
-              <svg 
-                width="16" 
-                height="16" 
-                viewBox="0 0 16 16" 
-                fill="none" 
-                className={`transform transition-transform ${isMenuOpen ? 'rotate-180' : ''}`}
-              >
-                <path d="M4 6L8 10L12 6" stroke="currentColor" strokeWidth="2"/>
-              </svg>
-            </div>
-          </div>
-      
-          <AnimatePresence mode="wait">
-            {!isFirstSection && (
-              <motion.div 
-                initial={{ width: 0, opacity: 0 }}
-                animate={{ width: "auto", opacity: 1 }}
-                exit={{ width: 0, opacity: 0 }}
-                className="flex gap-2 cursor-pointer items-center overflow-hidden whitespace-nowrap ml-4"
-                onClick={handleBackToTop}
-                role="button"
-                tabIndex={0}
-                onKeyDown={(e) => e.key === 'Enter' && handleBackToTop()}
-              >
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                  <path d="M12 19V5M12 5L5 12M12 5L19 12" stroke="currentColor" strokeWidth="2"/>
+    <div className="fixed bottom-0 left-0 right-0 z-50 pb-[42px] flex justify-center items-center font-helvetica-neue-5">
+      <div className="relative">
+        <motion.div 
+          className="relative"
+          initial={{ width: '340px' }}
+          animate={{ 
+            width: isFirstSection ? '340px' : '705px',
+          }}
+          transition={{ duration: 0.3 }}
+        >
+          <div className="flex justify-between items-center py-[12px] pl-[32px] pr-[16px] text-white backdrop-blur-lg rounded-full bg-[#1F1F1F]/50 border border-[#0000001e]">
+            <div 
+              className="flex gap-2 py-[16px] cursor-pointer items-center whitespace-nowrap"
+              onClick={toggleMenu}
+              role="button"
+              tabIndex={0}
+              onKeyDown={(e) => e.key === 'Enter' && toggleMenu()}
+            >
+              <div className="mix-blend-soft-light">
+                Section {(parseInt(activeSection.replace('section', ''), 10)).toString().padStart(2, '0')}:
+              </div>
+              <div className="flex items-center gap-2">
+                <div>{currentSection?.title || 'Select section'}</div>
+                <svg 
+                  width="16" 
+                  height="16" 
+                  viewBox="0 0 16 16" 
+                  fill="none" 
+                  className={`transform transition-transform ${isMenuOpen ? 'rotate-180' : ''}`}
+                >
+                  <path d="M4 6L8 10L12 6" stroke="currentColor" strokeWidth="2"/>
                 </svg>
-                <div>Back to top</div>          
+              </div>
+            </div>
+        
+            <AnimatePresence mode="wait">
+              {!isFirstSection && (
+                <motion.div 
+                  initial={{ width: 0, opacity: 0 }}
+                  animate={{ width: "auto", opacity: 1 }}
+                  exit={{ width: 0, opacity: 0 }}
+                  className="flex gap-2 cursor-pointer items-center overflow-hidden whitespace-nowrap ml-4"
+                  onClick={handleBackToTop}
+                  role="button"
+                  tabIndex={0}
+                  onKeyDown={(e) => e.key === 'Enter' && handleBackToTop()}
+                >
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path d="M12 19V5M12 5L5 12M12 5L19 12" stroke="currentColor" strokeWidth="2"/>
+                  </svg>
+                  <div>Back to top</div>          
+                </motion.div>
+              )}
+            </AnimatePresence>
+          
+            <AnimatePresence mode="wait">
+              {!isFirstSection && (
+                <motion.button 
+                  initial={{ width: 0, opacity: 0 }}
+                  animate={{ width: "auto", opacity: 1 }}
+                  exit={{ width: 0, opacity: 0 }}
+                  className="py-[16px] px-[32px] ml-4 rounded-full backdrop-blur-lg border bg-[#1F1F1F]/50 border-[#0000001a] whitespace-nowrap overflow-hidden hover:bg-[#1F1F1F]/70 transition-colors"
+                >
+                  Join the Waitlist
+                </motion.button>
+              )}
+            </AnimatePresence>
+          </div>
+
+          <AnimatePresence>
+            {isMenuOpen && (
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: 20 }}
+                className="absolute bottom-full  transform -translate-x-1/2 mb-2 w-[340px] bg-[#1F1F1F]/50 backdrop-blur-lg border border-[#0000001e] text-white rounded-2xl overflow-hidden"
+              >
+                <div className="py-[16px] px-[24px]">
+                  <ul className="flex flex-col gap-4">
+                    {sections.map((section) => (
+                      <li
+                        key={section.id}
+                        className={`cursor-pointer transition-colors ${
+                          activeSection === section.id 
+                            ? 'text-white font-medium' 
+                            : 'text-gray-400 hover:text-white'
+                        }`}
+                        onClick={() => handleSectionClick(section.id)}
+                        role="button"
+                        tabIndex={0}
+                        onKeyDown={(e) => e.key === 'Enter' && handleSectionClick(section.id)}
+                      >
+                        {section.title}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
               </motion.div>
             )}
           </AnimatePresence>
-        
-          <AnimatePresence mode="wait">
-            {!isFirstSection && (
-              <motion.button 
-                initial={{ width: 0, opacity: 0 }}
-                animate={{ width: "auto", opacity: 1 }}
-                exit={{ width: 0, opacity: 0 }}
-                className="py-[16px] px-[32px] ml-4 rounded-full backdrop-blur-lg border bg-[#1F1F1F]/50 border-[#0000001a] whitespace-nowrap overflow-hidden"
-              >
-                Join the Waitlist
-              </motion.button>
-            )}
-          </AnimatePresence>
-        </div>
-
-        <AnimatePresence>
-          {isMenuOpen && (
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: 20 }}
-              className="absolute bottom-full left-0 mb-2 w-[340px] bg-[#1F1F1F]/50 backdrop-blur-lg border border-[#0000001e] text-white rounded-2xl overflow-hidden"
-            >
-              <div className="py-[16px] px-[24px]">
-                <ul className="flex flex-col gap-4">
-                  {sections.map((section) => (
-                    <li
-                      key={section.id}
-                      className="cursor-pointer hover:text-gray-300 transition-colors"
-                      onClick={() => handleSectionClick(section.id)}
-                      role="button"
-                      tabIndex={0}
-                      onKeyDown={(e) => e.key === 'Enter' && handleSectionClick(section.id)}
-                    >
-                      {section.title}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </motion.div>
-          )}
-        </AnimatePresence>
-      </motion.div>
+        </motion.div>
+      </div>
     </div>
   );
 };
