@@ -9,11 +9,8 @@ import Sixth from "./Components/Sixth";
 import SeventhSection from "./Components/SeventhSection";
 import EightSection from "./Components/EightSection";
 import Navigation from './Components/Navigation';
-// import NavCom from './Components/NavCompo';
 
 function App() {
-
-  
   // useEffect(() => {
   //   const lenis = new Lenis({
   //     duration: 0.9,
@@ -35,25 +32,46 @@ function App() {
   // }, []);
 
   return (
-    // Outer div for full-width background effects if needed
-
-    
     <div className="w-full min-h-screen bg-[#B8BBC2]">
-      {/* <NavCom /> */}
-       <Navigation />
-      <img src="" alt="" />
-      {/* Inner container for max-width constraint */}
-      <div className=" mx-auto relative">
-        <HeroSection />
-       
-        <div style={{ marginTop: '200vh' }} />
-        <SecondSection />
-        <ThirdSection />
-        <FourthSection />
-        <Fifth />
-        <Sixth />
-        <SeventhSection />
-        <div className="relative">
+      <Navigation />
+      <div className="mx-auto relative">
+        {/* Section 1 */}
+        <div id="section1">
+          <HeroSection />
+        </div>
+
+        {/* Section 2 */}
+        <div id="section2">
+          <SecondSection />
+        </div>
+
+        {/* Section 3 */}
+        <div id="section3">
+          <ThirdSection />
+        </div>
+
+        {/* Section 4 */}
+        <div id="section4">
+          <FourthSection />
+        </div>
+
+        {/* Section 5 */}
+        <div id="section5">
+          <Fifth />
+        </div>
+
+        {/* Section 6 */}
+        <div id="section6">
+          <Sixth />
+        </div>
+
+        {/* Section 7 */}
+        <div id="section7">
+          <SeventhSection />
+        </div>
+
+        {/* Section 8 */}
+        <div id="section8" className="relative">
           <EightSection />
         </div>
       </div>

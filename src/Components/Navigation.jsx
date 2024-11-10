@@ -1,10 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const Navigation = () => {
   const [isFirstSection, setIsFirstSection] = useState(true);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('section1');
+  const navigationRef = useRef(null);
 
   const sections = [
     { id: 'section1', title: 'Etch your voice' },
@@ -18,29 +19,43 @@ const Navigation = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      const firstSectionHeight = window.innerHeight;
       const scrollPosition = window.scrollY;
-      setIsFirstSection(scrollPosition <= firstSectionHeight * 0.7);
+      const windowHeight = window.innerHeight;
+      
+      // Check if we're in first section
+      setIsFirstSection(scrollPosition <= windowHeight * 0.7);
 
-      // Determine active section
-      const sectionElements = sections.map(section => ({
-        id: section.id,
-        element: document.getElementById(section.id)
-      }));
+      // Find current section
+      for (let section of sections) {
+        const element = document.getElementById(section.id);
+        if (element) {
+          const rect = element.getBoundingClientRect();
+          const offset = windowHeight * 0.3; // Adjust this value to change when section becomes active
+          
+          if (rect.top <= offset && rect.bottom >= offset) {
+            setActiveSection(section.id);
+            break;
+          }
+        }
+      }
+    };
 
-      const currentSection = sectionElements.find(section => {
-        if (!section.element) return false;
-        const rect = section.element.getBoundingClientRect();
-        return rect.top <= window.innerHeight / 2 && rect.bottom >= window.innerHeight / 2;
-      });
-
-      if (currentSection) {
-        setActiveSection(currentSection.id);
+    const handleClickOutside = (event) => {
+      if (navigationRef.current && !navigationRef.current.contains(event.target)) {
+        setIsMenuOpen(false);
       }
     };
 
     window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    document.addEventListener('mousedown', handleClickOutside);
+    
+    // Initial check
+    handleScroll();
+    
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
   }, []);
 
   const handleBackToTop = () => {
@@ -50,9 +65,17 @@ const Navigation = () => {
   const handleSectionClick = (sectionId) => {
     const element = document.getElementById(sectionId);
     if (element) {
-      const offset = element.offsetTop - 100; // Adjust this value as needed
+      // Get the element's position relative to the viewport
+      const rect = element.getBoundingClientRect();
+      // Get the current scroll position
+      const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+      // Calculate the absolute position of the element
+      const absoluteElementTop = rect.top + currentScroll;
+      // Add offset for the header/navigation if needed
+      const offset = 100; // Adjust this value based on your layout
+      
       window.scrollTo({
-        top: offset,
+        top: absoluteElementTop - offset,
         behavior: 'smooth'
       });
     }
@@ -68,7 +91,7 @@ const Navigation = () => {
 
   return (
     <div className="fixed bottom-0 left-0 right-0 z-50 pb-[42px] flex justify-center items-center font-helvetica-neue-5">
-      <div className="relative">
+      <div className="relative" ref={navigationRef}>
         <motion.div 
           className="relative"
           initial={{ width: '340px' }}
@@ -142,7 +165,7 @@ const Navigation = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: 20 }}
-                className="absolute bottom-full  transform -translate-x-1/2 mb-2 w-[340px] bg-[#1F1F1F]/50 backdrop-blur-lg border border-[#0000001e] text-white rounded-2xl overflow-hidden"
+                className="absolute bottom-full transform -translate-x-1/2 mb-2 w-[340px] bg-[#1F1F1F]/50 backdrop-blur-lg border border-[#0000001e] text-white rounded-2xl overflow-hidden"
               >
                 <div className="py-[16px] px-[24px]">
                   <ul className="flex flex-col gap-4">
