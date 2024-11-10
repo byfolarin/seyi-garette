@@ -1,10 +1,19 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import Arrowdown from '../assets/arrowline.svg';
-import ArrowGroup from '../assets/Group.svg';
 
 const Navigation = () => {
   const [isFirstSection, setIsFirstSection] = useState(true);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const sections = [
+    { id: 'section1', title: 'Etch your voice' },
+    { id: 'section2', title: 'Our belief of your voice' },
+    { id: 'section3', title: 'Your words deserve' },
+    { id: 'section4', title: 'The GARSETTI Marvel' },
+    { id: 'section5', title: "What's in the box?" },
+    { id: 'section6', title: "What you've just witnessed" },
+    { id: 'section7', title: 'Footer | Closing' }
+  ];
 
   useEffect(() => {
     const handleScroll = () => {
@@ -21,6 +30,18 @@ const Navigation = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
+  const handleSectionClick = (sectionId) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+    setIsMenuOpen(false);
+  };
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
   return (
     <div className="fixed bottom-0 left-0 right-0 z-50 pb-[42px] font-helvetica-neue-5">
       <motion.div 
@@ -32,11 +53,25 @@ const Navigation = () => {
         transition={{ duration: 0.3 }}
       >
         <div className="flex justify-between items-center py-[12px] pl-[32px] pr-[16px] text-white backdrop-blur-lg rounded-full bg-[#1F1F1F]/50 border border-[#0000001e]">
-          <div className="flex gap-2 py-[16px] cursor-pointer items-center whitespace-nowrap">
+          <div 
+            className="flex gap-2 py-[16px] cursor-pointer items-center whitespace-nowrap"
+            onClick={toggleMenu}
+            role="button"
+            tabIndex={0}
+            onKeyDown={(e) => e.key === 'Enter' && toggleMenu()}
+          >
             <div className="mix-blend-soft-light">Section 01:</div>
-            <div className="flex items-center gap-2 ">
+            <div className="flex items-center gap-2">
               <div>Our belief of your voice</div>
-              <img src={Arrowdown} alt="" />
+              <svg 
+                width="16" 
+                height="16" 
+                viewBox="0 0 16 16" 
+                fill="none" 
+                className={`transform transition-transform ${isMenuOpen ? 'rotate-180' : ''}`}
+              >
+                <path d="M4 6L8 10L12 6" stroke="currentColor" strokeWidth="2"/>
+              </svg>
             </div>
           </div>
       
@@ -47,12 +82,14 @@ const Navigation = () => {
                 animate={{ width: "auto", opacity: 1 }}
                 exit={{ width: 0, opacity: 0 }}
                 className="flex gap-2 cursor-pointer items-center overflow-hidden whitespace-nowrap ml-4"
-                onClick={handleBackToTop}  // Added onClick handler here
-                role="button"  // Added for accessibility
-                tabIndex={0}   // Added for accessibility
-                onKeyDown={(e) => e.key === 'Enter' && handleBackToTop()}  // Added keyboard support
+                onClick={handleBackToTop}
+                role="button"
+                tabIndex={0}
+                onKeyDown={(e) => e.key === 'Enter' && handleBackToTop()}
               >
-                <img src={ArrowGroup} alt="" />
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                  <path d="M12 19V5M12 5L5 12M12 5L19 12" stroke="currentColor" strokeWidth="2"/>
+                </svg>
                 <div>Back to top</div>          
               </motion.div>
             )}
@@ -71,6 +108,34 @@ const Navigation = () => {
             )}
           </AnimatePresence>
         </div>
+
+        <AnimatePresence>
+          {isMenuOpen && (
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: 20 }}
+              className="absolute bottom-full left-0 mb-2 w-[340px] bg-[#1F1F1F]/50 backdrop-blur-lg border border-[#0000001e] text-white rounded-2xl overflow-hidden"
+            >
+              <div className="py-[16px] px-[24px]">
+                <ul className="flex flex-col gap-4">
+                  {sections.map((section) => (
+                    <li
+                      key={section.id}
+                      className="cursor-pointer hover:text-gray-300 transition-colors"
+                      onClick={() => handleSectionClick(section.id)}
+                      role="button"
+                      tabIndex={0}
+                      onKeyDown={(e) => e.key === 'Enter' && handleSectionClick(section.id)}
+                    >
+                      {section.title}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
       </motion.div>
     </div>
   );
