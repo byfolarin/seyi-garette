@@ -20,8 +20,7 @@ const Navigation = () => {
           <div>Back to top</div>          
         </div>
       
-        <button className='py-[16px] px-[32px] rounded-full bg-green-500'>Join the Waitlist</button>
-      </div>
+        <button className='py-[16px] px-[32px] rounded-full backdrop-blur-lg border bg-[#1F1F1F]/50 border-[#0000001a]'>Join the Waitlist</button>      </div>
     </div>
   );
 };
