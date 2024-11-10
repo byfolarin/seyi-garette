@@ -31,7 +31,7 @@ const Navigation = () => {
         }}
         transition={{ duration: 0.3 }}
       >
-        <div className="flex justify-between items-center py-[16px] pl-[32px] pr-[16px] text-white backdrop-blur-lg rounded-full bg-[#1F1F1F]/50 border border-[#0000001e]">
+        <div className="flex justify-between items-center py-[12px] pl-[32px] pr-[16px] text-white backdrop-blur-lg rounded-full bg-[#1F1F1F]/50 border border-[#0000001e]">
           <div className="flex gap-2 py-[16px] cursor-pointer items-center whitespace-nowrap">
             <div className="mix-blend-soft-light">Section 01:</div>
             <div className="flex items-center gap-2 ">
