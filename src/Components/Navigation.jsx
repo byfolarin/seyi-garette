@@ -18,76 +18,94 @@ const Navigation = () => {
     { id: 'section8', title: 'Eight Section' }
   ];
 
-  // Improved scroll detection
   useEffect(() => {
     const handleScroll = () => {
-      setIsFirstSection(window.scrollY < window.innerHeight * 0.3);
+      const scrollPosition = window.scrollY;
+      const windowHeight = window.innerHeight;
+      const viewportMiddle = scrollPosition + (windowHeight / 2);
       
-      // Find current section using Intersection Observer logic
-      let closestSection = null;
-      let closestDistance = Infinity;
+      // Check if we're in first section
+      setIsFirstSection(scrollPosition < windowHeight / 2);
 
-      sections.forEach(({ id }) => {
-        const element = document.getElementById(id);
+      // Find active section
+      let activeFound = false;
+      for (let section of sections) {
+        const element = document.getElementById(section.id);
         if (element) {
           const rect = element.getBoundingClientRect();
-          const distance = Math.abs(rect.top + rect.height / 2 - window.innerHeight / 2);
-          
-          if (distance < closestDistance) {
-            closestDistance = distance;
-            closestSection = id;
+          const absoluteTop = scrollPosition + rect.top;
+          const absoluteBottom = absoluteTop + rect.height;
+
+          if (viewportMiddle >= absoluteTop && viewportMiddle < absoluteBottom) {
+            setActiveSection(section.id);
+            activeFound = true;
+            break;
           }
         }
-      });
+      }
 
-      if (closestSection) {
+      // If no section is active (for edge cases), find the closest one
+      if (!activeFound) {
+        let closestSection = sections[0].id;
+        let minDistance = Infinity;
+
+        sections.forEach(section => {
+          const element = document.getElementById(section.id);
+          if (element) {
+            const rect = element.getBoundingClientRect();
+            const absoluteTop = scrollPosition + rect.top;
+            const distance = Math.abs(viewportMiddle - absoluteTop);
+            
+            if (distance < minDistance) {
+              minDistance = distance;
+              closestSection = section.id;
+            }
+          }
+        });
+
         setActiveSection(closestSection);
       }
     };
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
-  useEffect(() => {
     const handleClickOutside = (event) => {
       if (navigationRef.current && !navigationRef.current.contains(event.target)) {
         setIsMenuOpen(false);
       }
     };
 
+    window.addEventListener('scroll', handleScroll);
     document.addEventListener('mousedown', handleClickOutside);
-    return () => document.removeEventListener('mousedown', handleClickOutside);
-  }, []);
+    
+    // Initial check
+    handleScroll();
+    
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [sections]);
 
   const handleBackToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
-    setIsMenuOpen(false);
   };
 
-  // Improved section scrolling with better positioning
   const handleSectionClick = (sectionId) => {
-    const targetSection = document.getElementById(sectionId);
-    if (!targetSection) return;
+    const element = document.getElementById(sectionId);
+    if (element) {
+      // Get element's position relative to the document
+      const rect = element.getBoundingClientRect();
+      const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      const targetPosition = scrollTop + rect.top;
 
-    const viewportHeight = window.innerHeight;
-    const currentScrollY = window.scrollY;
-    const targetTop = targetSection.offsetTop;
-    const sectionHeight = targetSection.offsetHeight;
+      // Scroll to the element with offset
+      window.scrollTo({
+        top: targetPosition,
+        behavior: 'smooth'
+      });
 
-    // Calculate the ideal scroll position to center the section
-    const idealScrollPosition = targetTop - (viewportHeight - sectionHeight) / 2;
-
-    // Add some buffer for very tall sections
-    const maxScroll = document.documentElement.scrollHeight - viewportHeight;
-    const finalScrollPosition = Math.max(0, Math.min(idealScrollPosition, maxScroll));
-
-    window.scrollTo({
-      top: finalScrollPosition,
-      behavior: 'smooth'
-    });
-
-    setIsMenuOpen(false);
+      setActiveSection(sectionId);
+      setIsMenuOpen(false);
+    }
   };
 
   const toggleMenu = () => {
@@ -102,15 +120,18 @@ const Navigation = () => {
         <motion.div 
           className="relative"
           initial={{ width: '340px' }}
-          animate={{ width: isFirstSection ? '300px' : '705px' }}
+          animate={{ 
+            width: isFirstSection ? '300px' : '705px',
+          }}
           transition={{ duration: 0.3 }}
         >
           <div className="flex justify-between items-center py-[12px] pl-[32px] pr-[16px] text-white backdrop-blur-lg rounded-full bg-[#1F1F1F]/50 border border-[#0000001e]">
-            <button 
-              className="flex gap-2 py-[16px] cursor-pointer items-center whitespace-nowrap focus:outline-none"
+            <div 
+              className="flex gap-2 py-[16px] cursor-pointer items-center whitespace-nowrap"
               onClick={toggleMenu}
-              aria-expanded={isMenuOpen}
-              aria-controls="section-menu"
+              role="button"
+              tabIndex={0}
+              onKeyDown={(e) => e.key === 'Enter' && toggleMenu()}
             >
               <div className="mix-blend-soft-light">
                 Section {(parseInt(activeSection.replace('section', ''), 10)).toString().padStart(2, '0')}:
@@ -127,33 +148,35 @@ const Navigation = () => {
                   <path d="M4 6L8 10L12 6" stroke="currentColor" strokeWidth="2"/>
                 </svg>
               </div>
-            </button>
-
+            </div>
+        
             <AnimatePresence mode="wait">
               {!isFirstSection && (
-                <motion.button 
+                <motion.div 
                   initial={{ width: 0, opacity: 0 }}
                   animate={{ width: "auto", opacity: 1 }}
                   exit={{ width: 0, opacity: 0 }}
-                  className="flex gap-2 cursor-pointer items-center overflow-hidden whitespace-nowrap ml-4 focus:outline-none"
+                  className="flex gap-2 cursor-pointer items-center overflow-hidden whitespace-nowrap ml-4"
                   onClick={handleBackToTop}
-                  aria-label="Back to top"
+                  role="button"
+                  tabIndex={0}
+                  onKeyDown={(e) => e.key === 'Enter' && handleBackToTop()}
                 >
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
                     <path d="M12 19V5M12 5L5 12M12 5L19 12" stroke="currentColor" strokeWidth="2"/>
                   </svg>
                   <div>Back to top</div>          
-                </motion.button>
+                </motion.div>
               )}
             </AnimatePresence>
-
+          
             <AnimatePresence mode="wait">
               {!isFirstSection && (
                 <motion.button 
                   initial={{ width: 0, opacity: 0 }}
                   animate={{ width: "auto", opacity: 1 }}
                   exit={{ width: 0, opacity: 0 }}
-                  className="py-[16px] px-[32px] ml-4 rounded-full backdrop-blur-lg border bg-[#1F1F1F]/50 border-[#0000001a] whitespace-nowrap overflow-hidden hover:bg-[#1F1F1F]/70 transition-colors focus:outline-none"
+                  className="py-[16px] px-[32px] ml-4 rounded-full backdrop-blur-lg border bg-[#1F1F1F]/50 border-[#0000001a] whitespace-nowrap overflow-hidden hover:bg-[#1F1F1F]/70 transition-colors"
                 >
                   Join the Waitlist
                 </motion.button>
@@ -164,27 +187,27 @@ const Navigation = () => {
           <AnimatePresence>
             {isMenuOpen && (
               <motion.div
-                id="section-menu"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: 20 }}
-                className="absolute bottom-full transform -translate-x-1/2 left-1/2 mb-2 w-[340px] bg-[#1F1F1F]/50 backdrop-blur-lg border border-[#0000001e] text-white rounded-2xl overflow-hidden"
+                className="absolute bottom-full transform -translate-x-1/2 mb-2 w-[340px] bg-[#1F1F1F]/50 backdrop-blur-lg border border-[#0000001e] text-white rounded-2xl overflow-hidden"
               >
                 <div className="py-[16px] px-[24px]">
-                  <ul className="flex flex-col gap-4" role="menu">
+                  <ul className="flex flex-col gap-4">
                     {sections.map((section) => (
-                      <li key={section.id}>
-                        <button
-                          className={`w-full text-left transition-colors ${
-                            activeSection === section.id 
-                              ? 'text-white font-medium' 
-                              : 'text-gray-400 hover:text-white'
-                          }`}
-                          onClick={() => handleSectionClick(section.id)}
-                          role="menuitem"
-                        >
-                          {section.title}
-                        </button>
+                      <li
+                        key={section.id}
+                        className={`cursor-pointer transition-colors ${
+                          activeSection === section.id 
+                            ? 'text-white font-medium' 
+                            : 'text-gray-400 hover:text-white'
+                        }`}
+                        onClick={() => handleSectionClick(section.id)}
+                        role="button"
+                        tabIndex={0}
+                        onKeyDown={(e) => e.key === 'Enter' && handleSectionClick(section.id)}
+                      >
+                        {section.title}
                       </li>
                     ))}
                   </ul>
