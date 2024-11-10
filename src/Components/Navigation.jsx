@@ -27,7 +27,7 @@ const Navigation = () => {
         className="mx-auto"
         initial={{ width: '300px' }}
         animate={{ 
-          width: isFirstSection ? '300px' : '705px',
+          width: isFirstSection ? '340px' : '705px',
         }}
         transition={{ duration: 0.3 }}
       >
