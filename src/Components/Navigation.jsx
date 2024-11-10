@@ -25,7 +25,7 @@ const Navigation = () => {
     <div className="fixed bottom-0 left-0 right-0 z-50 pb-[42px] font-helvetica-neue-5">
       <motion.div 
         className="mx-auto"
-        initial={{ width: '300px' }}
+        initial={{ width: '340px' }}
         animate={{ 
           width: isFirstSection ? '340px' : '705px',
         }}
