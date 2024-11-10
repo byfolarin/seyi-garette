@@ -1,5 +1,6 @@
 import React from 'react';
 import Arrowdown from '../assets/arrowline.svg'
+import ArrowGroup from '../assets/Group.svg'
 
 const Navigation = () => {
   return (
@@ -15,7 +16,11 @@ const Navigation = () => {
   
         </div>
     
-        <div>Back to top</div>
+        <div className='flex gap-2'>
+             <img src={ArrowGroup} alt="" />
+             <div>Back to top</div>          
+        </div>
+      
 
         <button>Join the Waitlist</button>
       </div>
