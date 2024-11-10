@@ -6,6 +6,7 @@ const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('section1');
   const navigationRef = useRef(null);
+  const lastScrollTime = useRef(Date.now());
 
   const sections = [
     { id: 'section1', title: 'Etch your voice' },
@@ -14,29 +15,81 @@ const Navigation = () => {
     { id: 'section4', title: 'The GARSETTI Marvel' },
     { id: 'section5', title: "What's in the box?" },
     { id: 'section6', title: "What you've just witnessed" },
-    { id: 'section7', title: 'Footer | Closing' }
+    { id: 'section7', title: 'Seventh Section' },
+    { id: 'section8', title: 'Eight Section' }
   ];
 
+  const checkVisibleSection = () => {
+    const scrollPosition = window.scrollY;
+    const windowHeight = window.innerHeight;
+    
+    // Check if we're in first section
+    setIsFirstSection(scrollPosition < windowHeight / 2);
+
+    // Find which section is most visible in the viewport
+    let maxIntersection = 0;
+    let currentSection = activeSection;
+
+    sections.forEach(({ id }) => {
+      const element = document.getElementById(id);
+      if (element) {
+        const rect = element.getBoundingClientRect();
+        const elementHeight = rect.height;
+        const visibleHeight = Math.min(rect.bottom, windowHeight) - Math.max(rect.top, 0);
+        const intersectionRatio = visibleHeight / elementHeight;
+
+        if (intersectionRatio > maxIntersection && visibleHeight > 0) {
+          maxIntersection = intersectionRatio;
+          currentSection = id;
+        }
+      }
+    });
+
+    if (currentSection !== activeSection) {
+      setActiveSection(currentSection);
+    }
+  };
+
+  // Set up Intersection Observer
+  useEffect(() => {
+    const options = {
+      root: null,
+      rootMargin: '0px',
+      threshold: 0.5
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting && entry.intersectionRatio >= 0.5) {
+          setActiveSection(entry.target.id);
+        }
+      });
+    }, options);
+
+    sections.forEach(({ id }) => {
+      const element = document.getElementById(id);
+      if (element) {
+        observer.observe(element);
+      }
+    });
+
+    return () => {
+      sections.forEach(({ id }) => {
+        const element = document.getElementById(id);
+        if (element) {
+          observer.unobserve(element);
+        }
+      });
+    };
+  }, []);
+
+  // Handle scroll events (throttled)
   useEffect(() => {
     const handleScroll = () => {
-      const scrollPosition = window.scrollY;
-      const windowHeight = window.innerHeight;
-      
-      // Check if we're in first section
-      setIsFirstSection(scrollPosition <= windowHeight * 0.7);
-
-      // Find current section
-      for (let section of sections) {
-        const element = document.getElementById(section.id);
-        if (element) {
-          const rect = element.getBoundingClientRect();
-          const offset = windowHeight * 0.3; // Adjust this value to change when section becomes active
-          
-          if (rect.top <= offset && rect.bottom >= offset) {
-            setActiveSection(section.id);
-            break;
-          }
-        }
+      const now = Date.now();
+      if (now - lastScrollTime.current > 100) {
+        lastScrollTime.current = now;
+        checkVisibleSection();
       }
     };
 
@@ -50,7 +103,7 @@ const Navigation = () => {
     document.addEventListener('mousedown', handleClickOutside);
     
     // Initial check
-    handleScroll();
+    checkVisibleSection();
     
     return () => {
       window.removeEventListener('scroll', handleScroll);
@@ -65,22 +118,16 @@ const Navigation = () => {
   const handleSectionClick = (sectionId) => {
     const element = document.getElementById(sectionId);
     if (element) {
-      // Get the element's position relative to the viewport
-      const rect = element.getBoundingClientRect();
-      // Get the current scroll position
-      const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
-      // Calculate the absolute position of the element
-      const absoluteElementTop = rect.top + currentScroll;
-      // Add offset for the header/navigation if needed
-      const offset = 100; // Adjust this value based on your layout
-      
+      const elementPosition = element.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - window.innerHeight / 4;
+
       window.scrollTo({
-        top: absoluteElementTop - offset,
+        top: offsetPosition,
         behavior: 'smooth'
       });
+
+      setIsMenuOpen(false);
     }
-    setIsMenuOpen(false);
-    setActiveSection(sectionId);
   };
 
   const toggleMenu = () => {
@@ -124,7 +171,7 @@ const Navigation = () => {
                 </svg>
               </div>
             </div>
-        
+
             <AnimatePresence mode="wait">
               {!isFirstSection && (
                 <motion.div 
@@ -144,7 +191,7 @@ const Navigation = () => {
                 </motion.div>
               )}
             </AnimatePresence>
-          
+
             <AnimatePresence mode="wait">
               {!isFirstSection && (
                 <motion.button 
