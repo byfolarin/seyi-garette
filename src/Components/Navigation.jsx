@@ -96,7 +96,7 @@ const Navigation = () => {
           className="relative"
           initial={{ width: '340px' }}
           animate={{ 
-            width: isFirstSection ? '340px' : '705px',
+            width: isFirstSection ? '300px' : '705px',
           }}
           transition={{ duration: 0.3 }}
         >

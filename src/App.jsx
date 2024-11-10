@@ -44,30 +44,16 @@ function App() {
       <img src="" alt="" />
       {/* Inner container for max-width constraint */}
       <div className=" mx-auto relative">
-        <div id="section1">
-          <HeroSection />
-        </div>
+        <HeroSection />
        
-       
-        <div id="section2">
-          <SecondSection />
-        </div>
-        <div id="section3">
-          <ThirdSection />
-        </div>
-        <div id="section4">
-          <FourthSection />
-        </div>
-        <div id="section5">
-          <Fifth />
-        </div>
-        <div id="section6">
-          <Sixth />
-        </div>
-        <div id="section7">
-          <SeventhSection />
-        </div>
-        <div id="section8" className="relative">
+        <div style={{ marginTop: '200vh' }} />
+        <SecondSection />
+        <ThirdSection />
+        <FourthSection />
+        <Fifth />
+        <Sixth />
+        <SeventhSection />
+        <div className="relative">
           <EightSection />
         </div>
       </div>
