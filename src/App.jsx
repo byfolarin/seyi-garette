@@ -9,6 +9,7 @@ import Sixth from "./Components/Sixth";
 import SeventhSection from "./Components/SeventhSection";
 import EightSection from "./Components/EightSection";
 import Navigation from './Components/Navigation';
+import NavCom from './Components/NavCompo';
 
 function App() {
 
@@ -38,6 +39,7 @@ function App() {
 
     
     <div className="w-full min-h-screen bg-[#B8BBC2]">
+      <NavCom />
        <Navigation />
       <img src="" alt="" />
       {/* Inner container for max-width constraint */}
