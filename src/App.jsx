@@ -8,6 +8,7 @@ import Fifth from "./Components/FifthSection";
 import Sixth from "./Components/Sixth";
 import SeventhSection from "./Components/SeventhSection";
 import EightSection from "./Components/EightSection";
+import Navigation from './Components/Navigation';
 
 function App() {
 
@@ -34,11 +35,15 @@ function App() {
 
   return (
     // Outer div for full-width background effects if needed
+
+    
     <div className="w-full min-h-screen bg-[#B8BBC2]">
+       <Navigation />
       <img src="" alt="" />
       {/* Inner container for max-width constraint */}
       <div className=" mx-auto relative">
         <HeroSection />
+       
         <div style={{ marginTop: '200vh' }} />
         <SecondSection />
         <ThirdSection />
