@@ -15,10 +15,7 @@ function App() {
 
   
 
-  return (
-
-
-    
+  return (  
     <div className="w-full min-h-screen bg-[#B8BBC2]">
       {/* <NavCom /> */}
        <Navigation />
