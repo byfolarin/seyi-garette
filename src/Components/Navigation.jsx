@@ -47,7 +47,10 @@ const Navigation = () => {
                 animate={{ width: "auto", opacity: 1 }}
                 exit={{ width: 0, opacity: 0 }}
                 className="flex gap-2 cursor-pointer items-center overflow-hidden whitespace-nowrap ml-4"
-                onClick={handleBackToTop}
+                onClick={handleBackToTop}  // Added onClick handler here
+                role="button"  // Added for accessibility
+                tabIndex={0}   // Added for accessibility
+                onKeyDown={(e) => e.key === 'Enter' && handleBackToTop()}  // Added keyboard support
               >
                 <img src={ArrowGroup} alt="" />
                 <div>Back to top</div>          
