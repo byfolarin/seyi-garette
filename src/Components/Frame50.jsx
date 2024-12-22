@@ -6,7 +6,7 @@ export default function Frame50() {
     <div className='w-full max-w-[294px] sm:max-w-[394px] md:max-w-[494px] lg:max-w-[694px] px-4 mx-auto'>
       <img 
         src={Frame5} 
-        alt="" 
+        alt="frame 5" 
         className='w-full h-auto object-contain'
       />
     </div>
