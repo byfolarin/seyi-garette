@@ -54,7 +54,7 @@ export default function HeroSection() {
                   <li id='stoked'>GARSETTI</li>
                   <span className='font-helvetica-neue-5 text-[12px]'><p>&#174;</p></span>
                 </div>               
-                <li className='pb-[4px]'>PRE-ORDER</li>
+                <li className='pb-[4px] '>PRE-ORDER</li>
                 <li className='pb-[4px]'>ABOUT GARSETTI ONE</li>
                 <li className='pb-[4px]'>CONTENT IN BOX</li>
               </ul>
