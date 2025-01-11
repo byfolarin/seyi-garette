@@ -31,8 +31,8 @@ export default function HeroSection() {
       <div className="bg-[#B8BBC2] h-screen   sm:px-6 lg:px-12 pt-6 lg:pt-[42px] relative overflow-hidden">
         <div className='mx-auto max-w-[1440px]  relative h-full flex flex-col'>
           {/* Top section with typewriter and navigation */}
-          <div className='flex justify-between px-2 items-start'>
-            <div className="relative font-DepartureMono text-[12px] z-10 w-full sm:w-[408px] mb-6 lg:mb-0 h-[100px]">
+          <div className='flex justify-between px-2  items-start'>
+            <div className="relative font-DepartureMono text-[12px] pt-10 lg:pt-0 z-10 w-full sm:w-[408px] mb-6 lg:mb-0 h-[100px]">
               <Typewriter
                 options={{
                   strings: [
