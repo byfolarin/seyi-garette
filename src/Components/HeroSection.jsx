@@ -18,7 +18,9 @@ export default function HeroSection() {
   };
 
   return (
-    <div className='sticky top-0 h-screen overflow-hidden'>
+
+
+    <div className='sticky top-0 h-[100%] lg:h-screen overflow-hidden'>
       <div className='relative mx-auto max-w-[1440px]'>
         <motion.div 
           className='w-[394px] absolute z-[999] lg:right-32'
@@ -27,6 +29,8 @@ export default function HeroSection() {
           <img src={Frame50} alt="" />
         </motion.div>
       </div>
+
+
 
       <div className="bg-[#B8BBC2] h-screen   sm:px-6 lg:px-12 pt-6 lg:pt-[42px] relative overflow-hidden">
         <div className='mx-auto max-w-[1440px]  relative h-full flex flex-col'>
@@ -48,6 +52,8 @@ export default function HeroSection() {
               />
             </div>
 
+
+
             <div className='cursor-pointer z-50 px-2'>
               <ul className='font-DepartureMono text-[12px] text-right'>
                 <div className='flex items-center justify-end gap-1 tracking-tighter pb-[4px]'>
@@ -64,6 +70,7 @@ export default function HeroSection() {
               </ul>
             </div>
           </div>
+
 
           {/* Mobile image */}
           <div className='lg:hidden w-full sm:w-[451px] mt-6'>

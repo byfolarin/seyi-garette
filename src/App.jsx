@@ -45,8 +45,13 @@ function App() {
   }, []);
 
   return (
-    <div className="w-full min-h-screen bg-[#B8BBC2] relative">
+    <div className="w-full  min-h-screen bg-[#B8BBC2] relative">
+
+
+      <div className='sticky top-0 z-50 hidden lg:block'>
       <Navigation />
+      </div>
+    
       
       {/* Main content container */}
       <div className="relative">
