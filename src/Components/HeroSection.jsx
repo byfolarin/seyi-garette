@@ -20,10 +20,10 @@ export default function HeroSection() {
   return (
 
 
-    <div className='sticky top-0 h-[100%] lg:h-screen overflow-hidden'>
+    <div className='sticky top-0 h-[100] lg:h-screen overflow-hidden'>
       <div className='relative mx-auto max-w-[1440px]'>
         <motion.div 
-          className='w-[394px] absolute z-[999] lg:right-32'
+          className='w-[291px] lg:w-[394px] absolute z-[999] lg:right-32'
           style={{ y: frame50Y, rotate: frame50Rotate }}
         >
           <img src={Frame50} alt="" />
