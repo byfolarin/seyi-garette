@@ -42,7 +42,7 @@ export default function HeroSection() {
                   ],
                   autoStart: true,
                   loop: true,
-                  delay: 51,
+                  delay: 50,
                   deleteSpeed: 10,
                 }}
               />
