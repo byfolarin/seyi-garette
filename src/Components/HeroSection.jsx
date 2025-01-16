@@ -60,7 +60,7 @@ export default function HeroSection() {
                 <div className='hidden lg:flex lg:flex-col items-end gap-1 tracking-tighter'>
                   <li className='pb-[4px] '>PRE-ORDER</li>
                   <li className='pb-[4px]'>ABOUT GARSETTI ONE</li>
-                  <li className='pb-[4px]'>CONTENT IN BOX</li>
+                  <li className='pb-[4px]'>CONTENT N BOX</li>
                 </div>            
              
               </ul>
