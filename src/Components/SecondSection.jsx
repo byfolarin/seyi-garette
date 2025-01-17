@@ -46,8 +46,8 @@ export default function SecondSection() {
   const isInView = useInView(sectionRef, { once: true, amount: 0.4 });
   
   return (
-    <div className="bg-[#CECECE] min-h-screen sticky top-0 z-[10]" ref={sectionRef}>
-      <div className="max-w-[1440px] mx-auto h-screen px-4 md:px-8 lg:px-12 pt-10 relative overflow-hidden flex flex-col">
+    <div className="bg-[#CECECE] lg:min-h-screen sticky top-0 z-[10]" ref={sectionRef}>
+      <div className="max-w-[1440px] mx-auto h-[837px] px-4 md:px-8 lg:px-12 pt-10 relative overflow-hidden flex flex-col">
         <div className='flex-grow flex flex-col md:flex-row lg:flex-row items-center justify-center md:relative lg:relative'>
           {/* Background text */}
           <div className='md:absolute lg:absolute md:inset-0 lg:inset-0 flex justify-center items-center pointer-events-none'>
@@ -101,12 +101,12 @@ export default function SecondSection() {
         </div>
 
         <div className='md:absolute lg:absolute bottom-10 pt-12 md:pt-0 lg:pt-0 md:left-8 md:right-8 lg:left-12 lg:right-12 font-helvetica-neue-5 flex flex-col md:flex-row lg:flex-row justify-between'>
-          <div className='w-full md:w-72 lg:w-80 text-lg leading-tight mb-6 md:mb-0 lg:mb-0'>
+          <div className='w-full md:w-72 lg:w-80 text-lg leading-tight mb-2 md:mb-0 lg:mb-0'>
             We believe you have a voice worth remembering just like every notable human that walked the earth.
             The mic for a notable voice.
           </div>
 
-          <div className='w-full md:w-72 lg:w-80 flex flex-col gap-6 pt-16 md:pt-0 lg:pt-0'>
+          <div className='w-full md:w-72 lg:w-80 flex flex-col gap-6 pt-2 md:pt-0 lg:pt-0'>
             <p className='text-[#555963] text-xs'>Experience not just an engineering marvel but an artistic one as well. The GARSETTI One seeks to further revolutionise audio capturing. </p>
             
             <div className='flex flex-col md:flex-row lg:flex-row gap-8 mb-8 font-helvetica-neue-5'>
