@@ -55,7 +55,7 @@ export default function EightSection() {
         </div> */}
 
         {/* Orange overlay - full width */}
-        <div className='absolute top-0 left-0 right-0 bg-[#FF5931] rounded-b-[24px] lg:rounded-b-[80px] z-20 w-full h-[900px] lg:h-auto'>
+        <div className='absolute top-0 left-0 right-0 bg-[#FF5931] rounded-b-[24px] lg:rounded-b-[80px] z-20 w-full h-[900px] lg:h-[650px]'>
           {/* Content container with max-width */}
           <div className="max-w-[1440px] mx-auto px-4 lg:px-12 xl:px-[49px] flex flex-col justify-between h-full pb-28 lg:block lg:h-auto lg:pb-0">
             <div className="flex flex-col lg:flex-row gap-8 lg:gap-6 lg:items-start py-12 lg:py-[110px] w-full mx-auto justify-between">
