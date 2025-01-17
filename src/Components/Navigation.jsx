@@ -1,11 +1,14 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { span } from 'framer-motion/client';
 
 const Navigation = () => {
   const [isFirstSection, setIsFirstSection] = useState(true);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('section1');
   const navigationRef = useRef(null);
+  const [digit, setDigit] = useState(1)
+  const [nav, setNav] = useState(null)
 
   const sections = [
     { id: 'section1', title: 'Etch your voice' },
@@ -31,6 +34,8 @@ const Navigation = () => {
       let activeFound = false;
       for (let section of sections) {
         const element = document.getElementById(section.id);
+        // console.log(section.id);
+        
         if (element) {
           const rect = element.getBoundingClientRect();
           const absoluteTop = scrollPosition + rect.top;
@@ -38,11 +43,14 @@ const Navigation = () => {
 
           if (viewportMiddle >= absoluteTop && viewportMiddle < absoluteBottom) {
             setActiveSection(section.id);
+            // console.log(section.id)
             activeFound = true;
             break;
           }
         }
       }
+
+
 
       // If no section is active (for edge cases), find the closest one
       if (!activeFound) {
@@ -83,13 +91,49 @@ const Navigation = () => {
       window.removeEventListener('scroll', handleScroll);
       document.removeEventListener('mousedown', handleClickOutside);
     };
-  }, [sections]);
+  }, [sections, activeSection]);
+
+  
+
+   const [activePart, setActivePart] = useState("");
+
+  const sectionIndicator = () => {
+    const blocks = document.querySelectorAll(".section");
+    blocks.forEach((section) => {
+      const rect = section.getBoundingClientRect();
+      if (rect.top >= 0 && rect.top < window.innerHeight / 2) {
+        setActivePart(section.id);
+        // setActiveSection(section.id)
+        setNav(sections.find(x => x.id === activePart))
+        console.log(section.id);
+        console.log(nav);
+        
+        
+      }
+    });
+
+    
+  };
+
+  
+  console.log(nav);
+  
+
+  useEffect(() => {
+    window.addEventListener("scroll", sectionIndicator);
+    return () => window.removeEventListener("scroll", sectionIndicator);
+  }, []);
+
 
   const handleBackToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
+    setDigit(1)
+    // setNav('Etch your voice')
   };
 
-  const handleSectionClick = (sectionId) => {
+  const handleSectionClick = (sectionId, i) => {
+    setDigit(i + 1)
+    setNav(sections[i].title)
     const element = document.getElementById(sectionId);
     if (element) {
       // Get element's position relative to the document
@@ -134,10 +178,18 @@ const Navigation = () => {
               onKeyDown={(e) => e.key === 'Enter' && toggleMenu()}
             >
               <div className="mix-blend-soft-light">
-                Section {(parseInt(activeSection.replace('section', ''), 10)).toString().padStart(2, '0')}:
+                Section 0{
+                  sections.map((x, i) => (
+                    <span key={i} className={`${nav && x.id === nav.id ? '' : 'hidden'}`}>{nav ? (i + 1) : 1}</span>
+                  ))
+                }:
+                {/* {(parseInt(activeSection.replace('section', ''), 10)).toString().padStart(2, '0')}  */}
               </div>
               <div className="flex items-center gap-2">
-                <div>{currentSection?.title || 'Select section'}</div>
+                <div>
+                  {/* {currentSection?.title || 'Select section'} */}
+                  {nav ? nav.title : 'Etch your voice'}
+                </div>
                 <svg 
                   width="16" 
                   height="16" 
@@ -194,18 +246,18 @@ const Navigation = () => {
               >
                 <div className="py-[16px] px-[24px]">
                   <ul className="flex flex-col gap-4">
-                    {sections.map((section) => (
+                    {sections.map((section, i) => (
                       <li
                         key={section.id}
                         className={`cursor-pointer transition-colors ${
-                          activeSection === section.id 
+                          activePart === section.id 
                             ? 'text-white font-medium' 
                             : 'text-gray-400 hover:text-white'
                         }`}
-                        onClick={() => handleSectionClick(section.id)}
+                        onClick={() => handleSectionClick(section.id, i)}
                         role="button"
                         tabIndex={0}
-                        onKeyDown={(e) => e.key === 'Enter' && handleSectionClick(section.id)}
+                        onKeyDown={(e) => e.key === 'Enter' && handleSectionClick(section.id, i)}
                       >
                         {section.title}
                       </li>
