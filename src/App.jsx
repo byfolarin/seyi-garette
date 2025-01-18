@@ -9,6 +9,7 @@ import Sixth from "./Components/Sixth";
 import SeventhSection from "./Components/SeventhSection";
 import EightSection from "./Components/EightSection";
 import Navigation from './Components/Navigation';
+import Footer from './Components/Footer';
 
 function App() {
   // Refs for each section to track their positions
@@ -45,7 +46,7 @@ function App() {
   }, []);
 
   return (
-    <div className="w-full  min-h-screen bg-[#B8BBC2] relative">
+    <div className="w-full  min-h-screen bg-[#B8BBC2] relative pb-[693px] lg:pb-[100vh]">
 
 
       <div className='sticky top-0 z-50 hidden lg:block'>
@@ -59,7 +60,7 @@ function App() {
         <section 
           id="section1" 
           ref={heroRef}
-          className="relative min-h-screen sticky top-0 z-10"
+          className="relative min-h-screen sticky top-0 z-10 section"
         >
           <HeroSection />
         </section>
@@ -71,7 +72,7 @@ function App() {
         <section 
           id="section2" 
           ref={secondRef}
-          className="relative min-h-screen sticky top-0 z-20"
+          className="relative lg:min-h-screen sticky top-0 z-20 section"
         >
           <SecondSection />
         </section>
@@ -80,7 +81,7 @@ function App() {
         <section 
           id="section3" 
           ref={thirdRef}
-          className="relative min-h-screen z-30"
+          className="relative min-h-screen z-30 section"
         >
           <ThirdSection />
         </section>
@@ -89,7 +90,7 @@ function App() {
         <section 
           id="section4" 
           ref={fourthRef}
-          className="relative min-h-screen z-30"
+          className="relative min-h-screen z-30 section"
         >
           <FourthSection />
         </section>
@@ -98,7 +99,7 @@ function App() {
         <section 
           id="section5" 
           ref={fifthRef}
-          className="relative min-h-screen z-30"
+          className="relative min-h-screen z-30 section"
         >
           <Fifth />
         </section>
@@ -107,7 +108,7 @@ function App() {
         <section 
           id="section6" 
           ref={sixthRef}
-          className="relative min-h-screen z-30"
+          className="relative min-h-screen z-30 section"
         >
           <Sixth />
         </section>
@@ -116,7 +117,7 @@ function App() {
         <section 
           id="section7" 
           ref={seventhRef}
-          className="relative min-h-screen z-30"
+          className="relative min-h-screen z-30 section"
         >
           <SeventhSection />
         </section>
@@ -125,11 +126,13 @@ function App() {
         <section 
           id="section8" 
           ref={eighthRef}
-          className="relative min-h-screen z-30"
+          className="relative min-h-screen h-fit z-40 section"
         >
           <EightSection />
         </section>
       </div>
+
+      <Footer />
     </div>
   );
 }

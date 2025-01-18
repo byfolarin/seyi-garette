@@ -71,11 +71,11 @@ export default function SecondSection() {
           </div>
           
           {/* Foreground image */}
-          <div className="md:relative lg:relative md:z-10 lg:z-10 w-80 md:w-96 lg:w-[40%] xl:w-[45%] 2xl:w-[50%] md:translate-y-[10%] lg:translate-y-[8%] self-end">
+          <div className="md:relative lg:relative md:z-10 lg:z-10 w-full md:w-96 lg:w-[40%] xl:w-[45%] 2xl:w-[50%] md:translate-y-[10%] lg:translate-y-[8%] self-end">
             <img 
               src={GarsettiSide} 
               alt="Garrett with microphone" 
-              className="object-contain w-full h-auto"
+              className="object-contain w-full h-auto scale-110"
             />
           </div>
 
