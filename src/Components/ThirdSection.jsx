@@ -51,8 +51,8 @@ export default function SecondSection() {
         <div className='flex-grow flex flex-col md:flex-row lg:flex-row items-center justify-center md:relative lg:relative'>
           {/* Background text */}
           <div className='md:absolute lg:absolute md:inset-0 lg:inset-0 flex justify-center items-center pointer-events-none'>
-            <div className='md:flex lg:flex flex-col md:flex-row lg:flex-row justify-center items-center tracking-tighter font-DepartureMono text-[72px] md:text-[140px] lg:text-[200px] hidden text-white opacity-50'>
-              <h1 className="stoked md:-translate-y-16 lg:-translate-y-32 leading-[80%]">
+            <div className='md:flex lg:flex flex-col md:flex-row lg:flex-row justify-center items-center tracking-tighter font-DepartureMono text-[72px] md:text-[140px] lg:text-[200px] hidde text-white opacity-50'>
+              <h1 className="stoked translate-y-32 md:-translate-y-16 lg:-translate-y-36 leading-[80%]">
                 {word.slice(0, 5).split('').map((letter, index) => (
                   <AnimatedLetter key={index} target={letter} delay={index * 0.1} inView={isInView} />
                 ))}

@@ -48,11 +48,11 @@ export default function SecondSection() {
   return (
     <div className="bg-[#CECECE] lg:min-h-screen sticky top-0 z-[10]" ref={sectionRef}>
       <div className="max-w-[1440px] mx-auto h-[837px] px-4 md:px-8 lg:px-12 pt-10 relative overflow-hidden flex flex-col">
-        <div className='flex-grow flex flex-col md:flex-row lg:flex-row items-center justify-center md:relative lg:relative'>
+        <div className='flex-grow flex flex-col md:flex-row lg:flex-row items-center justify-center md:relative h-full lg:relative'>
           {/* Background text */}
           <div className='md:absolute lg:absolute md:inset-0 lg:inset-0 flex justify-center items-center pointer-events-none'>
-            <div className='md:flex lg:flex flex-col md:flex-row lg:flex-row justify-center items-center tracking-tighter font-DepartureMono text-[72px] md:text-[140px] lg:text-[200px] hidden text-white opacity-50'>
-              <h1 className="md:-translate-y-16 lg:-translate-y-32 leading-[80%]">
+            <div className='md:flex lg:flex flex-col md:flex-row lg:flex-row justify-center items-center tracking-tighter font-DepartureMono text-[72px] sm:text-[130px] md:text-[140px] lg:text-[200px] hidde text-white opacity-50'>
+              <h1 className="translate-y-32 md:-translate-y-16 lg:-translate-y-32 leading-[80%]">
                 {word.slice(0, 5).split('').map((letter, index) => (
                   <AnimatedLetter key={index} target={letter} delay={index * 0.1} inView={isInView} />
                 ))}
@@ -71,7 +71,7 @@ export default function SecondSection() {
           </div>
           
           {/* Foreground image */}
-          <div className="md:relative lg:relative md:z-10 lg:z-10 max-w-80 md:max-w-96 xl:pt-0 lg:max-w-[30%] md:translate-y-[10%] lg:translate-y-[8%] self-end">
+          <div className="md:relative lg:relative z-[5] md:z-10 lg:z-10 max-w-80 md:max-w-96 xl:pt-0 w-[180px] lg:max-w-[30%] md:translate-y-[10%] lg:translate-y-[8%] self-end left-1/2 -translate-x-1/2 md:w-auto md:left-0 md:-translate-x-0">
             <img 
               src={GarsettiFront} 
               alt="Garrett with microphone" 

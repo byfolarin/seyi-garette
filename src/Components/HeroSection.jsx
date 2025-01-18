@@ -4,7 +4,7 @@ import Typewriter from 'typewriter-effect';
 import GarretImg from '../../src/assets/images/Garsetti mic hero  1-min.png';
 import Marquee from "react-fast-marquee";
 import Frame50 from '../assets/images/Frame 50-min.png';
-import GarretMobile from '../../src/assets/images/Garsetti-mobile.png';
+import GarretMobile from '../../src/assets/images/Garsetti-mobile-crop.png';
 import SignUpModal from './SignUpModal';
 
 export default function HeroSection() {
@@ -69,7 +69,7 @@ export default function HeroSection() {
 
 
           {/* Mobile image */}
-          <div className='lg:hidden w-full sm:w-[451px] mt-6'>
+          <div className='absolute bottom-[-500px] lg:hidden w-full sm:w-[451px] mt-[500px]'>
             <img 
               src={GarretMobile} 
               alt="Garrett with microphone" 
@@ -78,11 +78,11 @@ export default function HeroSection() {
           </div>
 
           {/* Bottom section with heading and content */}
-          <div className="mt-auto mb-24 relative z-[9999] w-full lg:w-[608px]">
+          <div className="mt-aut mb-24 relative lg:z-[9999] w-full lg:w-[608px]">
             {showSignUp ? (
               <SignUpModal onClose={handleClose} />
             ) : (
-              <div className='flex flex-col'>       
+              <div className='flex flex-col px-3 lg:px-0'>       
                 <div className='flex items-center gap-4 mb-[16px]'>
                   <div className='w-[14px] h-[14px] bg-[#FC451A] overflow-hidden cursor-pointer rounded-full'></div>
                   <div className='flex items-center w-[248px] h-[24px] relative'>
