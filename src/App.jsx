@@ -117,7 +117,7 @@ function App() {
         <section 
           id="section7" 
           ref={seventhRef}
-          className="relative screen z-30 section"
+          className="relative sceen z-30 section"
         >
           <SeventhSection />
         </section>
