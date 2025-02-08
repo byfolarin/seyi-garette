@@ -117,8 +117,7 @@ function App() {
         <section 
           id="section7" 
           ref={seventhRef}
-          className="relative mi-h-screen z-30 section bg-red-500"
-        >
+          className="relative mi-h-screen z-30 section bg-red-500">
           <SeventhSection />
         </section>
 
