@@ -90,7 +90,7 @@ function App() {
         <section 
           id="section4" 
           ref={fourthRef}
-          className="relative min-h-screen z-30 section"
+          className="relative min-h-screen z-30 section bg-white"
         >
           <FourthSection />
         </section>
@@ -99,7 +99,7 @@ function App() {
         <section 
           id="section5" 
           ref={fifthRef}
-          className="relative min-h-screen z-30 section"
+          className="relative min-h-screen z-30 section bg-white"
         >
           <Fifth />
         </section>
@@ -108,7 +108,7 @@ function App() {
         <section 
           id="section6" 
           ref={sixthRef}
-          className="relative min-h-screen z-30 section"
+          className="relative min-h-screen z-30 section bg-white"
         >
           <Sixth />
         </section>
@@ -117,8 +117,7 @@ function App() {
         <section 
           id="section7" 
           ref={seventhRef}
-          className="relative d z-30 section"
-        >
+          className="relative mi-h-screen z-30 section bg-red-500">
           <SeventhSection />
         </section>
 
