@@ -121,7 +121,7 @@ function App() {
           <SeventhSection />
         </section>
 
-        {/* Eighth Sgction */}
+        {/* Eighth Sction */}
         <section 
           id="section8" 
           ref={eighthRef}
