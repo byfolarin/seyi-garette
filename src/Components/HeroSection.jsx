@@ -6,6 +6,7 @@ import Marquee from "react-fast-marquee";
 import Frame50 from '../assets/images/Frame 50-min.png';
 import GarretMobile from '../../src/assets/images/Garsetti-mobile-crop.png';
 import SignUpModal from './SignUpModal';
+import { LazyImage } from './LazyLoadImg';
 
 export default function HeroSection() {
   const { scrollY } = useScroll();  
@@ -24,7 +25,8 @@ export default function HeroSection() {
           className='w-[291px] lg:w-[394px] absolute z-[999] lg:right-32'
           style={{ y: frame50Y, rotate: frame50Rotate }}
         >
-          <img src={Frame50} alt="" />
+          <LazyImage src={Frame50} alt="" />
+          {/* <img src={Frame50} alt="" /> */}
         </motion.div>
       </div>
 
@@ -70,6 +72,11 @@ export default function HeroSection() {
 
           {/* Mobile image */}
           <div className='absolute bottom-[-500px] lg:hidden w-full sm:w-[451px] mt-[500px]'>
+            {/* <LazyImage
+              src={GarretMobile} 
+              alt="Garrett with microphone" 
+              className="object-cover w-full"
+            /> */}
             <img 
               src={GarretMobile} 
               alt="Garrett with microphone" 
@@ -148,11 +155,16 @@ export default function HeroSection() {
         
         <div className="hidden lg:block lg:absolute lg:top-0 lg:right-0 lg:w-[80%] xl:pr-16 lg:h-full lg:overflow-hidden">
           <div className="relative w-full h-full">
-            <img 
+            <LazyImage
               src={GarretImg} 
               alt="Garrett with microphone" 
               className="absolute top-0 left-0 w-full h-full object-cover object-left"
             />
+            {/* <img 
+              src={GarretImg} 
+              alt="Garrett with microphone" 
+              className="absolute top-0 left-0 w-full h-full object-cover object-left"
+            /> */}
           </div>
         </div>
       </div>

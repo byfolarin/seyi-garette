@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
 import GarsettiSide from '../../src/assets/images/Side-min.png';
+import { LazyImage } from './LazyLoadImg';
 
 const AnimatedLetter = ({ target, delay, inView }) => {
   const [currentLetter, setCurrentLetter] = useState('A');
@@ -62,7 +63,7 @@ export default function SecondSection() {
                   ))}
                 </span>
               </h1>
-              <h1 className="stoked hidden md:block lg:block md:-translate-y-16 lg:-translate-y-32">
+              <h1 className="stoked hidden md:block lg:block md:-translate-y-16 lg:-translate-y-32 lg:mt-[-35px]">
                 {word.slice(5).split('').map((letter, index) => (
                   <AnimatedLetter key={index + 5} target={letter} delay={(index + 5) * 0.1} inView={isInView} />
                 ))}
@@ -72,11 +73,16 @@ export default function SecondSection() {
           
           {/* Foreground image */}
           <div className="md:relative lg:relative md:z-10 lg:z-10 w-full md:w-96 lg:w-[40%] xl:w-[45%] 2xl:w-[50%] md:translate-y-[10%] lg:translate-y-[8%] self-end">
-            <img 
+            <LazyImage
               src={GarsettiSide} 
               alt="Garrett with microphone" 
               className="object-contain w-full h-auto scale-110"
             />
+            {/* <img 
+              src={GarsettiSide} 
+              alt="Garrett with microphone" 
+              className="object-contain w-full h-auto scale-110"
+            /> */}
           </div>
 
           {/* <div className='md:absolute lg:absolute md:inset-0 lg:inset-0 flex justify-center items-center pointer-events-none'>

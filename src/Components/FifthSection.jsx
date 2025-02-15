@@ -3,6 +3,7 @@ import Mid1 from '../../src/assets/images/mid1.jpg'
 import Mid2 from '../../src/assets/images/mid2.jpg'
 import Mid3 from '../../src/assets/images/mid3.jpg'
 import { motion, useInView } from 'framer-motion'
+import { LazyImage } from './LazyLoadImg';
 
 const AnimatedLetter = ({ target, delay, inView }) => {
     const [currentLetter, setCurrentLetter] = useState('A');  // Fixed this line
@@ -123,11 +124,16 @@ export default function Fifth() {
                         variants={itemVariants}
                     >
                         <div className="h-[361px] lg:h-[528px] overflow-hidden">
-                            <img 
+                            <LazyImage
                                 src={Mid1} 
                                 alt="Studio microphone" 
                                 className="w-full h-full object-cover"
                             />
+                            {/* <img 
+                                src={Mid1} 
+                                alt="Studio microphone" 
+                                className="w-full h-full object-cover"
+                            /> */}
                         </div>
                         <div className='pt-4 lg:pt-8 font-helvetica-neue-5 flex flex-col gap-2'>
                             <h5 className='font-bold text-[20px] tracking-tight'>Crisp Audio Capture</h5>
@@ -142,11 +148,16 @@ export default function Fifth() {
                         variants={itemVariants}
                     >
                         <div className="h-[361px] lg:h-[528px] overflow-hidden">
-                            <img 
+                            <LazyImage
                                 src={Mid2} 
                                 alt="Studio microphone" 
                                 className="w-full h-full object-cover"
                             />
+                            {/* <img 
+                                src={Mid2} 
+                                alt="Studio microphone" 
+                                className="w-full h-full object-cover"
+                            /> */}
                         </div>
                         <div className='pt-8 font-helvetica-neue-5 flex flex-col gap-2'>
                             <h5 className='font-bold text-[20px] text-nowrap tracking-tight'>Universal Compatibility</h5>
@@ -161,11 +172,16 @@ export default function Fifth() {
                         variants={itemVariants}
                     >
                         <div className="h-[361px] lg:h-[528px] overflow-hidden">
-                            <img 
+                            <LazyImage
                                 src={Mid3} 
                                 alt="Studio microphone" 
                                 className="w-full h-full object-cover"
                             />
+                            {/* <img 
+                                src={Mid3} 
+                                alt="Studio microphone" 
+                                className="w-full h-full object-cover"
+                            /> */}
                         </div>
                         <div className='pt-8 font-helvetica-neue-5 flex flex-col gap-2'>
                             <h5 className='font-bold text-[20px] tracking-tight'>Port Compatibility</h5>

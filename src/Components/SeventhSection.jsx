@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion'
 import mockup from '../assets/images/iPhone 14 Pro.png'
+import { LazyImage } from './LazyLoadImg'
 
 
 export default function SeventhSection() {
@@ -53,7 +54,8 @@ export default function SeventhSection() {
                 </div>
 
                 <div className='pt-[32px] pb-[0.5px]'>
-                    <img src={mockup} alt="" className='w-[330px]' />
+                  <LazyImage src={mockup} className='w-[330px]' />
+                    {/* <img src={mockup} alt="" className='w-[330px]' /> */}
                 </div>
 
             </div>

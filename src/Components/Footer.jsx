@@ -1,6 +1,7 @@
 import { motion, useInView } from 'framer-motion';
 import { useEffect, useRef, useState } from 'react'
 import FooterImg from '../assets/images/Garsetti front  1.jpg';
+import { LazyImage } from './LazyLoadImg';
 
 const AnimatedLetter = ({ target, delay, inView }) => {
   const [currentLetter, setCurrentLetter] = useState('A');
@@ -48,7 +49,8 @@ export default function Footer() {
     <footer>
         {/* Background image - full width */}
                 <div className='fixed bottom-0 z-0  w-full'>
-                  <img src={FooterImg} alt="" className='w-full h-[793px] lg:h-[1734px] object-cover' />
+                  <LazyImage src={FooterImg} alt="" className='w-full h-[793px] lg:h-[1734px] object-cover'/>
+                  {/* <img src={FooterImg} alt="" className='w-full h-[793px] lg:h-[1734px] object-cover' /> */}
                 </div>
 
         {/* Footer - full width */}

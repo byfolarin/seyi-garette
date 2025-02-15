@@ -2,6 +2,7 @@ import { motion } from 'framer-motion'
 import Box1 from '../../src/assets/images/In the box 1.jpg'
 import Box2 from '../../src/assets/images/USBC Cable 1.jpg'
 import Tick from '../../src/assets/images/Vector 4.svg'
+import { LazyImage } from './LazyLoadImg'
 
 export default function Sixth() {
     return (
@@ -114,11 +115,14 @@ export default function Sixth() {
                             transition={{ duration: 0.5, ease: "easeOut" }}
                             style={{ transformOrigin: 'center center' }}
                         >
-                            <img 
+                            <LazyImage src={Box1} 
+                                alt="Studio microphone" 
+                                className="w-full h-full object-cover cursor-pointer" />
+                            {/* <img 
                                 src={Box1} 
                                 alt="Studio microphone" 
                                 className="w-full h-full object-cover cursor-pointer"
-                            />
+                            /> */}
                         </motion.div>
                     </div>
                 </motion.div>
@@ -140,11 +144,14 @@ export default function Sixth() {
                             transition={{ duration: 0.5, ease: "easeOut" }}
                             style={{ transformOrigin: 'center center' }}
                         >
-                            <img 
+                            <LazyImage src={Box2} 
+                                alt="Studio microphone" 
+                                className="w-full h-full object-cover cursor-pointer" />
+                            {/* <img 
                                 src={Box2} 
                                 alt="Studio microphone" 
                                 className="w-full h-full object-cover cursor-pointer"
-                            />
+                            /> */}
                         </motion.div>
                     </div>
                 </motion.div>

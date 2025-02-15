@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
 import GarsettiFront from '../../src/assets/images/iFront 1-min.png';
+import { LazyImage } from './LazyLoadImg';
 
 const AnimatedLetter = ({ target, delay, inView }) => {
   const [currentLetter, setCurrentLetter] = useState('A');
@@ -52,7 +53,7 @@ export default function SecondSection() {
           {/* Background text */}
           <div className='md:absolute lg:absolute md:inset-0 lg:inset-0 flex justify-center items-center pointer-events-none'>
             <div className='md:flex lg:flex flex-col md:flex-row lg:flex-row justify-center items-center tracking-tighter font-DepartureMono text-[72px] sm:text-[130px] md:text-[140px] lg:text-[200px] hidde text-white opacity-50'>
-              <h1 className="translate-y-32 md:-translate-y-16 lg:-translate-y-32 leading-[80%]">
+            <h1 className="stoked translate-y-32 md:-translate-y-16 lg:-translate-y-36 leading-[80%]">
                 {word.slice(0, 5).split('').map((letter, index) => (
                   <AnimatedLetter key={index} target={letter} delay={index * 0.1} inView={isInView} />
                 ))}
@@ -62,7 +63,7 @@ export default function SecondSection() {
                   ))}
                 </span>
               </h1>
-              <h1 className="hidden md:block lg:block md:-translate-y-16 lg:-translate-y-32">
+              <h1 className="hidden md:block lg:block md:-translate-y-16 lg:-translate-y-32 lg:mt-[-35px]">
                 {word.slice(5).split('').map((letter, index) => (
                   <AnimatedLetter key={index + 5} target={letter} delay={(index + 5) * 0.1} inView={isInView} />
                 ))}
@@ -72,11 +73,16 @@ export default function SecondSection() {
           
           {/* Foreground image */}
           <div className="md:relative lg:relative z-[5] md:z-10 lg:z-10 max-w-80 md:max-w-96 xl:pt-0 w-[180px] lg:max-w-[30%] md:translate-y-[10%] lg:translate-y-[8%] self-end left-1/2 -translate-x-1/2 md:w-auto md:left-0 md:-translate-x-0">
-            <img 
+            <LazyImage
               src={GarsettiFront} 
               alt="Garrett with microphone" 
               className="object-contain w-full h-auto"
             />
+            {/* <img 
+              src={GarsettiFront} 
+              alt="Garrett with microphone" 
+              className="object-contain w-full h-auto"
+            /> */}
           </div>
 
           {/* <div className='md:absolute lg:absolute md:inset-0 lg:inset-0 flex justify-center items-center pointer-events-none'>

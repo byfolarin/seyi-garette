@@ -1,6 +1,7 @@
 import WomanMic from '../../src/assets/images/womanmic.jpg'
 import StudioMic from '../../src/assets/images/micstudio.jpg'
 import { motion } from 'framer-motion'
+import { LazyImage } from './LazyLoadImg'
 
 export default function FourthSection() {
     return (
@@ -63,11 +64,16 @@ export default function FourthSection() {
               }}
               viewport={{ once: true }}
             >
-              <img 
+              <LazyImage
                 src={WomanMic} 
                 alt="Woman with microphone" 
                 className="w-full h-full object-cover"
               />
+              {/* <img 
+                src={WomanMic} 
+                alt="Woman with microphone" 
+                className="w-full h-full object-cover"
+              /> */}
             </motion.div>
             
             <motion.div 
@@ -84,11 +90,16 @@ export default function FourthSection() {
               }}
               viewport={{ once: true }}
             >
-              <img 
+              <LazyImage
                 src={StudioMic} 
                 alt="Studio microphone" 
                 className="w-full h-full object-cover"
               />
+              {/* <img 
+                src={StudioMic} 
+                alt="Studio microphone" 
+                className="w-full h-full object-cover"
+              /> */}
             </motion.div>
           </div>
         </div>
