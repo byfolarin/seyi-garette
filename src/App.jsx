@@ -56,7 +56,7 @@ function App() {
       
       {/* Main content container */}
       <div className="relative">
-        {/* Hero Section - Sticky until second section */}
+        {/* Hero Section - Sticky untill second section */}
         <section 
           id="section1" 
           ref={heroRef}
