@@ -4,7 +4,7 @@ import './SplashScreen.css';
 const SplashScreen = ({count}) => {
   return (
     <div className="splash-screen bg-[#FF5931]">
-      <div className="flex items-center gap-3 text-6xl font-DepartureMono text-black font-bold">
+      <div className="flex items-center gap-3 text-6xl font-DepartureMono text-black">
         <div className="rounded-full bg-black w-12 h-12"></div>
         <div className="">00:0{count}</div>
       </div>
