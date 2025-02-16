@@ -73,16 +73,16 @@ export default function SecondSection() {
           
           {/* Foreground image */}
           <div className="md:relative lg:relative md:z-10 lg:z-10 w-full md:w-96 lg:w-[40%] xl:w-[45%] 2xl:w-[50%] md:translate-y-[10%] lg:translate-y-[8%] self-end">
-            <LazyImage
-              src={GarsettiSide} 
-              alt="Garrett with microphone" 
-              className="object-contain w-full h-auto scale-110"
-            />
-            {/* <img 
+            {/* <LazyImage
               src={GarsettiSide} 
               alt="Garrett with microphone" 
               className="object-contain w-full h-auto scale-110"
             /> */}
+            <img 
+              src={`https://res.cloudinary.com/dinfffgcg/image/upload/v1739632173/Side-min_a73brg.png`} 
+              alt="Garrett with microphone" 
+              className="object-contain w-full h-auto scale-110"
+            />
           </div>
 
           {/* <div className='md:absolute lg:absolute md:inset-0 lg:inset-0 flex justify-center items-center pointer-events-none'>

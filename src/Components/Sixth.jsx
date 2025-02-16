@@ -115,14 +115,14 @@ export default function Sixth() {
                             transition={{ duration: 0.5, ease: "easeOut" }}
                             style={{ transformOrigin: 'center center' }}
                         >
-                            <LazyImage src={Box1} 
+                            {/* <LazyImage src={Box1} 
                                 alt="Studio microphone" 
-                                className="w-full h-full object-cover cursor-pointer" />
-                            {/* <img 
-                                src={Box1} 
+                                className="w-full h-full object-cover cursor-pointer" /> */}
+                            <img 
+                                src={`https://res.cloudinary.com/dinfffgcg/image/upload/v1739645882/In_the_box_1_stv18m.jpg`} 
                                 alt="Studio microphone" 
                                 className="w-full h-full object-cover cursor-pointer"
-                            /> */}
+                            />
                         </motion.div>
                     </div>
                 </motion.div>
@@ -144,14 +144,14 @@ export default function Sixth() {
                             transition={{ duration: 0.5, ease: "easeOut" }}
                             style={{ transformOrigin: 'center center' }}
                         >
-                            <LazyImage src={Box2} 
+                            {/* <LazyImage src={Box2} 
                                 alt="Studio microphone" 
-                                className="w-full h-full object-cover cursor-pointer" />
-                            {/* <img 
-                                src={Box2} 
+                                className="w-full h-full object-cover cursor-pointer" /> */}
+                            <img 
+                                src={`https://res.cloudinary.com/dinfffgcg/image/upload/v1739645882/USBC_Cable_1_tmdd1l.jpg`} 
                                 alt="Studio microphone" 
                                 className="w-full h-full object-cover cursor-pointer"
-                            /> */}
+                            />
                         </motion.div>
                     </div>
                 </motion.div>

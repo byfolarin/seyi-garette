@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import Lenis from "@studio-freight/lenis";
 import HeroSection from "./Components/HeroSection";
 import SecondSection from "./Components/SecondSection";
@@ -10,6 +10,7 @@ import SeventhSection from "./Components/SeventhSection";
 import EightSection from "./Components/EightSection";
 import Navigation from './Components/Navigation';
 import Footer from './Components/Footer';
+import SplashScreen from './Components/SplashScreen';
 
 function App() {
   // Refs for each section to track their positions
@@ -45,27 +46,57 @@ function App() {
     };
   }, []);
 
-  return (
-    <div className="w-full  min-h-screen bg-[#B8BBC2] relative pb-[693px] lg:pb-[100vh]">
+  const [loading, setLoading] = useState(true);
 
+  useEffect(() => {
+    // You can replace this with actual resource loading
+    // For example: fetch data, preload critical images, etc.
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 3000);
 
-      <div className='sticky top-0 z-50 hidden lg:block'>
-      <Navigation />
-      </div>
-    
+    return () => clearTimeout(timer);
+  }, []);
+
+  const [count, setCount] = useState(5);
+  
+  // Use effect to set up the timer
+  useEffect(() => {
+    // Only set up the timer if count is greater than 0
+    if (count > 0) {
+      // Set a timeout to decrease the count by 1 after 1 second
+      const timerId = setTimeout(() => {
+        setCount(count - 1);
+      }, 1000);
       
-      {/* Main content container */}
-      <div className="relative">
-        {/* Hero Section - Sticky until second section */}
-        <section 
-          id="section1" 
-          ref={heroRef}
-          className="relative min-h-screen sticky top-0 z-10 section"
-        >
-          <HeroSection />
-        </section>
+      // Clean up the timeout when the component unmounts or count changes
+      return () => clearTimeout(timerId);
+    }
+  }, [count]);
 
-        {/* Spacer for scroll distance */}
+  return (
+    <div className="App">
+      { count ? <SplashScreen count={count} /> : 
+      <div className="w-full  min-h-screen bg-[#B8BBC2] relative pb-[693px] lg:pb-[100vh]">
+
+
+        <div className='sticky top-0 z-50 hidden lg:block'>
+          <Navigation />
+        </div>
+
+
+        {/* Main content container */}
+        <div className="relative">
+          {/* Hero Section - Sticky until second section */}
+          <section 
+            id="section1" 
+            ref={heroRef}
+            className="relative min-h-screen sticky top-0 z-10 section"
+          >
+            <HeroSection />
+          </section>
+
+          {/* Spacer for scroll distance */}
         <div className="h-screen" />
 
         {/* Second Section - Sticky until third section */}
@@ -132,7 +163,9 @@ function App() {
       </div>
 
       <Footer />
-    </div>
+    </div>}
+  </div>
+    
   );
 }
 

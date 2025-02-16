@@ -54,8 +54,8 @@ export default function SeventhSection() {
                 </div>
 
                 <div className='pt-[32px] pb-[0.5px]'>
-                  <LazyImage src={mockup} className='w-[330px]' />
-                    {/* <img src={mockup} alt="" className='w-[330px]' /> */}
+                  {/* <LazyImage src={mockup} className='w-[330px]' /> */}
+                    <img src={'https://res.cloudinary.com/dinfffgcg/image/upload/v1739646171/iPhone_14_Pro_jkimuz.png'} alt="" className='w-[330px]' />
                 </div>
 
             </div>

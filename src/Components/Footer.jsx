@@ -49,8 +49,8 @@ export default function Footer() {
     <footer>
         {/* Background image - full width */}
                 <div className='fixed bottom-0 z-0  w-full'>
-                  <LazyImage src={FooterImg} alt="" className='w-full h-[793px] lg:h-[1734px] object-cover'/>
-                  {/* <img src={FooterImg} alt="" className='w-full h-[793px] lg:h-[1734px] object-cover' /> */}
+                  {/* <LazyImage src={FooterImg} alt="" className='w-full h-[793px] lg:h-[1734px] object-cover'/> */}
+                  <img src={'https://res.cloudinary.com/dinfffgcg/image/upload/v1739646342/Garsetti_front_1_gvhq5u.jpg'} alt="" className='w-full h-[793px] lg:h-[1734px] object-cover' />
                 </div>
 
         {/* Footer - full width */}

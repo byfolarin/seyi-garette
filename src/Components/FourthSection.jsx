@@ -64,16 +64,16 @@ export default function FourthSection() {
               }}
               viewport={{ once: true }}
             >
-              <LazyImage
-                src={WomanMic} 
-                alt="Woman with microphone" 
-                className="w-full h-full object-cover"
-              />
-              {/* <img 
+              {/* <LazyImage
                 src={WomanMic} 
                 alt="Woman with microphone" 
                 className="w-full h-full object-cover"
               /> */}
+              <img 
+                src={`https://res.cloudinary.com/dinfffgcg/image/upload/v1739632523/womanmic_dj28ln.jpg`} 
+                alt="Woman with microphone" 
+                className="w-full h-full object-cover"
+              />
             </motion.div>
             
             <motion.div 
@@ -90,16 +90,16 @@ export default function FourthSection() {
               }}
               viewport={{ once: true }}
             >
-              <LazyImage
-                src={StudioMic} 
-                alt="Studio microphone" 
-                className="w-full h-full object-cover"
-              />
-              {/* <img 
+              {/* <LazyImage
                 src={StudioMic} 
                 alt="Studio microphone" 
                 className="w-full h-full object-cover"
               /> */}
+              <img 
+                src={`https://res.cloudinary.com/dinfffgcg/image/upload/v1739632521/micstudio_yugqed.jpg`} 
+                alt="Studio microphone" 
+                className="w-full h-full object-cover"
+              />
             </motion.div>
           </div>
         </div>

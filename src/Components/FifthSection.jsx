@@ -124,16 +124,16 @@ export default function Fifth() {
                         variants={itemVariants}
                     >
                         <div className="h-[361px] lg:h-[528px] overflow-hidden">
-                            <LazyImage
-                                src={Mid1} 
-                                alt="Studio microphone" 
-                                className="w-full h-full object-cover"
-                            />
-                            {/* <img 
+                            {/* <LazyImage
                                 src={Mid1} 
                                 alt="Studio microphone" 
                                 className="w-full h-full object-cover"
                             /> */}
+                            <img 
+                                src={`https://res.cloudinary.com/dinfffgcg/image/upload/v1739645216/mid1_ikcaqx.jpg`} 
+                                alt="Studio microphone" 
+                                className="w-full h-full object-cover"
+                            />
                         </div>
                         <div className='pt-4 lg:pt-8 font-helvetica-neue-5 flex flex-col gap-2'>
                             <h5 className='font-bold text-[20px] tracking-tight'>Crisp Audio Capture</h5>
@@ -148,16 +148,16 @@ export default function Fifth() {
                         variants={itemVariants}
                     >
                         <div className="h-[361px] lg:h-[528px] overflow-hidden">
-                            <LazyImage
-                                src={Mid2} 
-                                alt="Studio microphone" 
-                                className="w-full h-full object-cover"
-                            />
-                            {/* <img 
+                            {/* <LazyImage
                                 src={Mid2} 
                                 alt="Studio microphone" 
                                 className="w-full h-full object-cover"
                             /> */}
+                            <img 
+                                src={`https://res.cloudinary.com/dinfffgcg/image/upload/v1739645216/mid2_r5crsy.jpg`} 
+                                alt="Studio microphone" 
+                                className="w-full h-full object-cover"
+                            />
                         </div>
                         <div className='pt-8 font-helvetica-neue-5 flex flex-col gap-2'>
                             <h5 className='font-bold text-[20px] text-nowrap tracking-tight'>Universal Compatibility</h5>
@@ -172,16 +172,16 @@ export default function Fifth() {
                         variants={itemVariants}
                     >
                         <div className="h-[361px] lg:h-[528px] overflow-hidden">
-                            <LazyImage
-                                src={Mid3} 
-                                alt="Studio microphone" 
-                                className="w-full h-full object-cover"
-                            />
-                            {/* <img 
+                            {/* <LazyImage
                                 src={Mid3} 
                                 alt="Studio microphone" 
                                 className="w-full h-full object-cover"
                             /> */}
+                            <img 
+                                src={`https://res.cloudinary.com/dinfffgcg/image/upload/v1739645216/mid3_uxicly.jpg`} 
+                                alt="Studio microphone" 
+                                className="w-full h-full object-cover"
+                            />
                         </div>
                         <div className='pt-8 font-helvetica-neue-5 flex flex-col gap-2'>
                             <h5 className='font-bold text-[20px] tracking-tight'>Port Compatibility</h5>

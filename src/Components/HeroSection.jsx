@@ -155,16 +155,17 @@ export default function HeroSection() {
         
         <div className="hidden lg:block lg:absolute lg:top-0 lg:right-0 lg:w-[80%] xl:pr-16 lg:h-full lg:overflow-hidden">
           <div className="relative w-full h-full">
-            <LazyImage
-              src={GarretImg} 
-              alt="Garrett with microphone" 
-              className="absolute top-0 left-0 w-full h-full object-cover object-left"
-            />
-            {/* <img 
+            {/* <LazyImage
               src={GarretImg} 
               alt="Garrett with microphone" 
               className="absolute top-0 left-0 w-full h-full object-cover object-left"
             /> */}
+            <img 
+              // src={GarretImg} 
+              src="https://res.cloudinary.com/dinfffgcg/image/upload/v1739631142/Garsetti_mic_hero_1-min_nv4sog.png"
+              alt="Garrett with microphone" 
+              className="absolute top-0 left-0 w-full h-full object-cover object-left"
+            />
           </div>
         </div>
       </div>
