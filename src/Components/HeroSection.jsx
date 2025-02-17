@@ -8,7 +8,7 @@ import GarretMobile from '../../src/assets/images/Garsetti-mobile-crop.png';
 import SignUpModal from './SignUpModal';
 import { LazyImage } from './LazyLoadImg';
 
-export default function HeroSection() {
+export default function HeroSection({maintain}) {
   const { scrollY } = useScroll();  
   const frame50Y = useTransform(scrollY, [0, 1000], ['200%', '0%']);
   const frame50Rotate = useTransform(scrollY, [0, 1000], [40, 0]);
@@ -164,7 +164,7 @@ export default function HeroSection() {
               // src={GarretImg} 
               src="https://res.cloudinary.com/dinfffgcg/image/upload/v1739631142/Garsetti_mic_hero_1-min_nv4sog.png"
               alt="Garrett with microphone" 
-              className="absolute top-0 left-0 w-full h-full object-cover object-left"
+              className={`absolute top-0 left-0 w-full h-full object-cover object-left delay-75 duration-500 transition-all ease-in-out ${maintain > 0 ? 'scale-150' : 'scale-100'}`}
             />
           </div>
         </div>

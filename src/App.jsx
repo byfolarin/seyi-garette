@@ -86,7 +86,7 @@ function App() {
   }, [count, maintain]);
 
   return (
-    <div className={`${count ? 'pt-[100vh] h-screen overflow-hidden' : ''} duration-500 delay-500 ease-in-out`}>
+    <div className={`${count ? 'pt-[100vh] h-screen overflow-hidden' : ''} duration-1000 delay-700 ease-in-out`}>
      <div className={`fixed top-0 w-full ${maintain < 0 ? 'z-0' : 'z-[9]'}`}>
       <SplashScreen count={count} />
      </div>
@@ -106,7 +106,7 @@ function App() {
             ref={heroRef}
             className="relative min-h-screen sticky top-0 z-10 section"
           >
-            <HeroSection />
+            <HeroSection maintain={maintain} />
           </section>
 
           {/* Spacer for scroll distance */}
