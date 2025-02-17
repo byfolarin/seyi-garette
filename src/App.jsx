@@ -59,6 +59,7 @@ function App() {
   }, []);
 
   const [count, setCount] = useState(5);
+  const [maintain, setMaintain] = useState(5);
   
   // Use effect to set up the timer
   useEffect(() => {
@@ -72,12 +73,24 @@ function App() {
       // Clean up the timeout when the component unmounts or count changes
       return () => clearTimeout(timerId);
     }
-  }, [count]);
+
+    if (maintain > -1) {
+      // Set a timeout to decrease the count by 1 after 1 second
+      const timer = setTimeout(() => {
+        setMaintain(maintain - 1);
+      }, 1000);
+      
+      // Clean up the timeout when the component unmounts or count changes
+      return () => clearTimeout(timer);
+    }
+  }, [count, maintain]);
 
   return (
-    <div className="App">
-      { count ? <SplashScreen count={count} /> : 
-      <div className="w-full  min-h-screen bg-[#B8BBC2] relative pb-[693px] lg:pb-[100vh]">
+    <div className={`${count ? 'pt-[100vh] h-screen overflow-hidden' : ''} duration-500 delay-500 ease-in-out`}>
+     <div className={`fixed top-0 w-full ${maintain < 0 ? 'z-0' : 'z-[9]'}`}>
+      <SplashScreen count={count} />
+     </div>
+      <div className="w-full min-h-screen bg-[#B8BBC2] relative pb-[693px] lg:pb-[100vh]">
 
 
         <div className='sticky top-0 z-50 hidden lg:block'>
